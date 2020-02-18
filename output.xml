@@ -1,0 +1,4075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200217 10:03:15.893" rpa="false">
+<suite id="s1" name="JMapRobotTests" source="C:\Users\mbous\eclipse-workspace\JMapRobotTests">
+<suite id="s1-s1" name="Tests" source="C:\Users\mbous\eclipse-workspace\JMapRobotTests\tests">
+<suite id="s1-s1-s1" name="Jmap 7.0" source="C:\Users\mbous\eclipse-workspace\JMapRobotTests\tests\jmap_7.0">
+<suite id="s1-s1-s1-s1" name="jmapWeb" source="C:\Users\mbous\eclipse-workspace\JMapRobotTests\tests\jmap_7.0\jmapWeb">
+<suite id="s1-s1-s1-s1-s1" name="CheckLanguageTests" source="C:\Users\mbous\eclipse-workspace\JMapRobotTests\tests\jmap_7.0\jmapWeb\CheckLanguageTests.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="JM70-932:Verify text With spanish language">
+<kw name="Open Browser On JMap Web" library="CommonLogin" type="setup">
+<doc>Open Browser with the given URL and maximize the window to the resolution</doc>
+<arguments>
+<arg>${URLWebApp}</arg>
+<arg>${RESOLUTION_X}</arg>
+<arg>${RESOLUTION_Y}</arg>
+</arguments>
+<kw name="Setup Metrics" library="CommonKeywords">
+<doc>This Keyword give the start time when the execution of the test case starts.</doc>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=epoch</arg>
+</arguments>
+<assign>
+<var>${tc_start}</var>
+</assign>
+<msg timestamp="20200217 10:03:16.407" level="INFO">${tc_start} = 1581951796.406526</msg>
+<status status="PASS" starttime="20200217 10:03:16.407" endtime="20200217 10:03:16.407"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${tc_start}</arg>
+<arg>${tc_start}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:16.408" level="INFO">${tc_start} = 1581951796.406526</msg>
+<status status="PASS" starttime="20200217 10:03:16.407" endtime="20200217 10:03:16.408"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:16.406" endtime="20200217 10:03:16.408"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${vURL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:16.408" level="INFO">Opening browser 'Chrome' to base url 'http://192.168.0.33:8080/JMap_Web_WorldTest'.</msg>
+<status status="PASS" starttime="20200217 10:03:16.408" endtime="20200217 10:03:21.862"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>${RESOLUTION_X}</arg>
+<arg>${RESOLUTION_Y}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:21.863" endtime="20200217 10:03:25.980"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200217 10:03:25.980" endtime="20200217 10:03:26.471"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:16.406" endtime="20200217 10:03:26.471"></status>
+</kw>
+<kw name="Login JMap Web With Check Language" library="CommonLogin">
+<doc>Login in JMap Web with the language provided</doc>
+<arguments>
+<arg>${Title}</arg>
+<arg>es</arg>
+<arg>CONECTARSE</arg>
+<arg>userTest1</arg>
+<arg>userTest1</arg>
+</arguments>
+<kw name="Verify That Text Of The Cover Page Is" library="CommonWeb">
+<doc>Check for the text of the cover page</doc>
+<arguments>
+<arg>${pTitle}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://h4[@id='jmap-title']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:26.473" endtime="20200217 10:03:26.507"></status>
+</kw>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//h4[@id='jmap-title']</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:26.508" endtime="20200217 10:03:26.537"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.508" endtime="20200217 10:03:26.537"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:26.539" level="INFO">Verifying element '//h4[@id='jmap-title']' contains exact text 'JMap_Web_WorldTest'.</msg>
+<status status="PASS" starttime="20200217 10:03:26.538" endtime="20200217 10:03:26.825"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.538" endtime="20200217 10:03:26.826"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.507" endtime="20200217 10:03:26.826"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.472" endtime="20200217 10:03:26.826"></status>
+</kw>
+<kw name="Verify That Title Of The Cover Page Is" library="CommonWeb">
+<doc>Check for the title of the cover page</doc>
+<arguments>
+<arg>${pTitle}</arg>
+</arguments>
+<kw name="Verify Title" library="CommonWeb">
+<doc>Check for the title existence</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:26.827" endtime="20200217 10:03:26.829"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Title Should Be</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:26.834" level="INFO">Page title is 'JMap_Web_WorldTest'.</msg>
+<status status="PASS" starttime="20200217 10:03:26.829" endtime="20200217 10:03:26.834"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.829" endtime="20200217 10:03:26.834"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.827" endtime="20200217 10:03:26.834"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.826" endtime="20200217 10:03:26.834"></status>
+</kw>
+<kw name="Select Language Of JMap Web" library="CommonLogin">
+<doc>Select Language of JMap Web app</doc>
+<arguments>
+<arg>${pLanguage}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://a[@id='${language}']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:26.835" endtime="20200217 10:03:26.865"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//a[@id='${language}']</arg>
+<arg>class</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<assign>
+<var>${IslanguageSelected}</var>
+</assign>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//a[@id='${language}']</arg>
+<arg>class</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:26.883" level="INFO">Element '//a[@id='es']' attribute 'class' contains value ''.</msg>
+<status status="PASS" starttime="20200217 10:03:26.866" endtime="20200217 10:03:26.883"></status>
+</kw>
+<msg timestamp="20200217 10:03:26.883" level="INFO">${IslanguageSelected} = True</msg>
+<status status="PASS" starttime="20200217 10:03:26.865" endtime="20200217 10:03:26.883"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${IslanguageSelected}</arg>
+<arg>Click Element</arg>
+<arg>xpath://a[@id='${language}']</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@id='${language}']</arg>
+</arguments>
+<msg timestamp="20200217 10:03:26.884" level="INFO">Clicking element 'xpath://a[@id='es']'.</msg>
+<status status="PASS" starttime="20200217 10:03:26.884" endtime="20200217 10:03:26.928"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.884" endtime="20200217 10:03:26.928"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.835" endtime="20200217 10:03:26.928"></status>
+</kw>
+<kw name="Verify That Selected JMap Web Language Is" library="CommonLogin">
+<doc>Check the language in JMap Web</doc>
+<arguments>
+<arg>${pLanguage}</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200217 10:03:27.930" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200217 10:03:26.929" endtime="20200217 10:03:27.930"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://a[@id='${expected}']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:27.930" endtime="20200217 10:03:27.948"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//a[@id='${expected}']</arg>
+<arg>class</arg>
+<arg>selected</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//a[@id='${expected}']</arg>
+<arg>class</arg>
+<arg>selected</arg>
+</arguments>
+<msg timestamp="20200217 10:03:27.960" level="INFO">Element '//a[@id='es']' attribute 'class' contains value 'selected'.</msg>
+<status status="PASS" starttime="20200217 10:03:27.948" endtime="20200217 10:03:27.960"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:27.948" endtime="20200217 10:03:27.960"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.928" endtime="20200217 10:03:27.960"></status>
+</kw>
+<kw name="Verify That Text of Login Button Is" library="CommonLogin">
+<doc>Check the text for loggin button</doc>
+<arguments>
+<arg>${ptextButton}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://button[@id='submit']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:27.961" endtime="20200217 10:03:27.983"></status>
+</kw>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//button[@id='submit']</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:27.985" endtime="20200217 10:03:28.003"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:27.984" endtime="20200217 10:03:28.003"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:28.004" level="INFO">Verifying element '//button[@id='submit']' contains exact text 'CONECTARSE'.</msg>
+<status status="PASS" starttime="20200217 10:03:28.004" endtime="20200217 10:03:28.023"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:28.003" endtime="20200217 10:03:28.023"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:27.984" endtime="20200217 10:03:28.023"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:27.960" endtime="20200217 10:03:28.023"></status>
+</kw>
+<kw name="Enter JMap Web credentials" library="CommonLogin">
+<doc>Enter username and password in JMap Web login page</doc>
+<arguments>
+<arg>${pUserName}</arg>
+<arg>${pPassword}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:username</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:28.024" endtime="20200217 10:03:28.047"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:username</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:28.048" level="INFO">Typing text 'userTest1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20200217 10:03:28.048" endtime="20200217 10:03:28.131"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:28.131" endtime="20200217 10:03:28.159"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:28.159" level="INFO">Typing text 'userTest1' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20200217 10:03:28.159" endtime="20200217 10:03:28.228"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:28.023" endtime="20200217 10:03:28.229"></status>
+</kw>
+<kw name="Verify That Values of Username And Password Fields Are" library="CommonLogin">
+<doc>Check the values of the user and password fields</doc>
+<arguments>
+<arg>${pUserName}</arg>
+<arg>${pPassword}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://input[@id='username']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:28.229" endtime="20200217 10:03:28.252"></status>
+</kw>
+<kw name="Verify Value" library="CommonWeb">
+<doc>Check for the value existence on the locator</doc>
+<arguments>
+<arg>//input[@id='username']</arg>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:28.254" endtime="20200217 10:03:28.269"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:28.253" endtime="20200217 10:03:28.269"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>${locator}</arg>
+<arg>value</arg>
+<arg>${value}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>value</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:28.282" level="INFO">Element '//input[@id='username']' attribute 'value' contains value 'userTest1'.</msg>
+<status status="PASS" starttime="20200217 10:03:28.270" endtime="20200217 10:03:28.282"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:28.270" endtime="20200217 10:03:28.282"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:28.253" endtime="20200217 10:03:28.282"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://input[@id='password']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:28.283" endtime="20200217 10:03:28.304"></status>
+</kw>
+<kw name="Verify Value" library="CommonWeb">
+<doc>Check for the value existence on the locator</doc>
+<arguments>
+<arg>//input[@id='password']</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:28.305" endtime="20200217 10:03:28.321"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:28.305" endtime="20200217 10:03:28.321"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>${locator}</arg>
+<arg>value</arg>
+<arg>${value}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>value</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:28.333" level="INFO">Element '//input[@id='password']' attribute 'value' contains value 'userTest1'.</msg>
+<status status="PASS" starttime="20200217 10:03:28.322" endtime="20200217 10:03:28.333"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:28.321" endtime="20200217 10:03:28.334"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:28.304" endtime="20200217 10:03:28.334"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:28.229" endtime="20200217 10:03:28.334"></status>
+</kw>
+<kw name="Click Login JMap Web" library="CommonLogin">
+<doc>Click login button in JMap Web login page</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>id:submit</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:28.335" endtime="20200217 10:03:28.357"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id:submit</arg>
+</arguments>
+<msg timestamp="20200217 10:03:28.357" level="INFO">Clicking button 'id:submit'.</msg>
+<status status="PASS" starttime="20200217 10:03:28.357" endtime="20200217 10:03:28.807"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200217 10:03:29.809" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200217 10:03:28.807" endtime="20200217 10:03:29.809"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:28.334" endtime="20200217 10:03:29.809"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:26.472" endtime="20200217 10:03:29.809"></status>
+</kw>
+<kw name="Click On Options Icon" library="CommonWeb">
+<doc>Go to Option menu</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://i[@class='configMenuIcon']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:29.810" endtime="20200217 10:03:29.837"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://i[@class='configMenuIcon']</arg>
+</arguments>
+<msg timestamp="20200217 10:03:29.837" level="INFO">Clicking element 'xpath://i[@class='configMenuIcon']'.</msg>
+<status status="PASS" starttime="20200217 10:03:29.837" endtime="20200217 10:03:29.883"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:29.810" endtime="20200217 10:03:29.884"></status>
+</kw>
+<kw name="Verify That Texts Of Options Icon Are" library="CommonWeb">
+<doc>Check the links of the Option Menu</doc>
+<arguments>
+<arg>Opciones</arg>
+<arg>Preferencias</arg>
+<arg>Ayuda</arg>
+<arg>Cambiar la contraseña</arg>
+<arg>Desconexión (${UserName})</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//button[@class='configMenu btn btn-default']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:29.885" endtime="20200217 10:03:29.906"></status>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//button[@class='configMenu btn btn-default']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:29.921" level="INFO">Element '//button[@class='configMenu btn btn-default']' attribute 'data-original-title' contains value 'Opciones'.</msg>
+<status status="PASS" starttime="20200217 10:03:29.906" endtime="20200217 10:03:29.921"></status>
+</kw>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//a[contains(text(),'${text1}')]</arg>
+<arg>${text1}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:29.922" endtime="20200217 10:03:29.944"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:29.922" endtime="20200217 10:03:29.944"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:29.945" level="INFO">Verifying element '//a[contains(text(),'Preferencias')]' contains exact text 'Preferencias'.</msg>
+<status status="PASS" starttime="20200217 10:03:29.945" endtime="20200217 10:03:29.963"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:29.944" endtime="20200217 10:03:29.964"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:29.921" endtime="20200217 10:03:29.964"></status>
+</kw>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//a[contains(text(),'${text2}')]</arg>
+<arg>${text2}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:29.965" endtime="20200217 10:03:29.985"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:29.965" endtime="20200217 10:03:29.985"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:29.986" level="INFO">Verifying element '//a[contains(text(),'Ayuda')]' contains exact text 'Ayuda'.</msg>
+<status status="PASS" starttime="20200217 10:03:29.986" endtime="20200217 10:03:30.003"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:29.985" endtime="20200217 10:03:30.003"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:29.964" endtime="20200217 10:03:30.003"></status>
+</kw>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//a[contains(text(),'${text3}')]</arg>
+<arg>${text3}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.004" endtime="20200217 10:03:30.024"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.004" endtime="20200217 10:03:30.024"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.024" level="INFO">Verifying element '//a[contains(text(),'Cambiar la contraseña')]' contains exact text 'Cambiar la contraseña'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.024" endtime="20200217 10:03:30.042"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.024" endtime="20200217 10:03:30.042"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.004" endtime="20200217 10:03:30.042"></status>
+</kw>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//a[contains(text(),'${text4}')]</arg>
+<arg>${text4}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.043" endtime="20200217 10:03:30.062"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.043" endtime="20200217 10:03:30.062"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.063" level="INFO">Verifying element '//a[contains(text(),'Desconexión (userTest1)')]' contains exact text 'Desconexión (userTest1)'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.063" endtime="20200217 10:03:30.081"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.063" endtime="20200217 10:03:30.082"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.042" endtime="20200217 10:03:30.082"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:29.884" endtime="20200217 10:03:30.082"></status>
+</kw>
+<kw name="Click On Share features Icon" library="CommonWeb">
+<doc>Go to Share features menu</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://button[@class='glyphicon jmap_share btn btn-default']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.083" endtime="20200217 10:03:30.109"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[@class='glyphicon jmap_share btn btn-default']</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.109" level="INFO">Clicking element 'xpath://button[@class='glyphicon jmap_share btn btn-default']'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.109" endtime="20200217 10:03:30.161"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.082" endtime="20200217 10:03:30.162"></status>
+</kw>
+<kw name="Verify That Texts Of Share Features Icon Are" library="CommonWeb">
+<doc>Check the links of the Share Features Menu</doc>
+<arguments>
+<arg>Compartir</arg>
+<arg>Enlace a este mapa</arg>
+<arg>Insertar Mapa</arg>
+<arg>Crear imagen</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//button[@class='glyphicon jmap_share btn btn-default']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.162" endtime="20200217 10:03:30.179"></status>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//button[@class='glyphicon jmap_share btn btn-default']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.192" level="INFO">Element '//button[@class='glyphicon jmap_share btn btn-default']' attribute 'data-original-title' contains value 'Compartir'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.179" endtime="20200217 10:03:30.193"></status>
+</kw>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//a[contains(text(),'${text1}')]</arg>
+<arg>${text1}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.194" endtime="20200217 10:03:30.213"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.193" endtime="20200217 10:03:30.213"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.214" level="INFO">Verifying element '//a[contains(text(),'Enlace a este mapa')]' contains exact text 'Enlace a este mapa'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.213" endtime="20200217 10:03:30.232"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.213" endtime="20200217 10:03:30.232"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.193" endtime="20200217 10:03:30.232"></status>
+</kw>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//a[contains(text(),'${text2}')]</arg>
+<arg>${text2}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.233" endtime="20200217 10:03:30.253"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.233" endtime="20200217 10:03:30.253"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.254" level="INFO">Verifying element '//a[contains(text(),'Insertar Mapa')]' contains exact text 'Insertar Mapa'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.253" endtime="20200217 10:03:30.272"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.253" endtime="20200217 10:03:30.272"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.233" endtime="20200217 10:03:30.273"></status>
+</kw>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//a[contains(text(),'${text3}')]</arg>
+<arg>${text3}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.274" endtime="20200217 10:03:30.294"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.273" endtime="20200217 10:03:30.294"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.295" level="INFO">Verifying element '//a[contains(text(),'Crear imagen')]' contains exact text 'Crear imagen'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.295" endtime="20200217 10:03:30.317"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.294" endtime="20200217 10:03:30.318"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.273" endtime="20200217 10:03:30.318"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.162" endtime="20200217 10:03:30.318"></status>
+</kw>
+<kw name="Verify That Text Of Full Screen Icon Is" library="CommonWeb">
+<doc>Check the links of the Full Screen tool</doc>
+<arguments>
+<arg>Pantalla completa</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//button[@class='btn btn-default ol-full-screen-false']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.319" endtime="20200217 10:03:30.340"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//button[@class='btn btn-default ol-full-screen-false']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//button[@class='btn btn-default ol-full-screen-false']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.353" level="INFO">Element '//button[@class='btn btn-default ol-full-screen-false']' attribute 'data-original-title' contains value 'Pantalla completa'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.341" endtime="20200217 10:03:30.354"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.340" endtime="20200217 10:03:30.354"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.318" endtime="20200217 10:03:30.354"></status>
+</kw>
+<kw name="Verify That Text Of Overview Map Icon Is" library="CommonWeb">
+<doc>Check the links of the Overview Map tool</doc>
+<arguments>
+<arg>Vista global del mapa</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='OverViewTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.355" endtime="20200217 10:03:30.372"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='OverViewTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='OverViewTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.386" level="INFO">Element '//div[@id='OverViewTrigger']' attribute 'data-original-title' contains value 'Vista global del mapa'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.373" endtime="20200217 10:03:30.386"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.373" endtime="20200217 10:03:30.386"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.354" endtime="20200217 10:03:30.386"></status>
+</kw>
+<kw name="Verify That Text Of Print Map Icon Is" library="CommonWeb">
+<doc>Check the links of the Print Map tool</doc>
+<arguments>
+<arg>Impresión del mapa</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='printTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.386" endtime="20200217 10:03:30.406"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='printTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='printTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.419" level="INFO">Element '//div[@id='printTrigger']' attribute 'data-original-title' contains value 'Impresión del mapa'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.407" endtime="20200217 10:03:30.419"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.406" endtime="20200217 10:03:30.419"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.386" endtime="20200217 10:03:30.419"></status>
+</kw>
+<kw name="Click On Annotation Down List Arrow" library="CommonAnnotationWeb">
+<doc>Click on annotation tool</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>xpath://div[@id='smallTrigger_freehandSet']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@id='smallTrigger_freehandSet']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.420" endtime="20200217 10:03:30.445"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.420" endtime="20200217 10:03:30.445"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='smallTrigger_freehandSet']</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.446" level="INFO">Clicking element 'xpath://div[@id='smallTrigger_freehandSet']'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.446" endtime="20200217 10:03:30.494"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.420" endtime="20200217 10:03:30.495"></status>
+</kw>
+<kw name="Verify That Texts Of Annotations Icon Are">
+<arguments>
+<arg>Mano alzada</arg>
+<arg>Texto</arg>
+<arg>Punto</arg>
+<arg>Línea</arg>
+<arg>Rectángulo</arg>
+<arg>Polígono</arg>
+<arg>Círculo</arg>
+</arguments>
+<kw name="Verify That Text Of Freehand Annotation Icon Is" library="CommonAnnotationWeb">
+<doc>Check freehand annotation is enable</doc>
+<arguments>
+<arg>${expected1}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@id='dropdownPanel_freehandSet']//div[@class='freelinestringDrawing CustomButtons btn btn-default']</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@id='dropdownPanel_freehandSet']//div[@class='freelinestringDrawing CustomButtons btn btn-default']</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:30.497" endtime="20200217 10:03:30.519"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.496" endtime="20200217 10:03:30.519"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='dropdownPanel_freehandSet']//div[@class='freelinestringDrawing CustomButtons btn btn-default']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='dropdownPanel_freehandSet']//div[@class='freelinestringDrawing CustomButtons btn btn-default']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:30.533" level="INFO">Element '//div[@id='dropdownPanel_freehandSet']//div[@class='freelinestringDrawing CustomButtons btn btn-default']' attribute 'data-original-title' contains value 'Mano alzada'.</msg>
+<status status="PASS" starttime="20200217 10:03:30.520" endtime="20200217 10:03:30.534"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.520" endtime="20200217 10:03:30.534"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.535" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200217 10:03:30.534" endtime="20200217 10:03:31.535"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.495" endtime="20200217 10:03:31.535"></status>
+</kw>
+<kw name="Verify That Text Of Text Annotation Icon Is" library="CommonAnnotationWeb">
+<doc>Check text annotation is enable</doc>
+<arguments>
+<arg>${expected2}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@class='textAnnotation CustomButtons btn btn-default']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@class='textAnnotation CustomButtons btn btn-default']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.536" endtime="20200217 10:03:31.554"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.535" endtime="20200217 10:03:31.555"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@class='textAnnotation CustomButtons btn btn-default']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@class='textAnnotation CustomButtons btn btn-default']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.567" level="INFO">Element '//div[@class='textAnnotation CustomButtons btn btn-default']' attribute 'data-original-title' contains value 'Texto'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.555" endtime="20200217 10:03:31.567"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.555" endtime="20200217 10:03:31.567"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.535" endtime="20200217 10:03:31.567"></status>
+</kw>
+<kw name="Verify That Text Of Point Annotation Icon Is" library="CommonAnnotationWeb">
+<doc>Check point annotation is enable</doc>
+<arguments>
+<arg>${expected3}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@id='point_FreeDrawingTrigger']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@id='point_FreeDrawingTrigger']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.568" endtime="20200217 10:03:31.585"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.568" endtime="20200217 10:03:31.586"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='point_FreeDrawingTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='point_FreeDrawingTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.598" level="INFO">Element '//div[@id='point_FreeDrawingTrigger']' attribute 'data-original-title' contains value 'Punto'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.586" endtime="20200217 10:03:31.598"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.586" endtime="20200217 10:03:31.598"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.567" endtime="20200217 10:03:31.598"></status>
+</kw>
+<kw name="Verify That Text Of Line Annotation Icon Is" library="CommonAnnotationWeb">
+<doc>Check line annotation is enable</doc>
+<arguments>
+<arg>${expected4}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@id='linestring_FreeDrawingTrigger']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@id='linestring_FreeDrawingTrigger']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.599" endtime="20200217 10:03:31.617"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.599" endtime="20200217 10:03:31.617"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='linestring_FreeDrawingTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='linestring_FreeDrawingTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.629" level="INFO">Element '//div[@id='linestring_FreeDrawingTrigger']' attribute 'data-original-title' contains value 'Línea'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.617" endtime="20200217 10:03:31.629"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.617" endtime="20200217 10:03:31.629"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.598" endtime="20200217 10:03:31.629"></status>
+</kw>
+<kw name="Verify That Text Of Rectangle Annotation Icon Is" library="CommonAnnotationWeb">
+<doc>Check rectangle annotation is enable</doc>
+<arguments>
+<arg>${expected5}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@id='rectangle_FreeDrawingTrigger']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@id='rectangle_FreeDrawingTrigger']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.630" endtime="20200217 10:03:31.652"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.630" endtime="20200217 10:03:31.652"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='rectangle_FreeDrawingTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='rectangle_FreeDrawingTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.670" level="INFO">Element '//div[@id='rectangle_FreeDrawingTrigger']' attribute 'data-original-title' contains value 'Rectángulo'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.653" endtime="20200217 10:03:31.670"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.652" endtime="20200217 10:03:31.670"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.630" endtime="20200217 10:03:31.670"></status>
+</kw>
+<kw name="Verify That Text Of Polygon Annotation Icon Is" library="CommonAnnotationWeb">
+<doc>Check polygon annotation is enable</doc>
+<arguments>
+<arg>${expected6}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@id='polygon_FreeDrawingTrigger']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@id='polygon_FreeDrawingTrigger']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.671" endtime="20200217 10:03:31.689"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.671" endtime="20200217 10:03:31.689"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='polygon_FreeDrawingTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='polygon_FreeDrawingTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.701" level="INFO">Element '//div[@id='polygon_FreeDrawingTrigger']' attribute 'data-original-title' contains value 'Polígono'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.690" endtime="20200217 10:03:31.701"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.689" endtime="20200217 10:03:31.702"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.670" endtime="20200217 10:03:31.702"></status>
+</kw>
+<kw name="Verify That Text Of Circle Annotation Icon Is" library="CommonAnnotationWeb">
+<doc>Check circle annotation is enable</doc>
+<arguments>
+<arg>${expected7}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@id='circle_FreeDrawingTrigger']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.702" endtime="20200217 10:03:31.720"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='circle_FreeDrawingTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='circle_FreeDrawingTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.731" level="INFO">Element '//div[@id='circle_FreeDrawingTrigger']' attribute 'data-original-title' contains value 'Círculo'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.721" endtime="20200217 10:03:31.731"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.720" endtime="20200217 10:03:31.731"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.702" endtime="20200217 10:03:31.732"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:30.495" endtime="20200217 10:03:31.732"></status>
+</kw>
+<kw name="Verify That Text Of Google Directions Icon Is" library="CommonWeb">
+<doc>Check the links of the Google Directions tool</doc>
+<arguments>
+<arg>Google Directions</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='GoogleDirectionTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.732" endtime="20200217 10:03:31.750"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='GoogleDirectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='GoogleDirectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.763" level="INFO">Element '//div[@id='GoogleDirectionTrigger']' attribute 'data-original-title' contains value 'Google Directions'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.751" endtime="20200217 10:03:31.763"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.750" endtime="20200217 10:03:31.763"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.732" endtime="20200217 10:03:31.763"></status>
+</kw>
+<kw name="Verify That Text Of Google Street View Icon Is" library="CommonWeb">
+<doc>Check the links of the Google Street View tool</doc>
+<arguments>
+<arg>Google Street View</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='streetTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.764" endtime="20200217 10:03:31.781"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='streetTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='streetTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.793" level="INFO">Element '//div[@id='streetTrigger']' attribute 'data-original-title' contains value 'Google Street View'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.782" endtime="20200217 10:03:31.793"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.781" endtime="20200217 10:03:31.794"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.763" endtime="20200217 10:03:31.794"></status>
+</kw>
+<kw name="Verify That Text Of Information Report Icon Is" library="CommonWeb">
+<doc>Check the links of the Information Report tool</doc>
+<arguments>
+<arg>Reporte informativo</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='infoReportTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.794" endtime="20200217 10:03:31.811"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='infoReportTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='infoReportTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.823" level="INFO">Element '//div[@id='infoReportTrigger']' attribute 'data-original-title' contains value 'Reporte informativo'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.812" endtime="20200217 10:03:31.823"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.812" endtime="20200217 10:03:31.823"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.794" endtime="20200217 10:03:31.823"></status>
+</kw>
+<kw name="Click On Measurement Down List Arrow" library="CommonWeb">
+<doc>Go to Measurement menu</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@id='smallTrigger_measureSet']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.824" endtime="20200217 10:03:31.846"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='smallTrigger_measureSet']</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.847" level="INFO">Clicking element 'xpath://div[@id='smallTrigger_measureSet']'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.846" endtime="20200217 10:03:31.884"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.823" endtime="20200217 10:03:31.884"></status>
+</kw>
+<kw name="Verify That Texts Of Measures Icon Are">
+<arguments>
+<arg>Medir la distancia</arg>
+<arg>Medir la superficie</arg>
+<arg>Medir la superficie circular</arg>
+</arguments>
+<kw name="Verify That Text Of Distance Measurement Icon Is" library="CommonWeb">
+<doc>Check the links of the Distance Measurement tool</doc>
+<arguments>
+<arg>${expected1}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='measureLineTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.885" endtime="20200217 10:03:31.905"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='measureLineTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='measureLineTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.919" level="INFO">Element '//div[@id='measureLineTrigger']' attribute 'data-original-title' contains value 'Medir la distancia'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.906" endtime="20200217 10:03:31.919"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.905" endtime="20200217 10:03:31.919"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.884" endtime="20200217 10:03:31.919"></status>
+</kw>
+<kw name="Verify That Text Of Surface Measurement Icon Is" library="CommonWeb">
+<doc>Check the links of the Surface Measurement tool</doc>
+<arguments>
+<arg>${expected2}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='measureAreaTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.920" endtime="20200217 10:03:31.939"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='measureAreaTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='measureAreaTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.954" level="INFO">Element '//div[@id='measureAreaTrigger']' attribute 'data-original-title' contains value 'Medir la superficie'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.939" endtime="20200217 10:03:31.954"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.939" endtime="20200217 10:03:31.955"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.919" endtime="20200217 10:03:31.955"></status>
+</kw>
+<kw name="Verify That Text Of Circular Surface Measurement Icon Is" library="CommonWeb">
+<doc>Check the links of the Circular Measurement tool</doc>
+<arguments>
+<arg>${expected3}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='measureCircleTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.955" endtime="20200217 10:03:31.975"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='measureCircleTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='measureCircleTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:31.988" level="INFO">Element '//div[@id='measureCircleTrigger']' attribute 'data-original-title' contains value 'Medir la superficie circular'.</msg>
+<status status="PASS" starttime="20200217 10:03:31.975" endtime="20200217 10:03:31.989"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.975" endtime="20200217 10:03:31.989"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.955" endtime="20200217 10:03:31.989"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.884" endtime="20200217 10:03:31.989"></status>
+</kw>
+<kw name="Click On Selection Down List Arrow" library="CommonWeb">
+<doc>Go to Selection menu</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@id='smallTrigger_selectionSet']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:31.990" endtime="20200217 10:03:32.014"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='smallTrigger_selectionSet']</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.014" level="INFO">Clicking element 'xpath://div[@id='smallTrigger_selectionSet']'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.014" endtime="20200217 10:03:32.054"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:31.989" endtime="20200217 10:03:32.054"></status>
+</kw>
+<kw name="Verify That Texts Of Selections Icon Are">
+<arguments>
+<arg>Selección puntual</arg>
+<arg>Selección lineal</arg>
+<arg>Selección rectangular</arg>
+<arg>Selección poligonal</arg>
+<arg>Selección circular</arg>
+</arguments>
+<kw name="Verify That Text Of Punctual Selection Icon Is" library="CommonWeb">
+<doc>Check the links of the Punctual Selection tool</doc>
+<arguments>
+<arg>${expected1}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='point_SelectionTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.055" endtime="20200217 10:03:32.075"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='point_SelectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='point_SelectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.088" level="INFO">Element '//div[@id='point_SelectionTrigger']' attribute 'data-original-title' contains value 'Selección puntual'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.075" endtime="20200217 10:03:32.088"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.075" endtime="20200217 10:03:32.088"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.055" endtime="20200217 10:03:32.088"></status>
+</kw>
+<kw name="Verify That Text Of Linear Selection Icon Is" library="CommonWeb">
+<doc>Check the links of the Linear Selection tool</doc>
+<arguments>
+<arg>${expected2}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='linestring_SelectionTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.089" endtime="20200217 10:03:32.108"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='linestring_SelectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='linestring_SelectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.121" level="INFO">Element '//div[@id='linestring_SelectionTrigger']' attribute 'data-original-title' contains value 'Selección lineal'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.109" endtime="20200217 10:03:32.121"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.108" endtime="20200217 10:03:32.122"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.088" endtime="20200217 10:03:32.122"></status>
+</kw>
+<kw name="Verify That Text Of Rectangular Selection Icon Is" library="CommonWeb">
+<doc>Check the links of the Rentangular Selection tool</doc>
+<arguments>
+<arg>${expected3}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='rectangle_SelectionTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.122" endtime="20200217 10:03:32.142"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='rectangle_SelectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='rectangle_SelectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.155" level="INFO">Element '//div[@id='rectangle_SelectionTrigger']' attribute 'data-original-title' contains value 'Selección rectangular'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.142" endtime="20200217 10:03:32.155"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.142" endtime="20200217 10:03:32.155"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.122" endtime="20200217 10:03:32.156"></status>
+</kw>
+<kw name="Verify That Text Of Polygonal Selection Icon Is" library="CommonWeb">
+<doc>Check the links of the Polygonal Selection tool</doc>
+<arguments>
+<arg>${expected4}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='polygon_SelectionTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.156" endtime="20200217 10:03:32.176"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='polygon_SelectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='polygon_SelectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.189" level="INFO">Element '//div[@id='polygon_SelectionTrigger']' attribute 'data-original-title' contains value 'Selección poligonal'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.176" endtime="20200217 10:03:32.190"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.176" endtime="20200217 10:03:32.190"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.156" endtime="20200217 10:03:32.190"></status>
+</kw>
+<kw name="Verify That Text Of Circular Selection Icon Is" library="CommonWeb">
+<doc>Check the links of the Circular Selection tool</doc>
+<arguments>
+<arg>${expected5}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='circle_SelectionTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.190" endtime="20200217 10:03:32.208"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='circle_SelectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='circle_SelectionTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.220" level="INFO">Element '//div[@id='circle_SelectionTrigger']' attribute 'data-original-title' contains value 'Selección circular'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.209" endtime="20200217 10:03:32.221"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.209" endtime="20200217 10:03:32.221"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.190" endtime="20200217 10:03:32.221"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.055" endtime="20200217 10:03:32.221"></status>
+</kw>
+<kw name="Verify That Text Of Show Sidebar Icon Is" library="CommonWeb">
+<doc>Check the links of the Layer List menu</doc>
+<arguments>
+<arg>Panel lateral</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='TabMenuControlTrigger']</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.222" endtime="20200217 10:03:32.238"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Attribute Value Should Be</arg>
+<arg>//div[@id='TabMenuControlTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>//div[@id='TabMenuControlTrigger']</arg>
+<arg>data-original-title</arg>
+<arg>${iconText}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.251" level="INFO">Element '//div[@id='TabMenuControlTrigger']' attribute 'data-original-title' contains value 'Panel lateral'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.240" endtime="20200217 10:03:32.252"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.238" endtime="20200217 10:03:32.252"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.221" endtime="20200217 10:03:32.252"></status>
+</kw>
+<kw name="Click On Show Sidebar Icon" library="CommonWeb">
+<doc>Click on the menu to open layer list</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@id='TabMenuControlTrigger']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.253" endtime="20200217 10:03:32.272"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='TabMenuControlTrigger']</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.272" level="INFO">Clicking element 'xpath://div[@id='TabMenuControlTrigger']'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.272" endtime="20200217 10:03:32.323"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.252" endtime="20200217 10:03:32.323"></status>
+</kw>
+<kw name="Verify That The Sidebar Icon Contains The Texts">
+<arguments>
+<arg>Capas</arg>
+<arg>Consultas</arg>
+<arg>Mis mapas</arg>
+</arguments>
+<kw name="Verify That Text Of Layers Tab Is" library="CommonWeb">
+<doc>Check the links of the Layer Tab</doc>
+<arguments>
+<arg>${expected1}</arg>
+</arguments>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//div[@class='ulList']//li</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.325" endtime="20200217 10:03:32.566"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.324" endtime="20200217 10:03:32.566"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.567" level="INFO">Verifying element '//div[@class='ulList']//li' contains exact text 'Capas'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.567" endtime="20200217 10:03:32.592"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.566" endtime="20200217 10:03:32.592"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.324" endtime="20200217 10:03:32.593"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.324" endtime="20200217 10:03:32.593"></status>
+</kw>
+<kw name="Verify That Text Of Search Tab Is" library="CommonWeb">
+<doc>Check the links of the Search Tab</doc>
+<arguments>
+<arg>${expected2}</arg>
+</arguments>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//div[@class='ulList']//li[2]</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.594" endtime="20200217 10:03:32.622"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.594" endtime="20200217 10:03:32.623"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.624" level="INFO">Verifying element '//div[@class='ulList']//li[2]' contains exact text 'Consultas'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.623" endtime="20200217 10:03:32.642"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.623" endtime="20200217 10:03:32.643"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.593" endtime="20200217 10:03:32.643"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.593" endtime="20200217 10:03:32.643"></status>
+</kw>
+<kw name="Verify That Text Of My Maps Tab Is" library="CommonWeb">
+<doc>Check the links of the Context Tab</doc>
+<arguments>
+<arg>${expected3}</arg>
+</arguments>
+<kw name="Verify Text" library="CommonWeb">
+<doc>Check for the text existence on the locator</doc>
+<arguments>
+<arg>//div[@class='ulList']//li[3]</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>2s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.644" endtime="20200217 10:03:32.663"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.644" endtime="20200217 10:03:32.663"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.664" level="INFO">Verifying element '//div[@class='ulList']//li[3]' contains exact text 'Mis mapas'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.664" endtime="20200217 10:03:32.682"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.664" endtime="20200217 10:03:32.682"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.644" endtime="20200217 10:03:32.682"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.643" endtime="20200217 10:03:32.682"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.323" endtime="20200217 10:03:32.682"></status>
+</kw>
+<kw name="Click On Logout" library="CommonLogin">
+<doc>Click on Log out option in JMap Web</doc>
+<kw name="Click On Options Icon" library="CommonWeb">
+<doc>Go to Option menu</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://i[@class='configMenuIcon']</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.683" endtime="20200217 10:03:32.700"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://i[@class='configMenuIcon']</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.701" level="INFO">Clicking element 'xpath://i[@class='configMenuIcon']'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.701" endtime="20200217 10:03:32.738"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.683" endtime="20200217 10:03:32.738"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@class='headerContainer']//li[4]</arg>
+<arg>timeout=10s</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:32.738" endtime="20200217 10:03:32.763"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@class='headerContainer']//li[4]</arg>
+</arguments>
+<msg timestamp="20200217 10:03:32.763" level="INFO">Clicking element 'xpath://div[@class='headerContainer']//li[4]'.</msg>
+<status status="PASS" starttime="20200217 10:03:32.763" endtime="20200217 10:03:33.016"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200217 10:03:34.017" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200217 10:03:33.016" endtime="20200217 10:03:34.017"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:32.683" endtime="20200217 10:03:34.018"></status>
+</kw>
+<kw name="Close JMap Web" library="CommonKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200217 10:03:34.020" endtime="20200217 10:03:36.165"></status>
+</kw>
+<kw name="Check Metrics" library="CommonKeywords">
+<doc>This Keyword used to check the elapsed time, and display it in the console.</doc>
+<assign>
+<var>${ElapsedTime}</var>
+</assign>
+<kw name="End Metrics" library="CommonKeywords">
+<doc>This Keyword give the end time when the execution of the test case starts.
+And it account elapsed time for the execution</doc>
+<assign>
+<var>${duration}</var>
+</assign>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=epoch</arg>
+</arguments>
+<assign>
+<var>${tc_end}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.167" level="INFO">${tc_end} = 1581951816.166576</msg>
+<status status="PASS" starttime="20200217 10:03:36.167" endtime="20200217 10:03:36.167"></status>
+</kw>
+<kw name="Subtract Time From Time" library="DateTime">
+<doc>Subtracts time from another time and returns the resulting time.</doc>
+<arguments>
+<arg>${tc_end}</arg>
+<arg>${tc_start}</arg>
+</arguments>
+<assign>
+<var>${tc_duration}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.167" level="INFO">${tc_duration} = 19.76004981994629</msg>
+<status status="PASS" starttime="20200217 10:03:36.167" endtime="20200217 10:03:36.167"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${tc_duration}/60</arg>
+</arguments>
+<assign>
+<var>${tc_duration}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.168" level="INFO">${tc_duration} = 0.3293341636657715</msg>
+<status status="PASS" starttime="20200217 10:03:36.168" endtime="20200217 10:03:36.168"></status>
+</kw>
+<msg timestamp="20200217 10:03:36.168" level="INFO">${duration} = 0.3293341636657715</msg>
+<status status="PASS" starttime="20200217 10:03:36.166" endtime="20200217 10:03:36.168"></status>
+</kw>
+<kw name="Set Tags" library="BuiltIn">
+<doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
+<arguments>
+<arg>Time Out</arg>
+</arguments>
+<msg timestamp="20200217 10:03:36.169" level="INFO">Set tag 'Time Out'.</msg>
+<status status="PASS" starttime="20200217 10:03:36.169" endtime="20200217 10:03:36.169"></status>
+</kw>
+<msg timestamp="20200217 10:03:36.169" level="INFO">${ElapsedTime} = 0.3293341636657715</msg>
+<status status="PASS" starttime="20200217 10:03:36.166" endtime="20200217 10:03:36.169"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>================================================</arg>
+</arguments>
+<msg timestamp="20200217 10:03:36.169" level="INFO">================================================</msg>
+<status status="PASS" starttime="20200217 10:03:36.169" endtime="20200217 10:03:36.170"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${SUITE_NAME}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:36.170" level="INFO">JMapRobotTests.Tests.Jmap 7.0.jmapWeb.CheckLanguageTests</msg>
+<status status="PASS" starttime="20200217 10:03:36.170" endtime="20200217 10:03:36.170"></status>
+</kw>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${SUITE_NAME}</arg>
+<arg>.</arg>
+</arguments>
+<assign>
+<var>@{listeSuiteName}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.170" level="INFO">@{listeSuiteName} = [ JMapRobotTests | Tests | Jmap 7 | 0 | jmapWeb | CheckLanguageTests ]</msg>
+<status status="PASS" starttime="20200217 10:03:36.170" endtime="20200217 10:03:36.170"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${listeSuiteName}</arg>
+</arguments>
+<assign>
+<var>${LengthSuiteName}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.171" level="INFO">Length is 6</msg>
+<msg timestamp="20200217 10:03:36.171" level="INFO">${LengthSuiteName} = 6</msg>
+<status status="PASS" starttime="20200217 10:03:36.171" endtime="20200217 10:03:36.171"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${listeSuiteName[${LengthSuiteName}-1]}</arg>
+</arguments>
+<assign>
+<var>${suiteName}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.171" level="INFO">${suiteName} = CheckLanguageTests</msg>
+<status status="PASS" starttime="20200217 10:03:36.171" endtime="20200217 10:03:36.172"></status>
+</kw>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${suiteName}</arg>
+<arg>Tests</arg>
+</arguments>
+<assign>
+<var>@{suiteName}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.172" level="INFO">@{suiteName} = [ CheckLanguage |  ]</msg>
+<status status="PASS" starttime="20200217 10:03:36.172" endtime="20200217 10:03:36.172"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${suiteName[0]}</arg>
+</arguments>
+<assign>
+<var>${suiteName}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.172" level="INFO">${suiteName} = CheckLanguage</msg>
+<status status="PASS" starttime="20200217 10:03:36.172" endtime="20200217 10:03:36.173"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${suiteName}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:36.173" level="INFO">CheckLanguage</msg>
+<status status="PASS" starttime="20200217 10:03:36.173" endtime="20200217 10:03:36.173"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>================================================</arg>
+</arguments>
+<msg timestamp="20200217 10:03:36.173" level="INFO">================================================</msg>
+<status status="PASS" starttime="20200217 10:03:36.173" endtime="20200217 10:03:36.173"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:36.174" level="INFO">JM70-932:Verify text With spanish language</msg>
+<status status="PASS" starttime="20200217 10:03:36.174" endtime="20200217 10:03:36.174"></status>
+</kw>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+<arg>:</arg>
+</arguments>
+<assign>
+<var>@{listeTestName}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.174" level="INFO">@{listeTestName} = [ JM70-932 | Verify text With spanish language ]</msg>
+<status status="PASS" starttime="20200217 10:03:36.174" endtime="20200217 10:03:36.175"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${listeTestName}</arg>
+</arguments>
+<assign>
+<var>${LengthTest}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.175" level="INFO">Length is 2</msg>
+<msg timestamp="20200217 10:03:36.175" level="INFO">${LengthTest} = 2</msg>
+<status status="PASS" starttime="20200217 10:03:36.175" endtime="20200217 10:03:36.175"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${listeTestName[${LengthTest}-1]}</arg>
+</arguments>
+<assign>
+<var>${tesCaseName}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.175" level="INFO">${tesCaseName} = Verify text With spanish language</msg>
+<status status="PASS" starttime="20200217 10:03:36.175" endtime="20200217 10:03:36.176"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${tesCaseName}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:36.176" level="INFO">Verify text With spanish language</msg>
+<status status="PASS" starttime="20200217 10:03:36.176" endtime="20200217 10:03:36.176"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>================================================</arg>
+</arguments>
+<msg timestamp="20200217 10:03:36.176" level="INFO">================================================</msg>
+<status status="PASS" starttime="20200217 10:03:36.176" endtime="20200217 10:03:36.176"></status>
+</kw>
+<kw name="Open New Session" library="CommonKeywords">
+<doc>Open new session for the given username, password and application type
+The session id generated is stored in a global variable called SESSIONID.
+Use ${SESSIONID} wherever you want to access to the variable's value</doc>
+<arguments>
+<arg>${UserName}</arg>
+<arg>${Password}</arg>
+<arg>${TYPE}</arg>
+</arguments>
+<assign>
+<var>${BODY}</var>
+</assign>
+<kw name="Post" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a POST request to the endpoint.*</doc>
+<arguments>
+<arg>http://${localhost}:${internPort}/services/rest/v2.0/session</arg>
+<arg>body={"username": "${pUsername}","password": "${pPassword}","type": "${pType}"}</arg>
+<arg>allow_redirects=true</arg>
+<arg>headers={"Content-Type":"application/json"}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:36.177" endtime="20200217 10:03:36.279"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:36.280" endtime="20200217 10:03:36.280"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>$.status</arg>
+<arg>OK</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:36.281" endtime="20200217 10:03:36.301"></status>
+</kw>
+<kw name="Object" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON object.*</doc>
+<arguments>
+<arg>$.result</arg>
+</arguments>
+<assign>
+<var>${RESULT}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.319" level="INFO">${RESULT} = [{'sessionId': 1520996719, 'serverVersion': '7.0 Istanbul build 132', 'userFullName': 'userTest1', 'userEmailAddress': '', 'sessionExceed': False}]</msg>
+<status status="PASS" starttime="20200217 10:03:36.301" endtime="20200217 10:03:36.319"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${RESULT[0]}</arg>
+</arguments>
+<assign>
+<var>${RESULT}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.319" level="INFO">${RESULT} = {'sessionId': 1520996719, 'serverVersion': '7.0 Istanbul build 132', 'userFullName': 'userTest1', 'userEmailAddress': '', 'sessionExceed': False}</msg>
+<status status="PASS" starttime="20200217 10:03:36.319" endtime="20200217 10:03:36.319"></status>
+</kw>
+<msg timestamp="20200217 10:03:36.320" level="INFO">${BODY} = {'sessionId': 1520996719, 'serverVersion': '7.0 Istanbul build 132', 'userFullName': 'userTest1', 'userEmailAddress': '', 'sessionExceed': False}</msg>
+<status status="PASS" starttime="20200217 10:03:36.177" endtime="20200217 10:03:36.320"></status>
+</kw>
+<kw name="GET Current Session ID" library="CommonKeywords">
+<doc>Get the session ID for the current session</doc>
+<arguments>
+<arg>${BODY}</arg>
+</arguments>
+<assign>
+<var>${SESSIONID}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${pResult['sessionId']}</arg>
+</arguments>
+<assign>
+<var>${getSessionID}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.320" level="INFO">${getSessionID} = 1520996719</msg>
+<status status="PASS" starttime="20200217 10:03:36.320" endtime="20200217 10:03:36.320"></status>
+</kw>
+<msg timestamp="20200217 10:03:36.321" level="INFO">${SESSIONID} = 1520996719</msg>
+<status status="PASS" starttime="20200217 10:03:36.320" endtime="20200217 10:03:36.321"></status>
+</kw>
+<kw name="GET Current Server Version" library="CommonKeywords">
+<doc>Get the server version (Build) for the current session</doc>
+<arguments>
+<arg>${BODY}</arg>
+</arguments>
+<assign>
+<var>${buildName}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${pResult['serverVersion']}</arg>
+</arguments>
+<assign>
+<var>${getBuild}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.322" level="INFO">${getBuild} = 7.0 Istanbul build 132</msg>
+<status status="PASS" starttime="20200217 10:03:36.321" endtime="20200217 10:03:36.322"></status>
+</kw>
+<msg timestamp="20200217 10:03:36.322" level="INFO">${buildName} = 7.0 Istanbul build 132</msg>
+<status status="PASS" starttime="20200217 10:03:36.321" endtime="20200217 10:03:36.322"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>JMap ${buildName}</arg>
+</arguments>
+<assign>
+<var>${buildName}</var>
+</assign>
+<msg timestamp="20200217 10:03:36.322" level="INFO">${buildName} = JMap 7.0 Istanbul build 132</msg>
+<status status="PASS" starttime="20200217 10:03:36.322" endtime="20200217 10:03:36.322"></status>
+</kw>
+<kw name="Close The Current Session" library="CommonKeywords">
+<doc>Close REST API session by given session id</doc>
+<arguments>
+<arg>${SESSIONID}</arg>
+</arguments>
+<kw name="Delete" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a DELETE request to the endpoint.*</doc>
+<arguments>
+<arg>http://${localhost}:${internPort}/services/rest/v2.0/session?sessionId=${SESSION}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:36.323" endtime="20200217 10:03:36.330"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>$.message</arg>
+<arg>Session has been closed</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:36.330" endtime="20200217 10:03:36.349"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>$.status</arg>
+<arg>OK</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:36.350" endtime="20200217 10:03:36.369"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:36.323" endtime="20200217 10:03:36.369"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>================================================================================</arg>
+</arguments>
+<msg timestamp="20200217 10:03:36.369" level="INFO">================================================================================</msg>
+<status status="PASS" starttime="20200217 10:03:36.369" endtime="20200217 10:03:36.370"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn" type="teardown">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${useTL}"=="true"</arg>
+<arg>Go To Testlink To Update Test Case</arg>
+<arg>${projectNum}</arg>
+<arg>${testPlan}</arg>
+<arg>${buildName}</arg>
+<arg>${suiteName}</arg>
+<arg>${tesCaseName}</arg>
+<arg>${ElapsedTime}</arg>
+</arguments>
+<kw name="Go To Testlink To Update Test Case" library="CommonKeywords">
+<arguments>
+<arg>${projectNum}</arg>
+<arg>${testPlan}</arg>
+<arg>${buildName}</arg>
+<arg>${suiteName}</arg>
+<arg>${tesCaseName}</arg>
+<arg>${ElapsedTime}</arg>
+</arguments>
+<kw name="Init Api Class TestLinkAPIClient" library="CommonKeywords">
+<arguments>
+<arg>${TL_URL}</arg>
+<arg>${DEV_KEY}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>\n=================== Go To Connect To Testlink ===================</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:36.371" level="INFO">
+=================== Go To Connect To Testlink ===================</msg>
+<status status="PASS" starttime="20200217 10:03:36.371" endtime="20200217 10:03:36.371"></status>
+</kw>
+<kw name="Create Api Client" library="TestlinkAPILibrary">
+<doc>Creates a new TestLink-API-Python-client (XMLRPC), using Python class 
+TestlinkAPIClient or TestlinkAPIGeneric.</doc>
+<arguments>
+<arg>TestlinkAPIClient</arg>
+<arg>server_url=${URL}</arg>
+<arg>devkey=${API_KEY}</arg>
+</arguments>
+<assign>
+<var>${tlapi_client}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.175" level="INFO">${tlapi_client} = 
+TestLink API - class TestlinkAPIClient - version 0.8.1 (PY 3.7.3)
+@authors: Luiko Czub, Olivier Renault, James Stock, TestLink-API-Python-client developers
+
+Current connection settings
+ Server URL: h...</msg>
+<status status="PASS" starttime="20200217 10:03:36.371" endtime="20200217 10:03:40.176"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${tlapi_client}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.177" endtime="20200217 10:03:40.356"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>-----&gt; Testlink is connected successfully</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.356" level="INFO">-----&gt; Testlink is connected successfully</msg>
+<status status="PASS" starttime="20200217 10:03:40.356" endtime="20200217 10:03:40.356"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>=================================================================================</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.357" level="INFO">=================================================================================</msg>
+<status status="PASS" starttime="20200217 10:03:40.357" endtime="20200217 10:03:40.357"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:36.371" endtime="20200217 10:03:40.357"></status>
+</kw>
+<kw name="Call Api Method" library="TestlinkAPILibrary">
+<doc>Calls a TestLink API method and returns TestLinks server response.</doc>
+<arguments>
+<arg>getProjects</arg>
+</arguments>
+<assign>
+<var>@{projects}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.456" level="INFO">@{projects} = [ {'id': '1964', 'notes': '', 'color': '', 'active': '1', 'option_reqs': '0', 'option_priority': '0', 'option_automation': '0', 'options': 'O:8:"stdClass":4:{s:19:"requirementsEnabled";i:0;s:19:"testP...</msg>
+<status status="PASS" starttime="20200217 10:03:40.357" endtime="20200217 10:03:40.457"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${projects}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.458" level="INFO">Length is 10</msg>
+<msg timestamp="20200217 10:03:40.459" level="INFO">${length} = 10</msg>
+<status status="PASS" starttime="20200217 10:03:40.458" endtime="20200217 10:03:40.459"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${projects[${projectNum}]}</arg>
+</arguments>
+<assign>
+<var>${project}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.460" level="INFO">${project} = {'id': '4960', 'notes': '', 'color': '', 'active': '1', 'option_reqs': '0', 'option_priority': '0', 'option_automation': '0', 'options': 'O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPri...</msg>
+<status status="PASS" starttime="20200217 10:03:40.460" endtime="20200217 10:03:40.460"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${project}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.461" level="INFO">{'id': '4960', 'notes': '', 'color': '', 'active': '1', 'option_reqs': '0', 'option_priority': '0', 'option_automation': '0', 'options': 'O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}', 'prefix': 'JM70', 'tc_counter': '1112', 'is_public': '1', 'issue_tracker_enabled': '0', 'reqmgr_integration_enabled': '0', 'api_key': '5bad96bc97c7a43833402dd65e468024f00370e7535d8438fa11163c66b2d0a9', 'name': 'Jmap 7.0', 'opt': {'requirementsEnabled': 1, 'testPriorityEnabled': 1, 'automationEnabled': 1, 'inventoryEnabled': 0}}</msg>
+<status status="PASS" starttime="20200217 10:03:40.461" endtime="20200217 10:03:40.461"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${project['name']}</arg>
+</arguments>
+<assign>
+<var>${projectNAME}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.462" level="INFO">${projectNAME} = Jmap 7.0</msg>
+<status status="PASS" starttime="20200217 10:03:40.461" endtime="20200217 10:03:40.462"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${project['id']}</arg>
+</arguments>
+<assign>
+<var>${projectID}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.462" level="INFO">${projectID} = 4960</msg>
+<status status="PASS" starttime="20200217 10:03:40.462" endtime="20200217 10:03:40.462"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>=================================================================================</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.462" level="INFO">=================================================================================</msg>
+<status status="PASS" starttime="20200217 10:03:40.462" endtime="20200217 10:03:40.463"></status>
+</kw>
+<kw name="Call Api Method" library="TestlinkAPILibrary">
+<doc>Calls a TestLink API method and returns TestLinks server response.</doc>
+<arguments>
+<arg>getTestPlanByName</arg>
+<arg>testprojectname=${projectNAME}</arg>
+<arg>testplanname=${CurrentTestPlan}</arg>
+</arguments>
+<assign>
+<var>@{testPlans}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.560" level="INFO">@{testPlans} = [ {'id': '6381', 'testproject_id': '4960', 'notes': '', 'active': '1', 'is_open': '1', 'is_public': '1', 'api_key': 'd51e9fc5cf182e4821adcc1ef29ea5af29ca0bb64de6f11c3a6c82acfaea7002', 'name': 'Full te...</msg>
+<status status="PASS" starttime="20200217 10:03:40.463" endtime="20200217 10:03:40.561"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${testPlans}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.563" level="INFO">Length is 1</msg>
+<msg timestamp="20200217 10:03:40.563" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20200217 10:03:40.562" endtime="20200217 10:03:40.564"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${testPlans}[${length-1}]</arg>
+</arguments>
+<assign>
+<var>${testPlan}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.566" level="INFO">${testPlan} = {'id': '6381', 'testproject_id': '4960', 'notes': '', 'active': '1', 'is_open': '1', 'is_public': '1', 'api_key': 'd51e9fc5cf182e4821adcc1ef29ea5af29ca0bb64de6f11c3a6c82acfaea7002', 'name': 'Full test...</msg>
+<status status="PASS" starttime="20200217 10:03:40.564" endtime="20200217 10:03:40.566"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${testPlan}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.569" level="INFO">{'id': '6381', 'testproject_id': '4960', 'notes': '', 'active': '1', 'is_open': '1', 'is_public': '1', 'api_key': 'd51e9fc5cf182e4821adcc1ef29ea5af29ca0bb64de6f11c3a6c82acfaea7002', 'name': 'Full test'}</msg>
+<status status="PASS" starttime="20200217 10:03:40.568" endtime="20200217 10:03:40.569"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${testPlan['name']}</arg>
+</arguments>
+<assign>
+<var>${testPlanNAME}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.571" level="INFO">${testPlanNAME} = Full test</msg>
+<status status="PASS" starttime="20200217 10:03:40.570" endtime="20200217 10:03:40.571"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${testPlan['id']}</arg>
+</arguments>
+<assign>
+<var>${testPlanID}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.573" level="INFO">${testPlanID} = 6381</msg>
+<status status="PASS" starttime="20200217 10:03:40.572" endtime="20200217 10:03:40.574"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>=================================================================================</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.575" level="INFO">=================================================================================</msg>
+<status status="PASS" starttime="20200217 10:03:40.575" endtime="20200217 10:03:40.576"></status>
+</kw>
+<kw name="Call Api Method" library="TestlinkAPILibrary">
+<doc>Calls a TestLink API method and returns TestLinks server response.</doc>
+<arguments>
+<arg>getLatestBuildForTestPlan</arg>
+<arg>${testPlanID}</arg>
+</arguments>
+<assign>
+<var>${latestBuild}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.676" level="INFO">${latestBuild} = {'id': '816', 'testplan_id': '6381', 'name': 'JMap 7.0 Istanbul build 132', 'notes': '&lt;p&gt;\n\tHot Fix 2&lt;/p&gt;\n', 'active': '1', 'is_open': '1', 'release_date': '2020-02-14', 'closed_on_date': '', 'creat...</msg>
+<status status="PASS" starttime="20200217 10:03:40.577" endtime="20200217 10:03:40.676"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${latestBuild}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.676" level="INFO">Length is 9</msg>
+<msg timestamp="20200217 10:03:40.676" level="INFO">${length} = 9</msg>
+<status status="PASS" starttime="20200217 10:03:40.676" endtime="20200217 10:03:40.677"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${latestBuild['id']}</arg>
+</arguments>
+<assign>
+<var>${latestBuildID}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.677" level="INFO">${latestBuildID} = 816</msg>
+<status status="PASS" starttime="20200217 10:03:40.677" endtime="20200217 10:03:40.677"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${latestBuild['name']}</arg>
+</arguments>
+<assign>
+<var>${latestBuildNAME}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.678" level="INFO">${latestBuildNAME} = JMap 7.0 Istanbul build 132</msg>
+<status status="PASS" starttime="20200217 10:03:40.677" endtime="20200217 10:03:40.678"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${latestBuildNAME}' != '${CurrentBuildName}'</arg>
+<arg>Set Variable</arg>
+<arg>${CurrentBuildName}</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${latestBuildNAME}</arg>
+</arguments>
+<assign>
+<var>${latestBuildNAME}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${latestBuildNAME}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.678" endtime="20200217 10:03:40.678"></status>
+</kw>
+<msg timestamp="20200217 10:03:40.679" level="INFO">${latestBuildNAME} = JMap 7.0 Istanbul build 132</msg>
+<status status="PASS" starttime="20200217 10:03:40.678" endtime="20200217 10:03:40.679"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${latestBuildNAME}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.679" level="INFO">JMap 7.0 Istanbul build 132</msg>
+<status status="PASS" starttime="20200217 10:03:40.679" endtime="20200217 10:03:40.679"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>=================================================================================</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.680" level="INFO">=================================================================================</msg>
+<status status="PASS" starttime="20200217 10:03:40.679" endtime="20200217 10:03:40.680"></status>
+</kw>
+<kw name="Call Api Method" library="TestlinkAPILibrary">
+<doc>Calls a TestLink API method and returns TestLinks server response.</doc>
+<arguments>
+<arg>getTestCaseIDByName</arg>
+<arg>testcasename=${caseName}</arg>
+<arg>testsuitname=${suitName}</arg>
+<arg>testprojectname=${projectNAME}</arg>
+</arguments>
+<assign>
+<var>@{testCases}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.797" level="INFO">@{testCases} = [ {'id': '8608', 'name': 'Verify text With spanish language', 'parent_id': '8603', 'tsuite_name': 'CheckLanguage', 'tc_external_id': '932'} ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.680" endtime="20200217 10:03:40.798"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${testCases}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.799" level="INFO">Length is 1</msg>
+<msg timestamp="20200217 10:03:40.800" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20200217 10:03:40.799" endtime="20200217 10:03:40.800"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${testCases[${i}]}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.803" level="INFO">{'id': '8608', 'name': 'Verify text With spanish language', 'parent_id': '8603', 'tsuite_name': 'CheckLanguage', 'tc_external_id': '932'}</msg>
+<status status="PASS" starttime="20200217 10:03:40.802" endtime="20200217 10:03:40.804"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${testCases[${i}]['tsuite_name']}'=='${suitName}'</arg>
+<arg>Set Variable</arg>
+<arg>${testCases}[${i}]</arg>
+</arguments>
+<assign>
+<var>${testCase}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${testCases}[${i}]</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.806" endtime="20200217 10:03:40.807"></status>
+</kw>
+<msg timestamp="20200217 10:03:40.808" level="INFO">${testCase} = {'id': '8608', 'name': 'Verify text With spanish language', 'parent_id': '8603', 'tsuite_name': 'CheckLanguage', 'tc_external_id': '932'}</msg>
+<status status="PASS" starttime="20200217 10:03:40.805" endtime="20200217 10:03:40.808"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${testCases[${i}]['tsuite_name']}'=='${suitName}'</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.810" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20200217 10:03:40.809" endtime="20200217 10:03:40.810"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.801" endtime="20200217 10:03:40.811"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.801" endtime="20200217 10:03:40.811"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${testCase}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.812" level="INFO">{'id': '8608', 'name': 'Verify text With spanish language', 'parent_id': '8603', 'tsuite_name': 'CheckLanguage', 'tc_external_id': '932'}</msg>
+<status status="PASS" starttime="20200217 10:03:40.811" endtime="20200217 10:03:40.812"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${testCase['name']}</arg>
+</arguments>
+<assign>
+<var>${testCaseNAME}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.814" level="INFO">${testCaseNAME} = Verify text With spanish language</msg>
+<status status="PASS" starttime="20200217 10:03:40.813" endtime="20200217 10:03:40.814"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${testCase['id']}</arg>
+</arguments>
+<assign>
+<var>${testCaseID}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.815" level="INFO">${testCaseID} = 8608</msg>
+<status status="PASS" starttime="20200217 10:03:40.814" endtime="20200217 10:03:40.815"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${testCase['tc_external_id']}</arg>
+</arguments>
+<assign>
+<var>${testCaseExternalID}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.816" level="INFO">${testCaseExternalID} = 932</msg>
+<status status="PASS" starttime="20200217 10:03:40.815" endtime="20200217 10:03:40.816"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>=================================================================================</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.817" level="INFO">=================================================================================</msg>
+<status status="PASS" starttime="20200217 10:03:40.817" endtime="20200217 10:03:40.817"></status>
+</kw>
+<kw name="Call Api Method" library="TestlinkAPILibrary">
+<doc>Calls a TestLink API method and returns TestLinks server response.</doc>
+<arguments>
+<arg>getLastExecutionResult</arg>
+<arg>testplanid=${testPlanID}</arg>
+<arg>testcaseid=${testCaseID}</arg>
+<arg>testCaseexternaid=${testCaseExternalID}</arg>
+</arguments>
+<assign>
+<var>@{lastExecution}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.923" level="INFO">@{lastExecution} = [ {'id': '327908', 'build_id': '812', 'tester_id': '1', 'execution_ts': '2020-02-07 18:26:20', 'status': 'f', 'testplan_id': '6381', 'tcversion_id': '8609', 'tcversion_number': '1', 'platform_id': '0'...</msg>
+<status status="PASS" starttime="20200217 10:03:40.818" endtime="20200217 10:03:40.923"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${lastExecution}</arg>
+</arguments>
+<assign>
+<var>${Length1}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.924" level="INFO">Length is 1</msg>
+<msg timestamp="20200217 10:03:40.925" level="INFO">${Length1} = 1</msg>
+<status status="PASS" starttime="20200217 10:03:40.924" endtime="20200217 10:03:40.925"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${lastExecution[0]}</arg>
+</arguments>
+<assign>
+<var>${lastExecution}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.928" level="INFO">${lastExecution} = {'id': '327908', 'build_id': '812', 'tester_id': '1', 'execution_ts': '2020-02-07 18:26:20', 'status': 'f', 'testplan_id': '6381', 'tcversion_id': '8609', 'tcversion_number': '1', 'platform_id': '0', ...</msg>
+<status status="PASS" starttime="20200217 10:03:40.926" endtime="20200217 10:03:40.928"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${lastExecution}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.930" level="INFO">{'id': '327908', 'build_id': '812', 'tester_id': '1', 'execution_ts': '2020-02-07 18:26:20', 'status': 'f', 'testplan_id': '6381', 'tcversion_id': '8609', 'tcversion_number': '1', 'platform_id': '0', 'execution_type': '2', 'execution_duration': '0.32', 'notes': 'AUTOMATED TEST PASSED AND LAST EXECUTION TEST FAILED\nKnown Associated Issues:\nTFIFT-9639 JMap Web : Special characters are not supported\n'}</msg>
+<status status="PASS" starttime="20200217 10:03:40.929" endtime="20200217 10:03:40.930"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${lastExecution['id']}</arg>
+</arguments>
+<assign>
+<var>${lastExecutionID}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.932" level="INFO">${lastExecutionID} = 327908</msg>
+<status status="PASS" starttime="20200217 10:03:40.931" endtime="20200217 10:03:40.933"></status>
+</kw>
+<kw name="Run Keyword If Test Passed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<arguments>
+<arg>Update Test Case In Testlink With Passed</arg>
+<arg>${lastExecutionID}</arg>
+<arg>${lastExecution}</arg>
+<arg>${testCaseID}</arg>
+<arg>${testPlanID}</arg>
+<arg>${latestBuildNAME}</arg>
+<arg>${Elapsed}</arg>
+</arguments>
+<kw name="Update Test Case In Testlink With Passed" library="CommonKeywords">
+<arguments>
+<arg>${lastExecutionID}</arg>
+<arg>${lastExecution}</arg>
+<arg>${testCaseID}</arg>
+<arg>${testPlanID}</arg>
+<arg>${latestBuildNAME}</arg>
+<arg>${Elapsed}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${lastExecutionID}'=='-1'</arg>
+<arg>The First Execution Passed</arg>
+<arg>${testCaseID}</arg>
+<arg>${testPlanID}</arg>
+<arg>${latestBuildNAME}</arg>
+<arg>${Elapsed}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.937" endtime="20200217 10:03:40.938"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${lastExecutionID}'!='-1'</arg>
+<arg>The Next Execution Passed</arg>
+<arg>${lastExecution}</arg>
+<arg>${testCaseID}</arg>
+<arg>${testPlanID}</arg>
+<arg>${latestBuildNAME}</arg>
+<arg>${Elapsed}</arg>
+</arguments>
+<kw name="The Next Execution Passed" library="CommonKeywords">
+<doc>Get the attributes of the previous execution and update the test case.</doc>
+<arguments>
+<arg>${lastExecution}</arg>
+<arg>${testCaseID}</arg>
+<arg>${testPlanID}</arg>
+<arg>${latestBuildNAME}</arg>
+<arg>${Elapsed}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${lastExecution['notes']}</arg>
+</arguments>
+<assign>
+<var>${lastExecutionNotes}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.944" level="INFO">${lastExecutionNotes} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST FAILED
+Known Associated Issues:
+TFIFT-9639 JMap Web : Special characters are not supported
+</msg>
+<status status="PASS" starttime="20200217 10:03:40.942" endtime="20200217 10:03:40.944"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${lastExecution['status']}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.946" level="INFO">${status} = f</msg>
+<status status="PASS" starttime="20200217 10:03:40.945" endtime="20200217 10:03:40.946"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${lastExecution['tester_id']}</arg>
+</arguments>
+<assign>
+<var>${testerid}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.948" level="INFO">${testerid} = 1</msg>
+<status status="PASS" starttime="20200217 10:03:40.947" endtime="20200217 10:03:40.948"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${issuesPrefix}</arg>
+</arguments>
+<assign>
+<var>${lengthIssuesPrefix}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.950" level="INFO">Length is 2</msg>
+<msg timestamp="20200217 10:03:40.950" level="INFO">${lengthIssuesPrefix} = 2</msg>
+<status status="PASS" starttime="20200217 10:03:40.949" endtime="20200217 10:03:40.950"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{isIssuesPrefix}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.952" level="INFO">@{isIssuesPrefix} = [ ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.951" endtime="20200217 10:03:40.952"></status>
+</kw>
+<kw name="${issue} IN [ @{issuesPrefix} ]" type="for">
+<kw name="${issue} = TFIFT" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${lastExecutionNotes}</arg>
+<arg>${issue}</arg>
+</arguments>
+<assign>
+<var>${isIssue}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${lastExecutionNotes}</arg>
+<arg>${issue}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.953" endtime="20200217 10:03:40.954"></status>
+</kw>
+<msg timestamp="20200217 10:03:40.954" level="INFO">${isIssue} = True</msg>
+<status status="PASS" starttime="20200217 10:03:40.953" endtime="20200217 10:03:40.954"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${isIssue}</arg>
+</arguments>
+<assign>
+<var>${isIssue}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.955" level="INFO">${isIssue} = True</msg>
+<status status="PASS" starttime="20200217 10:03:40.954" endtime="20200217 10:03:40.955"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${isIssuesPrefix}</arg>
+<arg>${isIssue}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.955" endtime="20200217 10:03:40.956"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.952" endtime="20200217 10:03:40.956"></status>
+</kw>
+<kw name="${issue} = JMNG" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${lastExecutionNotes}</arg>
+<arg>${issue}</arg>
+</arguments>
+<assign>
+<var>${isIssue}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${lastExecutionNotes}</arg>
+<arg>${issue}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.957" level="FAIL">'AUTOMATED TEST PASSED AND LAST EXECUTION TEST FAILED
+Known Associated Issues:
+TFIFT-9639 JMap Web : Special characters are not supported
+' does not contain 'JMNG'</msg>
+<status status="FAIL" starttime="20200217 10:03:40.957" endtime="20200217 10:03:40.957"></status>
+</kw>
+<msg timestamp="20200217 10:03:40.957" level="INFO">${isIssue} = False</msg>
+<status status="PASS" starttime="20200217 10:03:40.956" endtime="20200217 10:03:40.958"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${isIssue}</arg>
+</arguments>
+<assign>
+<var>${isIssue}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.958" level="INFO">${isIssue} = False</msg>
+<status status="PASS" starttime="20200217 10:03:40.958" endtime="20200217 10:03:40.958"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${isIssuesPrefix}</arg>
+<arg>${isIssue}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.959" endtime="20200217 10:03:40.959"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.956" endtime="20200217 10:03:40.959"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.952" endtime="20200217 10:03:40.959"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${isIssuesPrefix}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.960" level="INFO">['True', 'False']</msg>
+<status status="PASS" starttime="20200217 10:03:40.960" endtime="20200217 10:03:40.960"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>List Should Contain Value</arg>
+<arg>${isIssuesPrefix}</arg>
+<arg>True</arg>
+</arguments>
+<assign>
+<var>${isIssueInList}</var>
+</assign>
+<kw name="List Should Contain Value" library="Collections">
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<arguments>
+<arg>${isIssuesPrefix}</arg>
+<arg>True</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.961" endtime="20200217 10:03:40.961"></status>
+</kw>
+<msg timestamp="20200217 10:03:40.961" level="INFO">${isIssueInList} = True</msg>
+<status status="PASS" starttime="20200217 10:03:40.960" endtime="20200217 10:03:40.961"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isIssueInList}' == '${True}'</arg>
+<arg>Get All Ticket Keys Of The Last Execution Notes</arg>
+<arg>${lastExecutionNotes}</arg>
+<arg>${issuesPrefix}</arg>
+<arg>${JiraUser}</arg>
+<arg>${JiraToken}</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<assign>
+<var>${lastExecutionNotes}</var>
+</assign>
+<kw name="Get All Ticket Keys Of The Last Execution Notes" library="CommonKeywords">
+<arguments>
+<arg>${lastExecutionNotes}</arg>
+<arg>${issuesPrefix}</arg>
+<arg>${JiraUser}</arg>
+<arg>${JiraToken}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>\n=================== Go To Get All Ticket Keys Of The Last Execution Notes ===================</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.963" level="INFO">
+=================== Go To Get All Ticket Keys Of The Last Execution Notes ===================</msg>
+<status status="PASS" starttime="20200217 10:03:40.963" endtime="20200217 10:03:40.963"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{allKeys}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.964" level="INFO">@{allKeys} = [ ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.963" endtime="20200217 10:03:40.964"></status>
+</kw>
+<kw name="${prefix} IN [ @{pIssuePrefix} ]" type="for">
+<kw name="${prefix} = TFIFT" type="foritem">
+<kw name="Get The Ticket Keys Of Notes For A Project Into The List" library="CommonKeywords">
+<arguments>
+<arg>${plastExecutionNotes}</arg>
+<arg>${prefix}</arg>
+<arg>@{allKeys}</arg>
+</arguments>
+<assign>
+<var>@{allKeys}</var>
+</assign>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${pThelastExecutionNotes}</arg>
+<arg>${pIssuePrefix}-</arg>
+</arguments>
+<assign>
+<var>@{keyNotes}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.965" level="INFO">@{keyNotes} = [ AUTOMATED TEST PASSED AND LAST EXECUTION TEST FAILED
+Known Associated Issues:
+ | 9639 JMap Web : Special characters are not supported
+ ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.965" endtime="20200217 10:03:40.965"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${keyNotes}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.966" level="INFO">['AUTOMATED TEST PASSED AND LAST EXECUTION TEST FAILED\nKnown Associated Issues:\n', '9639 JMap Web : Special characters are not supported\n']</msg>
+<status status="PASS" starttime="20200217 10:03:40.965" endtime="20200217 10:03:40.966"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${keyNotes}</arg>
+</arguments>
+<assign>
+<var>${lengthKeyNotes}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.967" level="INFO">Length is 2</msg>
+<msg timestamp="20200217 10:03:40.967" level="INFO">${lengthKeyNotes} = 2</msg>
+<status status="PASS" starttime="20200217 10:03:40.966" endtime="20200217 10:03:40.967"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${lengthKeyNotes} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${keyNotes[${i}]}</arg>
+<arg>${SPACE}</arg>
+</arguments>
+<assign>
+<var>@{TicketList}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.968" level="INFO">@{TicketList} = [ AUTOMATED | TEST | PASSED | AND | LAST | EXECUTION | TEST | FAILED
+Known | Associated | Issues:
+ ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.967" endtime="20200217 10:03:40.968"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${TicketList[0]}</arg>
+</arguments>
+<assign>
+<var>${keyNumber}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.968" level="INFO">${keyNumber} = AUTOMATED</msg>
+<status status="PASS" starttime="20200217 10:03:40.968" endtime="20200217 10:03:40.968"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Be True</arg>
+<arg>${keyNumber} &gt; 0</arg>
+</arguments>
+<assign>
+<var>${isNumber}</var>
+</assign>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${keyNumber} &gt; 0</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.969" level="FAIL">Evaluating expression 'AUTOMATED &gt; 0' failed: NameError: name 'AUTOMATED' is not defined</msg>
+<status status="FAIL" starttime="20200217 10:03:40.969" endtime="20200217 10:03:40.969"></status>
+</kw>
+<msg timestamp="20200217 10:03:40.970" level="INFO">${isNumber} = False</msg>
+<status status="PASS" starttime="20200217 10:03:40.969" endtime="20200217 10:03:40.970"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isNumber}' == '${True}'</arg>
+<arg>Append To List</arg>
+<arg>${listTickets}</arg>
+<arg>${pIssuePrefix}-${keyNumber}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.970" endtime="20200217 10:03:40.970"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.967" endtime="20200217 10:03:40.970"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${keyNotes[${i}]}</arg>
+<arg>${SPACE}</arg>
+</arguments>
+<assign>
+<var>@{TicketList}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.971" level="INFO">@{TicketList} = [ 9639 | JMap | Web | : | Special | characters | are | not | supported
+ ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.970" endtime="20200217 10:03:40.971"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${TicketList[0]}</arg>
+</arguments>
+<assign>
+<var>${keyNumber}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.971" level="INFO">${keyNumber} = 9639</msg>
+<status status="PASS" starttime="20200217 10:03:40.971" endtime="20200217 10:03:40.971"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Be True</arg>
+<arg>${keyNumber} &gt; 0</arg>
+</arguments>
+<assign>
+<var>${isNumber}</var>
+</assign>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${keyNumber} &gt; 0</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.972" endtime="20200217 10:03:40.972"></status>
+</kw>
+<msg timestamp="20200217 10:03:40.972" level="INFO">${isNumber} = True</msg>
+<status status="PASS" starttime="20200217 10:03:40.972" endtime="20200217 10:03:40.973"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isNumber}' == '${True}'</arg>
+<arg>Append To List</arg>
+<arg>${listTickets}</arg>
+<arg>${pIssuePrefix}-${keyNumber}</arg>
+</arguments>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${listTickets}</arg>
+<arg>${pIssuePrefix}-${keyNumber}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.973" endtime="20200217 10:03:40.973"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.973" endtime="20200217 10:03:40.974"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.970" endtime="20200217 10:03:40.974"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.967" endtime="20200217 10:03:40.974"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>-----&gt; Tickets: ${listTickets}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.974" level="INFO">-----&gt; Tickets: ['TFIFT-9639']</msg>
+<status status="PASS" starttime="20200217 10:03:40.974" endtime="20200217 10:03:40.974"></status>
+</kw>
+<msg timestamp="20200217 10:03:40.974" level="INFO">@{allKeys} = [ TFIFT-9639 ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.964" endtime="20200217 10:03:40.975"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.964" endtime="20200217 10:03:40.975"></status>
+</kw>
+<kw name="${prefix} = JMNG" type="foritem">
+<kw name="Get The Ticket Keys Of Notes For A Project Into The List" library="CommonKeywords">
+<arguments>
+<arg>${plastExecutionNotes}</arg>
+<arg>${prefix}</arg>
+<arg>@{allKeys}</arg>
+</arguments>
+<assign>
+<var>@{allKeys}</var>
+</assign>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${pThelastExecutionNotes}</arg>
+<arg>${pIssuePrefix}-</arg>
+</arguments>
+<assign>
+<var>@{keyNotes}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.976" level="INFO">@{keyNotes} = [ AUTOMATED TEST PASSED AND LAST EXECUTION TEST FAILED
+Known Associated Issues:
+TFIFT-9639 JMap Web : Special characters are not supported
+ ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.975" endtime="20200217 10:03:40.976"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${keyNotes}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.976" level="INFO">['AUTOMATED TEST PASSED AND LAST EXECUTION TEST FAILED\nKnown Associated Issues:\nTFIFT-9639 JMap Web : Special characters are not supported\n']</msg>
+<status status="PASS" starttime="20200217 10:03:40.976" endtime="20200217 10:03:40.976"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${keyNotes}</arg>
+</arguments>
+<assign>
+<var>${lengthKeyNotes}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.976" level="INFO">Length is 1</msg>
+<msg timestamp="20200217 10:03:40.977" level="INFO">${lengthKeyNotes} = 1</msg>
+<status status="PASS" starttime="20200217 10:03:40.976" endtime="20200217 10:03:40.977"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${lengthKeyNotes} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${keyNotes[${i}]}</arg>
+<arg>${SPACE}</arg>
+</arguments>
+<assign>
+<var>@{TicketList}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.977" level="INFO">@{TicketList} = [ AUTOMATED | TEST | PASSED | AND | LAST | EXECUTION | TEST | FAILED
+Known | Associated | Issues:
+TFIFT-9639 | JMap | Web | : | Special | characters | are | not | supported
+ ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.977" endtime="20200217 10:03:40.977"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${TicketList[0]}</arg>
+</arguments>
+<assign>
+<var>${keyNumber}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.978" level="INFO">${keyNumber} = AUTOMATED</msg>
+<status status="PASS" starttime="20200217 10:03:40.978" endtime="20200217 10:03:40.978"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Be True</arg>
+<arg>${keyNumber} &gt; 0</arg>
+</arguments>
+<assign>
+<var>${isNumber}</var>
+</assign>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${keyNumber} &gt; 0</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.979" level="FAIL">Evaluating expression 'AUTOMATED &gt; 0' failed: NameError: name 'AUTOMATED' is not defined</msg>
+<status status="FAIL" starttime="20200217 10:03:40.978" endtime="20200217 10:03:40.979"></status>
+</kw>
+<msg timestamp="20200217 10:03:40.979" level="INFO">${isNumber} = False</msg>
+<status status="PASS" starttime="20200217 10:03:40.978" endtime="20200217 10:03:40.979"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isNumber}' == '${True}'</arg>
+<arg>Append To List</arg>
+<arg>${listTickets}</arg>
+<arg>${pIssuePrefix}-${keyNumber}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.979" endtime="20200217 10:03:40.980"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.977" endtime="20200217 10:03:40.980"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.977" endtime="20200217 10:03:40.980"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>-----&gt; Tickets: ${listTickets}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.980" level="INFO">-----&gt; Tickets: ['TFIFT-9639']</msg>
+<status status="PASS" starttime="20200217 10:03:40.980" endtime="20200217 10:03:40.980"></status>
+</kw>
+<msg timestamp="20200217 10:03:40.981" level="INFO">@{allKeys} = [ TFIFT-9639 ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.975" endtime="20200217 10:03:40.981"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.975" endtime="20200217 10:03:40.981"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.964" endtime="20200217 10:03:40.981"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>-----&gt; All Keys Of Notes For A Project Into The List: ${allKeys}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.981" level="INFO">-----&gt; All Keys Of Notes For A Project Into The List: ['TFIFT-9639']</msg>
+<status status="PASS" starttime="20200217 10:03:40.981" endtime="20200217 10:03:40.981"></status>
+</kw>
+<kw name="${JiraPrefix} IN [ @{allKeys} ]" type="for">
+<kw name="${JiraPrefix} = TFIFT-9639" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${JiraPrefix}' != '${EMPTY}'</arg>
+<arg>Set Jira Link</arg>
+<arg>${JiraPrefix}</arg>
+</arguments>
+<kw name="Set Jira Link" library="CommonKeywords">
+<arguments>
+<arg>${JiraPrefix}</arg>
+</arguments>
+<kw name="Set Log Level" library="BuiltIn">
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<arguments>
+<arg>WARN</arg>
+</arguments>
+<assign>
+<var>${prev_level}</var>
+</assign>
+<status status="PASS" starttime="20200217 10:03:40.982" endtime="20200217 10:03:40.983"></status>
+</kw>
+<kw name="Set Test Message" library="BuiltIn">
+<doc>Sets message for the current test case.</doc>
+<arguments>
+<arg>*HTML* &lt;br/&gt;&lt;b&gt;Link:&lt;/b&gt; &lt;a href='https://k2geospatial.atlassian.net/browse/${jira_Id}'&gt;Jira Issue : ${jira_Id}&lt;/a&gt;&lt;br/&gt;</arg>
+<arg>append=${true}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.983" endtime="20200217 10:03:40.983"></status>
+</kw>
+<kw name="Set Log Level" library="BuiltIn">
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<arguments>
+<arg>${prev_level}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.984" level="INFO">Log level changed from WARN to INFO.</msg>
+<status status="PASS" starttime="20200217 10:03:40.983" endtime="20200217 10:03:40.984"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.982" endtime="20200217 10:03:40.984"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.982" endtime="20200217 10:03:40.984"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.982" endtime="20200217 10:03:40.984"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.981" endtime="20200217 10:03:40.984"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{notesNotClosed}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.985" level="INFO">@{notesNotClosed} = [ ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.984" endtime="20200217 10:03:40.985"></status>
+</kw>
+<kw name="${Key} IN [ @{allKeys} ]" type="for">
+<kw name="${Key} = TFIFT-9639" type="foritem">
+<kw name="Get Jira Status Of Ticket &quot;${Key}&quot; With Username &quot;${pJiraUser}&quot; And Authentication Token &quot;${pJiraToken}&quot;" library="CommonKeywords">
+<doc>This keyword is used to get the ticket key with the status from "Jira".</doc>
+<assign>
+<var>@{JiraTicketStatus}</var>
+</assign>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>\n=================== Go To Get Jira Status Of Ticket "${pticketKey}" ===================</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:40.986" level="INFO">
+=================== Go To Get Jira Status Of Ticket "TFIFT-9639" ===================</msg>
+<status status="PASS" starttime="20200217 10:03:40.985" endtime="20200217 10:03:40.986"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${pJiraUser}:${pJiraToken}</arg>
+</arguments>
+<assign>
+<var>${variable}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.986" level="INFO">${variable} = mboussad@k2geospatial.com:qhQqnQQBHNyP9aAemb6b4901</msg>
+<status status="PASS" starttime="20200217 10:03:40.986" endtime="20200217 10:03:40.986"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>$variable.encode("utf-8")</arg>
+</arguments>
+<assign>
+<var>${variable}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.990" level="INFO">${variable} = mboussad@k2geospatial.com:qhQqnQQBHNyP9aAemb6b4901</msg>
+<status status="PASS" starttime="20200217 10:03:40.987" endtime="20200217 10:03:40.990"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${variable}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.990" endtime="20200217 10:03:40.990"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>base64.b64encode($variable)</arg>
+<arg>modules=base64</arg>
+</arguments>
+<assign>
+<var>${Base64Token}</var>
+</assign>
+<msg timestamp="20200217 10:03:40.991" level="INFO">${Base64Token} = bWJvdXNzYWRAazJnZW9zcGF0aWFsLmNvbTpxaFFxblFRQkhOeVA5YUFlbWI2YjQ5MDE=</msg>
+<status status="PASS" starttime="20200217 10:03:40.990" endtime="20200217 10:03:40.991"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Token : ${Base64Token}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:40.991" endtime="20200217 10:03:40.991"></status>
+</kw>
+<kw name="Get" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a GET request to the endpoint.*</doc>
+<arguments>
+<arg>https://k2geospatial.atlassian.net/rest/api/2/issue/${pticketKey}?fields=status,summary</arg>
+<arg>headers={ "Authorization": "Basic ${Base64Token}", "Content-Type": "application/json" }</arg>
+</arguments>
+<assign>
+<var>${JSONFile}</var>
+</assign>
+<msg timestamp="20200217 10:03:41.556" level="INFO">${JSONFile} = {'seconds': 0.556101, 'status': 200, 'body': {'expand': 'renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations', 'id': '79965', 'self': 'https://k2geospatial.atlassian.net...</msg>
+<status status="PASS" starttime="20200217 10:03:40.992" endtime="20200217 10:03:41.556"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>\n${JSONFile}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:41.556" level="INFO">
+{'seconds': 0.556101, 'status': 200, 'body': {'expand': 'renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations', 'id': '79965', 'self': 'https://k2geospatial.atlassian.net/rest/api/2/issue/79965', 'key': 'TFIFT-9639', 'fields': {'summary': 'JMap Web : Special characters are not supported', 'status': {'self': 'https://k2geospatial.atlassian.net/rest/api/2/status/1', 'description': 'The issue is open and ready for the assignee to start work on it.', 'iconUrl': 'https://k2geospatial.atlassian.net/images/icons/statuses/open.png', 'name': 'Open', 'id': '1', 'statusCategory': {'self': 'https://k2geospatial.atlassian.net/rest/api/2/statuscategory/2', 'id': 2, 'key': 'new', 'colorName': 'blue-gray', 'name': 'To Do'}}}}, 'headers': {'Server': 'AtlassianProxy/1.15.8.1', 'Vary': 'Accept-Encoding', 'Cache-Control': 'no-cache, no-store, no-transform', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Encoding': 'gzip', 'Strict-Transport-Security': 'max-age=315360000; includeSubDomains; preload', 'Date': 'Mon, 17 Feb 2020 15:03:41 GMT', 'ATL-TraceId': '9ad82fe18008da9b', 'X-AACCOUNTID': '5cd060a509c5fa0fd9fa9451', 'X-AREQUESTID': '8002fb0d-7b79-4755-b265-c5597037ceec', 'X-XSS-Protection': '1; mode=block', 'Transfer-Encoding': 'chunked', 'Timing-Allow-Origin': '*', 'X-Content-Type-Options': 'nosniff', 'Connection': 'keep-alive', 'Set-Cookie': 'atlassian.xsrf.token=BVZI-RIQN-3AUP-J6IC_b720593b3878a9f24547260c575f6585f0575166_lin; Path=/; Secure'}}</msg>
+<status status="PASS" starttime="20200217 10:03:41.556" endtime="20200217 10:03:41.557"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${JSONFile['status']}'=='200'</arg>
+<arg>Log</arg>
+<arg>-----&gt; Jira is connected successfully</arg>
+<arg>console=yes</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>-----&gt; Jira is not connected</arg>
+<arg>console=yes</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>-----&gt; Jira is connected successfully</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:41.558" level="INFO">-----&gt; Jira is connected successfully</msg>
+<status status="PASS" starttime="20200217 10:03:41.557" endtime="20200217 10:03:41.558"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:41.557" endtime="20200217 10:03:41.558"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${JSONFile['body']['key']}</arg>
+</arguments>
+<assign>
+<var>${key}</var>
+</assign>
+<msg timestamp="20200217 10:03:41.558" level="INFO">${key} = TFIFT-9639</msg>
+<status status="PASS" starttime="20200217 10:03:41.558" endtime="20200217 10:03:41.558"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${JSONFile['body']['fields']['summary']}</arg>
+</arguments>
+<assign>
+<var>${summary}</var>
+</assign>
+<msg timestamp="20200217 10:03:41.559" level="INFO">${summary} = JMap Web : Special characters are not supported</msg>
+<status status="PASS" starttime="20200217 10:03:41.559" endtime="20200217 10:03:41.559"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${JSONFile['body']['fields']['status']['name']}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20200217 10:03:41.559" level="INFO">${status} = Open</msg>
+<status status="PASS" starttime="20200217 10:03:41.559" endtime="20200217 10:03:41.560"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Key : ${key}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:41.560" endtime="20200217 10:03:41.560"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Summary : ${summary}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:41.560" endtime="20200217 10:03:41.560"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>name : ${status}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:41.561" endtime="20200217 10:03:41.561"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${key}</arg>
+<arg>${summary}</arg>
+<arg>${status}</arg>
+</arguments>
+<assign>
+<var>@{JiraTicketStatus}</var>
+</assign>
+<msg timestamp="20200217 10:03:41.561" level="INFO">@{JiraTicketStatus} = [ TFIFT-9639 | JMap Web : Special characters are not supported | Open ]</msg>
+<status status="PASS" starttime="20200217 10:03:41.561" endtime="20200217 10:03:41.561"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>-----&gt; Jira Ticket Status: ${JiraTicketStatus}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:41.562" level="INFO">-----&gt; Jira Ticket Status: ['TFIFT-9639', 'JMap Web : Special characters are not supported', 'Open']</msg>
+<status status="PASS" starttime="20200217 10:03:41.562" endtime="20200217 10:03:41.562"></status>
+</kw>
+<msg timestamp="20200217 10:03:41.562" level="INFO">@{JiraTicketStatus} = [ TFIFT-9639 | JMap Web : Special characters are not supported | Open ]</msg>
+<status status="PASS" starttime="20200217 10:03:40.985" endtime="20200217 10:03:41.562"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${JiraTicketStatus[2]}' != 'Done' and '${JiraTicketStatus[2]}' != 'Closed' and '${JiraTicketStatus[2]}' != 'Fini' and '${JiraTicketStatus[2]}' != 'Fermée'</arg>
+<arg>Append To List</arg>
+<arg>${notesNotClosed}</arg>
+<arg>${Key} ${JiraTicketStatus[1]}</arg>
+</arguments>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${notesNotClosed}</arg>
+<arg>${Key} ${JiraTicketStatus[1]}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:41.563" endtime="20200217 10:03:41.563"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:41.562" endtime="20200217 10:03:41.563"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.985" endtime="20200217 10:03:41.564"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.985" endtime="20200217 10:03:41.564"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>-----&gt; Notes not closed: ${notesNotClosed}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:41.564" level="INFO">-----&gt; Notes not closed: ['TFIFT-9639 JMap Web : Special characters are not supported']</msg>
+<status status="PASS" starttime="20200217 10:03:41.564" endtime="20200217 10:03:41.564"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<assign>
+<var>${NotesString}</var>
+</assign>
+<msg timestamp="20200217 10:03:41.565" level="INFO">${NotesString} = </msg>
+<status status="PASS" starttime="20200217 10:03:41.564" endtime="20200217 10:03:41.565"></status>
+</kw>
+<kw name="${line} IN [ @{notesNotClosed} ]" type="for">
+<kw name="${line} = TFIFT-9639 JMap Web : Special characters are not supported" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${line}</arg>
+<arg>console=yes</arg>
+</arguments>
+<msg timestamp="20200217 10:03:41.565" level="INFO">TFIFT-9639 JMap Web : Special characters are not supported</msg>
+<status status="PASS" starttime="20200217 10:03:41.565" endtime="20200217 10:03:41.565"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${NotesString}${line}\n</arg>
+</arguments>
+<assign>
+<var>${NotesString}</var>
+</assign>
+<msg timestamp="20200217 10:03:41.566" level="INFO">${NotesString} = TFIFT-9639 JMap Web : Special characters are not supported
+</msg>
+<status status="PASS" starttime="20200217 10:03:41.565" endtime="20200217 10:03:41.566"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:41.565" endtime="20200217 10:03:41.566"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:41.565" endtime="20200217 10:03:41.566"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.962" endtime="20200217 10:03:41.566"></status>
+</kw>
+<msg timestamp="20200217 10:03:41.566" level="INFO">${lastExecutionNotes} = TFIFT-9639 JMap Web : Special characters are not supported
+</msg>
+<status status="PASS" starttime="20200217 10:03:40.962" endtime="20200217 10:03:41.566"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Be Equal</arg>
+<arg>${lastExecutionNotes}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<assign>
+<var>${isEmpty}</var>
+</assign>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${lastExecutionNotes}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20200217 10:03:41.567" level="FAIL">TFIFT-9639 JMap Web : Special characters are not supported
+ != </msg>
+<status status="FAIL" starttime="20200217 10:03:41.567" endtime="20200217 10:03:41.567"></status>
+</kw>
+<msg timestamp="20200217 10:03:41.568" level="INFO">${isEmpty} = False</msg>
+<status status="PASS" starttime="20200217 10:03:41.567" endtime="20200217 10:03:41.568"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>AUTOMATED TEST PASSED AND LAST EXECUTION TEST</arg>
+</arguments>
+<assign>
+<var>${notesFinal}</var>
+</assign>
+<msg timestamp="20200217 10:03:41.568" level="INFO">${notesFinal} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST</msg>
+<status status="PASS" starttime="20200217 10:03:41.568" endtime="20200217 10:03:41.568"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='p'</arg>
+<arg>Set Variable</arg>
+<arg>${notesFinal} PASSED</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${notesFinal} FAILED</arg>
+</arguments>
+<assign>
+<var>${notesFinal}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${notesFinal} FAILED</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:41.568" endtime="20200217 10:03:41.569"></status>
+</kw>
+<msg timestamp="20200217 10:03:41.569" level="INFO">${notesFinal} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST FAILED</msg>
+<status status="PASS" starttime="20200217 10:03:41.568" endtime="20200217 10:03:41.569"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${isIssueInList}'=='${False}' or '${isEmpty}' == '${True}'</arg>
+<arg>${notesFinal}</arg>
+<arg>'${isIssueInList}'=='${True}' and '${isEmpty}' != '${True}'</arg>
+<arg>${notesFinal}\nKnown Associated Issues:\n${lastExecutionNotes}</arg>
+</arguments>
+<assign>
+<var>${notesFinal}</var>
+</assign>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${isIssueInList}'=='${True}' and '${isEmpty}' != '${True}'</arg>
+<arg>${notesFinal}\nKnown Associated Issues:\n${lastExecutionNotes}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:41.570" endtime="20200217 10:03:41.570"></status>
+</kw>
+<msg timestamp="20200217 10:03:41.570" level="INFO">${notesFinal} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST FAILED
+Known Associated Issues:
+TFIFT-9639 JMap Web : Special characters are not supported
+</msg>
+<status status="PASS" starttime="20200217 10:03:41.569" endtime="20200217 10:03:41.570"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${status}'=='p' and '${isEmpty}' == '${True}' or '${status}'=='f' and '${isEmpty}' == '${True}'</arg>
+<arg>Call Api Method</arg>
+<arg>reportTCResult</arg>
+<arg>${testCaseID}</arg>
+<arg>${testPlanID}</arg>
+<arg>${latestBuildNAME}</arg>
+<arg>p</arg>
+<arg>${notesFinal}</arg>
+<arg>execduration=${Elapsed}</arg>
+<arg>ELSE</arg>
+<arg>Call Api Method</arg>
+<arg>reportTCResult</arg>
+<arg>${testCaseID}</arg>
+<arg>${testPlanID}</arg>
+<arg>${latestBuildNAME}</arg>
+<arg>f</arg>
+<arg>${notesFinal}</arg>
+<arg>execduration=${Elapsed}</arg>
+</arguments>
+<kw name="Call Api Method" library="TestlinkAPILibrary">
+<doc>Calls a TestLink API method and returns TestLinks server response.</doc>
+<arguments>
+<arg>reportTCResult</arg>
+<arg>${testCaseID}</arg>
+<arg>${testPlanID}</arg>
+<arg>${latestBuildNAME}</arg>
+<arg>f</arg>
+<arg>${notesFinal}</arg>
+<arg>execduration=${Elapsed}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:41.571" endtime="20200217 10:03:43.162"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:41.570" endtime="20200217 10:03:43.163"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.940" endtime="20200217 10:03:43.163"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.939" endtime="20200217 10:03:43.164"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.935" endtime="20200217 10:03:43.164"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:40.934" endtime="20200217 10:03:43.165"></status>
+</kw>
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Update Test Case In Testlink With Failed</arg>
+<arg>${lastExecutionID}</arg>
+<arg>${lastExecution}</arg>
+<arg>${testCaseID}</arg>
+<arg>${testPlanID}</arg>
+<arg>${latestBuildNAME}</arg>
+<arg>${Elapsed}</arg>
+</arguments>
+<status status="PASS" starttime="20200217 10:03:43.165" endtime="20200217 10:03:43.167"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:36.370" endtime="20200217 10:03:43.167"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:36.370" endtime="20200217 10:03:43.168"></status>
+</kw>
+<status status="PASS" starttime="20200217 10:03:34.019" endtime="20200217 10:03:43.168"></status>
+</kw>
+<tags>
+<tag>Time Out</tag>
+</tags>
+<status status="PASS" starttime="20200217 10:03:16.405" endtime="20200217 10:03:43.169" critical="yes">*HTML* &lt;br/&gt;&lt;b&gt;Link:&lt;/b&gt; &lt;a href='https://k2geospatial.atlassian.net/browse/TFIFT-9639'&gt;Jira Issue : TFIFT-9639&lt;/a&gt;&lt;br/&gt;</status>
+</test>
+<doc>Check language Test in JMap Web</doc>
+<metadata>
+<item name="author">Mordjane Boussad</item>
+</metadata>
+<status status="PASS" starttime="20200217 10:03:15.937" endtime="20200217 10:03:43.171"></status>
+</suite>
+<status status="PASS" starttime="20200217 10:03:15.935" endtime="20200217 10:03:43.176"></status>
+</suite>
+<status status="PASS" starttime="20200217 10:03:15.934" endtime="20200217 10:03:43.178"></status>
+</suite>
+<status status="PASS" starttime="20200217 10:03:15.933" endtime="20200217 10:03:43.180"></status>
+</suite>
+<status status="PASS" starttime="20200217 10:03:15.916" endtime="20200217 10:03:43.183"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Time Out</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="JMapRobotTests">JMapRobotTests</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Tests">JMapRobotTests.Tests</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Jmap 7.0">JMapRobotTests.Tests.Jmap 7.0</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1" name="jmapWeb">JMapRobotTests.Tests.Jmap 7.0.jmapWeb</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s1" name="CheckLanguageTests">JMapRobotTests.Tests.Jmap 7.0.jmapWeb.CheckLanguageTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200217 10:03:16.102" level="WARN">Error in file 'C:\Users\mbous\eclipse-workspace\JMapRobotTests\common\admin\CommonKeywords.robot': Escaping empty cells with '\' before line continuation marker '...' is deprecated. Remove escaping before Robot Framework 3.2.</msg>
+</errors>
+</robot>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<projectConfiguration>
+    <configVersion>2</configVersion>
+    <robotExecEnvironment path="C:/Python37" interpreter="Python"/>
+    <relativeTo>PROJECT</relativeTo>
+    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Python37-32/Lib/site-packages" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="REST" path="C:/Python37-32/Lib/site-packages" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="SeleniumLibraryHeadlessChromeDownload" path="C:/Python37-32/lib/site-packages/robot/libraries" dynamic="false"/>
+    <pythonpath>
+        <path location="C:\Python37-32\Lib\site-packages"/>
+    </pythonpath>
+    <classpath>
+        <path location="C:\Python37-32"/>
+    </classpath>
+    <excludedForValidation/>
+    <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
+    <validatedFileMaxSize>1024</validatedFileMaxSize>
+</projectConfiguration>
