@@ -1,1 +1,1 @@
-CheckLanguageTests.robot
+LoginAndLogoutTests.robot
