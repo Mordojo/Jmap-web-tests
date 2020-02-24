@@ -771,14 +771,20 @@ Go To Testlink To Update Test Case
     ${testCaseID}    Set Variable    ${testCase['id']}
     ${testCaseExternalID}    Set Variable    ${testCase['tc_external_id']}
     Log    =================================================================================
-    @{lastExecution}=    Call Api Method    getLastExecutionResult    testplanid=${testPlanID}
-                                                               ...    testcaseid=${testCaseID}    
-                                                               ...    testCaseexternaid=${testCaseExternalID}    
-                                                               #...    buildid=${latestBuildID}    
-                                                               #...    buildname=${latestBuildNAME}
-    ${Length1}    Get Length    ${lastExecution}
+    
+    @{beforBuildName}    Split String    ${latestBuildNAME}    ${EMPTY}
+    ${NumVersion}    Set Variable    ${beforBuildName[4]}
+    :FOR    ${i}    IN RANGE    1    4    
+    \    @{lastExecution}=    Call Api Method    getLastExecutionResult    testplanid=${testPlanID}    testcaseid=${testCaseID}    testCaseexternaid=${testCaseExternalID}    buildname=${beforBuildName[0]} ${beforBuildName[1]} ${beforBuildName[2]} ${beforBuildName[3]} ${NumVersion} 
+    \    Log    ---- > ${lastExecution} 
+    \    ${Length1}    Get Length    ${lastExecution}
+    \    Log    ID of V.${NumVersion} : ${lastExecution[0]['id']}
+    \    Log    ------------------------------------------------------------------------------------
+    \    ${NumVersion}    Evaluate    ${NumVersion}-${i}
+    \    Exit For Loop If    ${Length1} > 0 and ${lastExecution[0]['id']} != -1      
+    
     ${lastExecution}    Set Variable    ${lastExecution[0]}
-    Log    ${lastExecution}
+    Log    -----> Last execution : ${lastExecution}    console=yes
     ${lastExecutionID}    Set Variable    ${lastExecution['id']}
    
     Run Keyword If Test Passed    Update Test Case In Testlink With Passed    ${lastExecutionID}    ${lastExecution}    ${testCaseID}    ${testPlanID}    ${latestBuildNAME}    ${Elapsed}   
