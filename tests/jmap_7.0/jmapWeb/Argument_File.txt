@@ -1,8 +1,0 @@
-CheckLanguageTests.robot
-LoginAndLogoutTests.robot
-Annotations\DrawAnAnnotationTests.robot
-Annotations\SelectAnAnnotationTests.robot
-Annotations\EditAnAnnotationTests.robot
-Annotations\DeleteAnAnnotationTests.robot
-Annotations\VerifyStyleOfAnnotationTests.robot
-Annotations\EditStyleOfAnnotationTests.robot

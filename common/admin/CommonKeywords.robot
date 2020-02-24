@@ -27,7 +27,7 @@ ${JiraUser}    mboussad@k2geospatial.com
 ${JiraToken}    qhQqnQQBHNyP9aAemb6b4901
 ${TYPE}    WEB
 ${tc_start}    ${EMPTY}
-${useTL}    false
+${useTL}    true
 #-----------------------------------------------------------------------------------------------------------------------------------
 *** Keywords ***
 

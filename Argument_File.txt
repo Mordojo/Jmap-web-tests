@@ -1,0 +1,2 @@
+tests\jmap_7.0\jmapWeb\CheckLanguageTests.robot
+tests\jmap_7.0\jmapWeb\LoginAndLogoutTests.robot
