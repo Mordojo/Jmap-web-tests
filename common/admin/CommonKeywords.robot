@@ -773,16 +773,19 @@ Go To Testlink To Update Test Case
     Log    =================================================================================
     
     @{beforBuildName}    Split String    ${latestBuildNAME}    ${EMPTY}
-    ${NumVersion}    Set Variable    ${beforBuildName[4]}
-    :FOR    ${i}    IN RANGE    1    4    
-    \    @{lastExecution}=    Call Api Method    getLastExecutionResult    testplanid=${testPlanID}    testcaseid=${testCaseID}    testCaseexternaid=${testCaseExternalID}    buildname=${beforBuildName[0]} ${beforBuildName[1]} ${beforBuildName[2]} ${beforBuildName[3]} ${NumVersion} 
-    \    Log    ---- > ${lastExecution} 
-    \    ${Length1}    Get Length    ${lastExecution}
-    \    Log    ID of V.${NumVersion} : ${lastExecution[0]['id']}
+    ${numVersion}    Set Variable    ${beforBuildName[4]}
+    :FOR    ${i}    IN RANGE    1    5    
+    \    @{getExecution}=    Run Keyword And Ignore Error    Call Api Method    getLastExecutionResult    testplanid=${testPlanID}    testcaseid=${testCaseID}    testCaseexternaid=${testCaseExternalID}    buildname=${beforBuildName[0]} ${beforBuildName[1]} ${beforBuildName[2]} ${beforBuildName[3]} ${numVersion}       
+    \    Log    ---- > ${getExecution} 
+    \    ${Length1}    Get Length    ${getExecution} 
+    \    ${lastExecution}    Set Variable    ${getExecution[1]}
+    \    ${idBuild}    Run Keyword If    '${getExecution[0]}' == 'PASS'    Set Variable    ${lastExecution[0]['id']}           
+    \    Run Keyword If    '${getExecution[0]}' == 'PASS'    Log    ID of Build(${NumVersion}) : ${idBuild}
     \    Log    ------------------------------------------------------------------------------------
-    \    ${NumVersion}    Evaluate    ${NumVersion}-${i}
-    \    Exit For Loop If    ${Length1} > 0 and ${lastExecution[0]['id']} != -1      
+    \    ${numVersion}    Evaluate    ${numVersion}-1
+    \    Exit For Loop If    '${getExecution[0]}' == 'PASS' and '${idBuild}' != '-1'                    
     
+    ${Length1}    Get Length    ${lastExecution}
     ${lastExecution}    Set Variable    ${lastExecution[0]}
     Log    -----> Last execution : ${lastExecution}    console=yes
     ${lastExecutionID}    Set Variable    ${lastExecution['id']}
