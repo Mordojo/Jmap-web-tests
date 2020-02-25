@@ -774,7 +774,7 @@ Go To Testlink To Update Test Case
     
     @{beforBuildName}    Split String    ${latestBuildNAME}    ${EMPTY}
     ${numVersion}    Set Variable    ${beforBuildName[4]}
-    :FOR    ${i}    IN RANGE    1    5    
+    :FOR    ${i}    IN RANGE    1    10    
     \    @{getExecution}=    Run Keyword And Ignore Error    Call Api Method    getLastExecutionResult    testplanid=${testPlanID}    testcaseid=${testCaseID}    testCaseexternaid=${testCaseExternalID}    buildname=${beforBuildName[0]} ${beforBuildName[1]} ${beforBuildName[2]} ${beforBuildName[3]} ${numVersion}       
     \    Log    ---- > ${getExecution} 
     \    ${Length1}    Get Length    ${getExecution} 
