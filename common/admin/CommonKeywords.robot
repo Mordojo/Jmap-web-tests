@@ -771,18 +771,21 @@ Go To Testlink To Update Test Case
     ${testCaseID}    Set Variable    ${testCase['id']}
     ${testCaseExternalID}    Set Variable    ${testCase['tc_external_id']}
     Log    =================================================================================
-    
-    @{beforBuildName}    Split String    ${latestBuildNAME}    ${EMPTY}
-    ${numVersion}    Set Variable    ${beforBuildName[4]}
-    :FOR    ${i}    IN RANGE    1    10    
-    \    @{getExecution}=    Run Keyword And Ignore Error    Call Api Method    getLastExecutionResult    testplanid=${testPlanID}    testcaseid=${testCaseID}    testCaseexternaid=${testCaseExternalID}    buildname=${beforBuildName[0]} ${beforBuildName[1]} ${beforBuildName[2]} ${beforBuildName[3]} ${numVersion}       
+    ${numVersion}    Set Variable    ${latestBuildNAME[-3:]}
+    ${splitedBuild}    Fetch From Left    ${latestBuildNAME}    ${numVersion}
+    :FOR    ${i}    IN RANGE    1    20    
+    \    @{getExecution}=    Run Keyword And Ignore Error    Call Api Method    getLastExecutionResult    testplanid=${testPlanID}    testcaseid=${testCaseID}    testCaseexternaid=${testCaseExternalID}    buildname=${splitedBuild}${numVersion}       
     \    Log    ---- > ${getExecution} 
     \    ${Length1}    Get Length    ${getExecution} 
     \    ${lastExecution}    Set Variable    ${getExecution[1]}
     \    ${idBuild}    Run Keyword If    '${getExecution[0]}' == 'PASS'    Set Variable    ${lastExecution[0]['id']}           
-    \    Run Keyword If    '${getExecution[0]}' == 'PASS'    Log    ID of Build(${NumVersion}) : ${idBuild}
+    \    Run Keyword If    '${getExecution[0]}' == 'PASS'    Log    ----- > ID of Build(${NumVersion}) : ${idBuild}
     \    Log    ------------------------------------------------------------------------------------
+    \    ${numVersion}    Convert To Integer    ${numVersion}
     \    ${numVersion}    Evaluate    ${numVersion}-1
+    \    ${numVersion}    Set Variable If    ${numVersion} < 10    00${numVersion}
+    \    ...    ${numVersion} > 10 and ${numVersion} < 100    0${numVersion}
+    \    ...    ${numVersion} > 100    ${numVersion}   
     \    Exit For Loop If    '${getExecution[0]}' == 'PASS' and '${idBuild}' != '-1'                    
     
     ${Length1}    Get Length    ${lastExecution}
