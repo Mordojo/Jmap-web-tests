@@ -28,7 +28,7 @@ ${USERPASSWORD}    Test
 ${USEREMAIL}    test@k2geospatial.com
 ${USERFULLNAME}    Test Full Name
 ${JMAPADMIN}    http://192.168.0.25:8080
-${SERVERVERSION}    7.0 Istanbul build 117    
+${SERVERVERSION}    7.0 Jakarta build 023    
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 *** Test Cases ***
 
@@ -44,9 +44,9 @@ Validate Session With Empty Session Id
     [Documentation]    Endpoint to retreive actual session information with empty session id
     Validate Session With Empty Session Id
     
-Open New Session
+Open New REST Session
     [Documentation]    Endpoint to open a new session
-    Open New Session
+    Open New REST Session
     
 Open Session With Invalid User Name
     [Documentation]    Endpoint to open a new session with invalid user name
@@ -103,7 +103,7 @@ Validate Session With Empty Session Id
     String    $.status    Unauthorized
     String    $.message    Invalid session id.
     
-Open New Session 
+Open New REST Session 
     Post    /services/rest/v2.0/session    body={"username": "${NAME}","password": "${USERPASSWORD}","type": "${TYPE}"}
     #    Logs
     Output    Server status response must be 'OK'    

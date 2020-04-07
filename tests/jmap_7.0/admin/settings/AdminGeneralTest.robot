@@ -13,7 +13,7 @@ Suite Teardown		Logout JMap    ${True}
 *** Variables ***
 
 ${DELAY}    0.2
-${LOGIN URL}      http://192.168.0.59:8080/jmapadmin/login.jsf
+${LOGIN URL}      http://192.168.0.25:8080/jmapadmin/login.jsf
 #-------------------------------------------------------------------------------------------------------------------------------------------
 *** Test Cases ***
 

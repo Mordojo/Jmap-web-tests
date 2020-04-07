@@ -4,7 +4,8 @@ Documentation     Edit Annotation Test cases
 #-----------------------------------------------------------------------------------------------------------------------------
 Library    String
 Library    OperatingSystem
-Library    SeleniumLibrary
+Library    SeleniumLibrary   
+Library    Dialogs
 Library    BuiltIn
 Library    DateTime
 #------------------------------------------------------------------------------------------------------------------------------
@@ -15,7 +16,7 @@ Resource    ../../../../common/jmapWeb/CommonWeb.robot
 #-------------------------------------------------------------------------------------------------------------------------------- 
 Test Setup   Run Keywords    
              ...    Open Browser On JMap Web    ${URLWebApp}    ${RESOLUTION_X}    ${RESOLUTION_Y}    AND
-             ...    Login To JMap Web
+             ...    Login To JMap Web    ${UserName}    ${Password}
 Test Teardown    LogOut 
 Metadata    author    Mordjane Boussad
 #-------------------------------------------------------------------------------------------------------------------------------- 

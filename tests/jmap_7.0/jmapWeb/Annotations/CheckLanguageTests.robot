@@ -5,15 +5,14 @@ Documentation     Check language Test in JMap Web
 Library    Collections
 Library    String
 Library    OperatingSystem
-Library    SeleniumLibrary    run_on_failure=No Operation   
-Library    Dialogs
+Library    SeleniumLibrary    run_on_failure=No Operation
 Library    BuiltIn
 Library    DateTime
 #--------------------------------------------------------------------------------------------------------------------------------------------------- 
-Resource    ../../../common/admin/CommonKeywords.robot
-Resource    ../../../common/CommonLogin.robot
-Resource    ../../../common/jmapWeb/CommonAnnotationWeb.robot
-Resource    ../../../common/jmapWeb/CommonWeb.robot
+Resource    ../../../../common/admin/CommonKeywords.robot
+Resource    ../../../../common/CommonLogin.robot
+Resource    ../../../../common/jmapWeb/CommonAnnotationWeb.robot
+Resource    ../../../../common/jmapWeb/CommonWeb.robot
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 Test Setup   Open Browser On JMap Web    ${URLWebApp}    ${RESOLUTION_X}    ${RESOLUTION_Y}
 Test Teardown    Close JMap Web

@@ -15,7 +15,11 @@ ${URLWebNightly}    http://192.168.0.25:8080/Test84Map7_0/login.jsp
 ${Title}        JMap_Web_WorldTest    
 ${internPort}    8080
 ${externPort}    8442    #8081
+<<<<<<< working copy
 ${localhost}    localhost    #jmap7dev.jmaponline.net   192.168.2.71  192.168.0.33
+=======
+${localhost}    192.168.0.33    #192.168.0.25
+>>>>>>> merge rev
 ${URLWebApp}    http://${localhost}:${internPort}/${Title}
 ${URLWebNGApp}    http://${localhost}:${internPort}/services/jmap
 ${UserName}    userTest1

@@ -1,8 +1,0 @@
-tests\jmap_7.0\jmapWeb\CheckLanguageTests.robot
-tests\jmap_7.0\jmapWeb\LoginAndLogoutTests.robot
-tests\jmap_7.0\jmapWeb\Annotations\DrawAnAnnotationTests.robot
-tests\jmap_7.0\jmapWeb\Annotations\SelectAnAnnotationTests.robot
-tests\jmap_7.0\jmapWeb\Annotations\EditAnAnnotationTests.robot
-tests\jmap_7.0\jmapWeb\Annotations\DeleteAnAnnotationTests.robot
-tests\jmap_7.0\jmapWeb\Annotations\VerifyStyleOfAnnotationTests.robot
-tests\jmap_7.0\jmapWeb\Annotations\EditStyleOfAnnotationTests.robot

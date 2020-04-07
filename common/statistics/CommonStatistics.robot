@@ -5,7 +5,7 @@ Documentation     Common keywords for statistics
 Library		SeleniumLibrary		# Selenium framework
 Library    OperatingSystem
 Library    Collections    
-Library    SeleniumLibraryHeadlessChromeDownload
+# Library    SeleniumLibraryHeadlessChromeDownload
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Resource    ../admin/CommonKeywords.robot
 Resource    ../CommonLogin.robot
@@ -15,7 +15,7 @@ Resource    ../admin/CommonSpatialDataSource.robot
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 *** Variables ***
 
-${BROWSER}        Chrome    #Chrome
+${BROWSER}        Chrome    
 ${HEADLESS}    ${False}    #--normal    #--headless
 ${VAL}    ${EMPTY}
 ${VAL1}    ${EMPTY}

@@ -6,6 +6,7 @@
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Python37-32/Lib/site-packages" dynamic="false"/>
     <referencedLibrary type="PYTHON" name="REST" path="C:/Python37-32/Lib/site-packages" dynamic="false"/>
     <referencedLibrary type="PYTHON" name="SeleniumLibraryHeadlessChromeDownload" path="C:/Python37-32/lib/site-packages/robot/libraries" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="RequestsLibrary" path="C:/Python37/Lib/site-packages/RequestsLibrary/__init__.py" dynamic="false"/>
     <pythonpath>
         <path location="C:\Python37-32\Lib\site-packages"/>
     </pythonpath>

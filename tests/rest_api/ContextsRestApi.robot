@@ -13,6 +13,7 @@ Resource    ../../common/admin/CommonKeywords.robot
 Resource    ../../common/admin/CommonDeployment.robot
 Resource    ../../common/jmapWeb/CommonAnnotationWeb.robot
 Resource    ../../common/admin/CommonSpatialDataSource.robot
+Resource    ../../common/jmapWeb/CommonContextWeb.robot
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Suite Setup    Start Up    
 Suite Teardown    Suite Down        

@@ -32,11 +32,13 @@ Select Language Of JMap Web    [Arguments]    ${language}
     Run Keyword If    ${IslanguageSelected}
     ...    Click Element    xpath://a[@id='${language}']
         
-Enter credentials    [Arguments]    ${USERNAME}    ${PASSWORD}
+Enter credentials    [Arguments]    ${USERNAME}    ${PASSWORD}=${EMPTY}
     [Documentation]    Enter username and password in JMap Admin login page
-    Wait Until Element Is Enabled    id:inputTextUsername    timeout=10s    
+    Wait Until Element Is Enabled    id:inputTextUsername    timeout=10s  
+    Clear Element Text    id:inputTextUsername  
     Input Text		id:inputTextUsername  	${USERNAME}
-    Wait Until Element Is Enabled    id:inputTextPassword    timeout=10s    
+    Wait Until Element Is Enabled    id:inputTextPassword    timeout=10s  
+    Clear Element Text    id:inputTextPassword  
 	Input Text		id:inputTextPassword  	${PASSWORD}
 	
 Click Login
@@ -46,7 +48,7 @@ Click Login
 
 Open JMap Admin    [Arguments]    ${LOGIN URL}
     [Documentation]    Open browser with the jmap url. Set window size to 1920x1080 and Maximize the window for headless test
-    Open Browser		${LOGIN URL}  browser=${BROWSER}    alias=${ALIAS}
+    Open Browser		${LOGIN URL}  browser=${BROWSER}    alias=JMap Admin
     Set Window Size    1920    1080
     Maximize Browser Window
     
@@ -66,7 +68,17 @@ Logout JMap    [Arguments]    ${CLOSE_BROWSER}
     Wait Until Element Is Enabled    xpath://span[@class='ui-menuitem-text'][text()='Logout']    timeout=10s    
 	Click Element		xpath://span[@class='ui-menuitem-text'][text()='Logout']
 	Run Keyword If    '${CLOSE_BROWSER}'=='${True}'    Close Browser
-    
+
+Logout From JMap Admin
+    [Documentation]    Log out from JMap Admin and close the browser
+    Wait Until Element Is Enabled    id:theForm:userMenu    timeout=10s    
+    Click Element		id:theForm:userMenu
+    Wait Until Element Is Enabled    xpath://span[@class='ui-menuitem-text'][text()='Logout']    timeout=10s    
+	Click Element		xpath://span[@class='ui-menuitem-text'][text()='Logout']
+	Sleep    1s    
+	Close Browser
+	Sleep    1s
+        
 Login JMap Web    [Arguments]    ${USER}    ${PASS}    ${URL}    ${DELAY}
     [Documentation]    Login in JMap Web with user and pass 
     Open JMap Web    ${URL}
@@ -84,14 +96,13 @@ LogOut
     [Documentation]    Log out from JMap Web
     Click On Logout
     Close JMap Web
-    Sleep    1s 
    
 Click On Logout
     [Documentation]    Click on Log out option in JMap Web
     Click On Options Icon
     Wait Until Element Is Enabled    xpath://div[@class='headerContainer']//li[4]    timeout=10s    
     Click Element    xpath://div[@class='headerContainer']//li[4]
-    Sleep    1s
+    Sleep    2s
     
 Logout JMap Web    [Arguments]    ${USER}    ${CLOSE_BROWSER}
     [Documentation]    Log out JMap Web and close the browser if the option is given
@@ -145,13 +156,14 @@ Login JMap Web With Check Language    [Arguments]     ${pTitle}    ${pLanguage} 
     #Maximize Browser Window
     #Login To JMap Web 
 
-Login To JMap Web
-     Wait Until Element Is Visible    id=username    5s
+Login To JMap Web    [Arguments]    ${pUsername}    ${pPassword}
+     Wait Until Element Is Visible    id=username    10s
      Clear Element Text    id=username 
      Clear Element Text    id=password     
-     Type    id=username    ${UserName}
-     Type    id=password   ${Password}
+     Type    id=username    ${pUsername}
+     Type    id=password   ${pPassword}
      Click Element   id=submit
+     Sleep    1s
          
 Open JMap Web    [Arguments]    ${LOGIN URL}
     [Documentation]    Open browser with the given URL. Set the browser options and the download path
@@ -181,7 +193,7 @@ Open Custom Chrome Browser    [Arguments]    ${LOGIN URL}
 Open Browser On JMap Web    [Arguments]    ${vURL}    ${RESOLUTION_X}    ${RESOLUTION_Y}
     [Documentation]    Open Browser with the given URL and maximize the window to the resolution
     Setup Metrics
-    Open Browser    ${vURL}    ${Browser}
+    Open Browser    ${vURL}    ${Browser}    alias=JMap Web
     Set Window Size    ${RESOLUTION_X}    ${RESOLUTION_Y}
     Maximize Browser Window
     

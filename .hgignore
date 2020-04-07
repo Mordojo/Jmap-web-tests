@@ -1,7 +1,0 @@
-libspecs
-syntax: glob
-report.html
-output.xml
-log.html
-.project
-.hgignore

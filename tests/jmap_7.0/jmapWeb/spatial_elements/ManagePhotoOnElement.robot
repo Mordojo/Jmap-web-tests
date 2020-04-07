@@ -4,8 +4,7 @@ Documentation     TC for manage photo on spatial element on the map
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Library    String
 Library    OperatingSystem
-Library    SeleniumLibrary   
-Library    Dialogs
+Library    SeleniumLibrary 
 Library    BuiltIn
 Library    DateTime
 Library    XML

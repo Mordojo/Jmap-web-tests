@@ -235,7 +235,7 @@ Add multiple statistics with invalid session id    [Arguments]    ${PROJECTID}  
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT} 
     \    ${CRITERIA_LAYER}=    Catenate    {"projectId": ${PROJECTID}, "targetId": ${LAYERSID[${INDEX}]}, "targetType": "LAYER", "action": "VIEW"} 
     \    ${VAL_LAYER}=    Check statistics records in DB    ${CRITERIA_LAYER}    
-    \     Append To List    ${LAYER_LIST}    ${VAL_LAYER}
+    \    Append To List    ${LAYER_LIST}    ${VAL_LAYER}
     
      
     Post    /services/rest/v2.0/statistics/projects/${PROJECTID}/?sessionId=${SESSIONID}    body=${BODY}    timeout=10
@@ -262,7 +262,7 @@ Add multiple statistics with invalid session id    [Arguments]    ${PROJECTID}  
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT} 
     \    ${CRITERIA_LAYER}=    Catenate    {"projectId": ${PROJECTID}, "targetId": ${LAYERSID[${INDEX}]}, "targetType": "LAYER", "action": "VIEW"} 
     \    ${VAL_LAYER1}=    Check statistics records in DB    ${CRITERIA_LAYER}    
-    \   Append To List    ${LAYER_LIST1}    ${VAL_LAYER1}
+    \    Append To List    ${LAYER_LIST1}    ${VAL_LAYER1}
     
     
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT}
@@ -292,7 +292,7 @@ Add multiple statistics with invalid project id    [Arguments]    ${PROJECTID}  
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT} 
     \    ${CRITERIA_LAYER}=    Catenate    {"projectId": ${PROJECTID}, "targetId": ${LAYERSID[${INDEX}]}, "targetType": "LAYER", "action": "VIEW"} 
     \    ${VAL_LAYER}=    Check statistics records in DB    ${CRITERIA_LAYER}    
-    \     Append To List    ${LAYER_LIST}    ${VAL_LAYER}
+    \    Append To List    ${LAYER_LIST}    ${VAL_LAYER}
     
      
     Post    /services/rest/v2.0/statistics/projects/${INVALID_PROJECT}/?sessionId=${SESSIONID}    body=${BODY}    timeout=10
@@ -319,7 +319,7 @@ Add multiple statistics with invalid project id    [Arguments]    ${PROJECTID}  
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT} 
     \    ${CRITERIA_LAYER}=    Catenate    {"projectId": ${PROJECTID}, "targetId": ${LAYERSID[${INDEX}]}, "targetType": "LAYER", "action": "VIEW"} 
     \    ${VAL_LAYER1}=    Check statistics records in DB    ${CRITERIA_LAYER}    
-    \   Append To List    ${LAYER_LIST1}    ${VAL_LAYER1}
+    \    Append To List    ${LAYER_LIST1}    ${VAL_LAYER1}
     
     
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT}
@@ -349,7 +349,7 @@ Add multiple statistics with invalid layers id    [Arguments]    ${PROJECTID}   
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT} 
     \    ${CRITERIA_LAYER}=    Catenate    {"projectId": ${PROJECTID}, "targetId": ${LAYERSID[${INDEX}]}, "targetType": "LAYER", "action": "VIEW"} 
     \    ${VAL_LAYER}=    Check statistics records in DB    ${CRITERIA_LAYER}    
-    \     Append To List    ${LAYER_LIST}    ${VAL_LAYER}
+    \    Append To List    ${LAYER_LIST}    ${VAL_LAYER}
     
      
     Post    /services/rest/v2.0/statistics/projects/${PROJECTID}/?sessionId=${SESSIONID}    body=${BODY}    timeout=10
@@ -376,7 +376,7 @@ Add multiple statistics with invalid layers id    [Arguments]    ${PROJECTID}   
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT} 
     \    ${CRITERIA_LAYER}=    Catenate    {"projectId": ${PROJECTID}, "targetId": ${LAYERSID[${INDEX}]}, "targetType": "LAYER", "action": "VIEW"} 
     \    ${VAL_LAYER1}=    Check statistics records in DB    ${CRITERIA_LAYER}    
-    \   Append To List    ${LAYER_LIST1}    ${VAL_LAYER1}
+    \    Append To List    ${LAYER_LIST1}    ${VAL_LAYER1}
     
     
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT}
@@ -406,7 +406,7 @@ Add multiple statistics with invalid contexts id    [Arguments]    ${PROJECTID} 
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT} 
     \    ${CRITERIA_LAYER}=    Catenate    {"projectId": ${PROJECTID}, "targetId": ${LAYERSID[${INDEX}]}, "targetType": "LAYER", "action": "VIEW"} 
     \    ${VAL_LAYER}=    Check statistics records in DB    ${CRITERIA_LAYER}    
-    \     Append To List    ${LAYER_LIST}    ${VAL_LAYER}
+    \    Append To List    ${LAYER_LIST}    ${VAL_LAYER}
     
      
     Post    /services/rest/v2.0/statistics/projects/${PROJECTID}/?sessionId=${SESSIONID}    body=${BODY}    timeout=10
@@ -433,7 +433,7 @@ Add multiple statistics with invalid contexts id    [Arguments]    ${PROJECTID} 
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT} 
     \    ${CRITERIA_LAYER}=    Catenate    {"projectId": ${PROJECTID}, "targetId": ${LAYERSID[${INDEX}]}, "targetType": "LAYER", "action": "VIEW"} 
     \    ${VAL_LAYER1}=    Check statistics records in DB    ${CRITERIA_LAYER}    
-    \   Append To List    ${LAYER_LIST1}    ${VAL_LAYER1}
+    \    Append To List    ${LAYER_LIST1}    ${VAL_LAYER1}
     
     
     :FOR    ${INDEX}    IN RANGE    0    ${ELEMENT}

@@ -10,6 +10,7 @@ Resource    ../../../../common/jmapWeb/CommonWeb.robot
 Resource    ../../../../common/admin/CommonKeywords.robot
 Resource    ../../../../common/statistics/CommonStatistics.robot
 Resource    ../../../../common/rest_api/CommonRestApi.robot
+Resource    ../../../../common/jmapWeb/CommonContextWeb.robot
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Suite Setup    Edit Project with Usage Statistics    ${PROJECT_NAME}    ${LOGIN URL}    ${DELAY}    ${NAME}    ${PROTOCOL}    ${HOST}    ${PORT}    ${PATH}           
 Suite Teardown		Logout JMap    ${True}   

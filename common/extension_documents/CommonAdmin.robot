@@ -65,9 +65,8 @@ Fill Metadata Step    [Arguments]    ${DIRECTION}    @{METADATAS}
 Move Elements on Picklist Component    [Arguments]    ${PICKLISTID}    ${DIRECTION}    @{ITEMS}
     :FOR    ${ITEM}    IN    @{ITEMS}
     \    Click Element    xpath://*[@id="${PICKLISTID}"]//li[text()='${ITEM}']
-    \    Run Keyword If    '${DIRECTION}'=='TO_RIGHT'
-    \    ...    Click Button    xpath://*[@id="${PICKLISTID}"]//button[1]
-    \    ...    ELSE    Click Button    xpath://*[@id="${PICKLISTID}"]//button[3]
+    \    Run Keyword If    '${DIRECTION}'=='TO_RIGHT'    Click Button    xpath://*[@id="${PICKLISTID}"]//button[1]
+    \    ELSE    Click Button    xpath://*[@id="${PICKLISTID}"]//button[3]
 
 Finish the Wizard
     Click Element    xpath://span[text()='Finish']

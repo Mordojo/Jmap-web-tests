@@ -9,7 +9,7 @@ Library    Reserved
 Library    String
 Library    DateTime 
 Library    REST  
-#----------------------------------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------------------------
 Resource    ../jmapWeb/CommonWeb.robot
 #----------------------------------------------------------------------------------------------------------------------------------
 *** Variables ***
@@ -923,8 +923,14 @@ Get All Ticket Keys Of The Last Execution Notes
     @{notesNotClosed}    Create List    
     :FOR    ${Key}    IN    @{allKeys}
     \    @{JiraTicketStatus}    Get Jira Status Of Ticket "${Key}" With Username "${pJiraUser}" And Authentication Token "${pJiraToken}"
-    \    Run Keyword If    '${JiraTicketStatus[2]}' != 'Done' and '${JiraTicketStatus[2]}' != 'Closed' and '${JiraTicketStatus[2]}' != 'Fini' and '${JiraTicketStatus[2]}' != 'Fermée'    Append To List    ${notesNotClosed}    ${Key} ${JiraTicketStatus[1]}                      
+<<<<<<< working copy
+    \    Run Keyword If    '${JiraTicketStatus[2]}' != 'Done' and '${JiraTicketStatus[2]}' != 'Closed' and '${JiraTicketStatus[2]}' != 'Fini' and '${JiraTicketStatus[2]}' != 'Fermée'
+    \    ...    Append To List    ${notesNotClosed}    ${Key} ${JiraTicketStatus[1]}                      
     Log    -----> Notes not closed: ${notesNotClosed}    console=yes
+=======
+    \    Run Keyword If    '${JiraTicketStatus[2]}' != 'Done' and '${JiraTicketStatus[2]}' != 'Closed' and '${JiraTicketStatus[2]}' != 'Fini' and '${JiraTicketStatus[2]}' != 'Fermée'    Append To List    ${notesNotClosed}    ${Key} ${JiraTicketStatus[1]}                      
+    Log    ${notesNotClosed}    console=yes
+>>>>>>> merge rev
     
     ${NotesString}=     Set Variable    
     :FOR    ${line}    IN    @{notesNotClosed}

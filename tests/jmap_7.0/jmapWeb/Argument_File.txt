@@ -1,0 +1,10 @@
+LoginAndLogoutTests.robot
+CheckLanguageTests.robot
+Annotations\DrawAnAnnotationTests.robot
+Annotations\SelectAnAnnotationTests.robot
+Annotations\EditAnAnnotationTests.robot
+Annotations\DeleteAnAnnotationTests.robot
+Annotations\VerifyStyleOfAnnotationTests.robot
+Annotations\EditStyleOfAnnotationTests.robot
+measurement\MeasurementsTests.robot
+ManageContextsTests.robot

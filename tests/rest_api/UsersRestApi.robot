@@ -29,7 +29,7 @@ ${NEWPASSWORD}    NewTest
 ${USEREMAIL}    test@k2geospatial.com
 ${USERFULLNAME}    Test Full Name
 ${JMAPADMIN}    http://192.168.0.25:8080
-${SERVERVERSION}    7.0 Istanbul build 117    
+${SERVERVERSION}    7.0 Jakarta build 023    
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 *** Test Cases ***
 
