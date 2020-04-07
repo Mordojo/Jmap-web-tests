@@ -1,12 +1,1 @@
-LoginAndLogoutTests.robot
-CheckLanguageTests.robot
-Manage_Annotations\DrawAnAnnotationTests.robot
-Manage_Annotations\SelectAnAnnotationTests.robot
 Manage_Annotations\EditAnAnnotationTests.robot
-Manage_Annotations\DeleteAnAnnotationTests.robot
-Manage_Annotations\VerifyStyleOfAnnotationTests.robot
-Manage_Annotations\EditStyleOfAnnotationTests.robot
-measurement\MeasurementsTests.robot
-Manage_Contexts\CreateContextTests.robot
-Manage_Contexts\ManageContextsTests.robot
-Manage_Contexts\ShareContextTests.robot
