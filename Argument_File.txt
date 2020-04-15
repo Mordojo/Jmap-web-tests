@@ -1,0 +1,4 @@
+tests\jmap_7.0\jmapWeb\measurement\MeasurementsTests.robot
+tests\jmap_7.0\jmapWeb\Manage_Contexts\CreateContextTests.robot
+tests\jmap_7.0\jmapWeb\Manage_Contexts\ManageContextsTests.robot
+tests\jmap_7.0\jmapWeb\Manage_Contexts\ShareContextTests.robot
