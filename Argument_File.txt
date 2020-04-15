@@ -1,3 +1,11 @@
+tests\jmap_7.0\jmapWeb\LoginAndLogoutTests.robot
+tests\jmap_7.0\jmapWeb\CheckLanguageTests.robot
+tests\jmap_7.0\jmapWeb\Manage_Annotations\DrawAnAnnotationTests.robot
+tests\jmap_7.0\jmapWeb\Manage_Annotations\SelectAnAnnotationTests.robot
+tests\jmap_7.0\jmapWeb\Manage_Annotations\EditAnAnnotationTests.robot
+tests\jmap_7.0\jmapWeb\Manage_Annotations\DeleteAnAnnotationTests.robot
+tests\jmap_7.0\jmapWeb\Manage_Annotations\VerifyStyleOfAnnotationTests.robot
+tests\jmap_7.0\jmapWeb\Manage_Annotations\EditStyleOfAnnotationTests.robot
 tests\jmap_7.0\jmapWeb\measurement\MeasurementsTests.robot
 tests\jmap_7.0\jmapWeb\Manage_Contexts\CreateContextTests.robot
 tests\jmap_7.0\jmapWeb\Manage_Contexts\ManageContextsTests.robot

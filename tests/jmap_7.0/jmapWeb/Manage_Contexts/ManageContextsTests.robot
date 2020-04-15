@@ -90,7 +90,6 @@ JM70-1036:Update Context without name
     Delete Context    MyContext-${FORMATED_DATE}
     
 JM70-1039:See Context image preview
-    Login To JMap Web    ${UserName}    ${Password}
     Create New Context    Context_image_preview-${FORMATED_DATE}    Description of image preview
     Verify That The Context That Exist In The List Is    Context_image_preview-${FORMATED_DATE}    Description of image preview
     Verify That The Image Preview Is Visible In The Context    Context_image_preview-${FORMATED_DATE}
