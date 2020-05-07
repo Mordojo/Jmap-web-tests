@@ -249,6 +249,7 @@ Verify That Context Id Appears As Parameter With The URL    [Arguments]    ${lin
 Verify That Context Link Is Copied 
     [Documentation]    This keyword for JMap Web, check that the context is copied correctly
     Log    -----> Verifying That Context Link Is Copied correctly    console=yes
+    Wait Until Element Is Enabled    //div[@class='CopyLinkDiv']/i    5s 
     Run Keyword And Continue On Failure    Element Attribute Value Should Be    //div[@class='CopyLinkDiv']/i    data-original-title    Copied!    
         
 Create Context With Freehand Annotation    [Arguments]    ${CONTEXT_NAME}    ${CONTEXT_DESCRIPTION}=${EMPTY}

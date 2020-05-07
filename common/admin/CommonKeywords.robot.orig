@@ -18,7 +18,7 @@ ${RESOLUTION_Y}    1080
 ${BROWSER}        Chrome    #headlesschrome
 ${HEADLESS}    ${False}    #--normal    #--headless
 ${ALIAS}    JMap   
-${TL_URL}    http://192.168.0.42/testlink2/lib/api/xmlrpc/v1/xmlrpc.php
+${TL_URL}    http://192.168.5.247/testlink2/lib/api/xmlrpc/v1/xmlrpc.php
 ${DEV_KEY}    1d540de5247e1354aceccb25b4eac749    # admin: 5d5a0fc4f1196272ed91c601df2c71bd
 @{issuesPrefix}    TFIFT    JMNG
 ${projectNum}    6
