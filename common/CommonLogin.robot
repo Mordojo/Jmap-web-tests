@@ -193,10 +193,27 @@ Open Custom Chrome Browser    [Arguments]    ${LOGIN URL}
 Open Browser On JMap Web    [Arguments]    ${vURL}    ${RESOLUTION_X}    ${RESOLUTION_Y}
     [Documentation]    Open Browser with the given URL and maximize the window to the resolution
     Setup Metrics
-    Open Browser    ${vURL}    ${Browser}    alias=JMap Web
+    #Open Browser    ${vURL}    ${Browser}    alias=JMap Web
+    Run Keyword If    '${Browser}'=='Chrome'    Open Chrome    ELSE IF    '${Browser}'=='Firefox'    Open Firefox    ELSE    Open Edge    
+    Go To    ${vURL}
     Set Window Size    ${RESOLUTION_X}    ${RESOLUTION_Y}
     Maximize Browser Window
+
+Open Chrome
+    ${chrome_options}    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${chrome_options}    add_argument    --ignore-certificate-errors    
+    Create Webdriver    ${Browser}    chrome    chrome_options=${chrome_options}
     
+Open Firefox
+    ${profile}    Evaluate    sys.modules['selenium.webdriver'].FirefoxProfile()    sys, selenium.webdriver
+    Call Method    ${profile}    set_preference    accept_untrusted_certs    True    
+    Create Webdriver    ${Browser}    firefox    firefox_profile=${profile}    
+
+Open Edge
+    ${edge_options}    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys, selenium.webdriver
+    Call Method    ${edge_options}    add_argument    acceptSslCerts    True    
+    Create Webdriver    ${Browser}    edge    edge_options=${edge_options}
+        
 Verify That Selected JMap Web Language Is    [Arguments]    ${expected}
     [Documentation]    Check the language in JMap Web
     Sleep    1s

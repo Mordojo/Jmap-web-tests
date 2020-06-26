@@ -15,7 +15,6 @@ Resource    ../jmapWeb/CommonWeb.robot
 *** Variables ***
 ${RESOLUTION_X}    1920
 ${RESOLUTION_Y}    1080
-${BROWSER}        Chrome    #headlesschrome
 ${HEADLESS}    ${False}    #--normal    #--headless
 ${ALIAS}    JMap   
 ${TL_URL}    http://192.168.5.247/testlink2/lib/api/xmlrpc/v1/xmlrpc.php
