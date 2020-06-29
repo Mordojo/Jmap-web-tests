@@ -12,11 +12,11 @@ Resource    ../CommonLogin.robot
 *** Variables ***
 
 ${URLWebNightly}    http://192.168.0.25:8080/Test84Map7_0/login.jsp
-${Title}        JMap_Web_SDK_HTTPS5    
+${Title}        JMap_Web_SDK_HTTP    
 ${internPort}    8080
-${externPort}    8443    #8081   8442
+${externPort}    8081    #8081   8442
 ${localhost}    localhost    #jmap7dev.jmaponline.net   192.168.2.71  192.168.0.33
-${URLWebApp}    https://${localhost}:${externPort}/${Title}
+${URLWebApp}    http://${localhost}:${externPort}/${Title}
 ${URLWebNGApp}    http://${localhost}:${internPort}/services/jmap
 ${UserName}    userTest1
 ${Password}    userTest1
