@@ -202,12 +202,12 @@ Open Browser On JMap Web    [Arguments]    ${vURL}    ${RESOLUTION_X}    ${RESOL
 Open Chrome
     ${chrome_options}    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     Call Method    ${chrome_options}    add_argument    --ignore-certificate-errors    
-    Create Webdriver    ${Browser}    chrome    chrome_options=${chrome_options}
+    Create Webdriver    ${Browser}    alias=JMap Web    chrome_options=${chrome_options}
     
 Open Firefox
     ${profile}    Evaluate    sys.modules['selenium.webdriver'].FirefoxProfile()    sys, selenium.webdriver
     Call Method    ${profile}    set_preference    accept_untrusted_certs    True    
-    Create Webdriver    ${Browser}    firefox    firefox_profile=${profile}    
+    Create Webdriver    ${Browser}    alias=JMap Web    firefox_profile=${profile}    
 
 Open Edge
     ${edge_options}    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys, selenium.webdriver

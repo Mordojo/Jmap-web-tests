@@ -16,7 +16,7 @@ ${Title}        JMap_Web_SDK_HTTPS5
 ${internPort}    8080
 ${externPort}    8443    #8081   8442
 ${localhost}    localhost    #jmap7dev.jmaponline.net   192.168.2.71  192.168.0.33
-${URLWebApp}    https://${localhost}:${externPort}/${Title}/login.jsp
+${URLWebApp}    https://${localhost}:${externPort}/${Title}
 ${URLWebNGApp}    http://${localhost}:${internPort}/services/jmap
 ${UserName}    userTest1
 ${Password}    userTest1
