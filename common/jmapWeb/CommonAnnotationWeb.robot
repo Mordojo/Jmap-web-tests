@@ -103,7 +103,8 @@ Choose The Color Via The Text Field    [Arguments]    ${colorElement}
     [Documentation]    Choose text color for annotations
     Wait Until Keyword Succeeds    10s    1s    Wait Until Element Is Visible    xpath://div[@class='AnnotationStylePanel']//div[5]//div[1]//div[1]//div[1]    timeout=2s   
     Click Element    xpath://div[@class='AnnotationStylePanel']//div[5]//div[1]//div[1]//div[1]
-    Wait Until Keyword Succeeds    10s    1s    Wait Until Element Is Visible    xpath:${colorElement}    timeout=2s       
+    Wait Until Keyword Succeeds    10s    1s    Wait Until Element Is Visible    xpath:${colorElement}    timeout=2s
+    Sleep    0.5s           
     Click Element    xpath:${colorElement}    
     
 Get Annotation Attribute    [Arguments]    ${attribute}

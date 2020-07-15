@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200707 20:26:43.215" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200713 18:58:41.207" rpa="false">
 <suite id="s1" name="JMapJenkinsTests" source="C:\Users\mbous\eclipse-workspace\JMapJenkinsTests">
 <suite id="s1-s1" name="Tests" source="C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\tests">
 <suite id="s1-s1-s1" name="Jmap 7.0" source="C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\tests\jmap_7.0">
 <suite id="s1-s1-s1-s1" name="jmapWeb" source="C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\tests\jmap_7.0\jmapWeb">
 <suite id="s1-s1-s1-s1-s1" name="Manage Annotations" source="C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\tests\jmap_7.0\jmapWeb\Manage_Annotations">
-<suite id="s1-s1-s1-s1-s1-s1" name="EditStyleOfAnnotationTests" source="C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\tests\jmap_7.0\jmapWeb\Manage_Annotations\EditStyleOfAnnotationTests.robot">
-<test id="s1-s1-s1-s1-s1-s1-t1" name="JM70-974:Modify the text color of the text annotation">
+<suite id="s1-s1-s1-s1-s1-s1" name="DeleteAnAnnotationTests" source="C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\tests\jmap_7.0\jmapWeb\Manage_Annotations\DeleteAnAnnotationTests.robot">
+<test id="s1-s1-s1-s1-s1-s1-t1" name="JM70-918:Delete a Rectangle annotation">
 <kw name="Run Keywords" library="BuiltIn" type="setup">
 <doc>Executes all the given keywords in a sequence.</doc>
 <arguments>
@@ -36,8 +36,8 @@
 <assign>
 <var>${tc_start}</var>
 </assign>
-<msg timestamp="20200707 20:26:44.007" level="INFO">${tc_start} = 1594168004.006798</msg>
-<status status="PASS" starttime="20200707 20:26:44.007" endtime="20200707 20:26:44.008"></status>
+<msg timestamp="20200713 18:58:41.815" level="INFO">${tc_start} = 1594681121.814756</msg>
+<status status="PASS" starttime="20200713 18:58:41.815" endtime="20200713 18:58:41.815"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
@@ -45,10 +45,10 @@
 <arg>${tc_start}</arg>
 <arg>${tc_start}</arg>
 </arguments>
-<msg timestamp="20200707 20:26:44.008" level="INFO">${tc_start} = 1594168004.006798</msg>
-<status status="PASS" starttime="20200707 20:26:44.008" endtime="20200707 20:26:44.008"></status>
+<msg timestamp="20200713 18:58:41.816" level="INFO">${tc_start} = 1594681121.814756</msg>
+<status status="PASS" starttime="20200713 18:58:41.815" endtime="20200713 18:58:41.816"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:44.007" endtime="20200707 20:26:44.009"></status>
+<status status="PASS" starttime="20200713 18:58:41.814" endtime="20200713 18:58:41.816"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -71,8 +71,8 @@
 <assign>
 <var>${chrome_options}</var>
 </assign>
-<msg timestamp="20200707 20:26:44.010" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002038D260D30&gt;</msg>
-<status status="PASS" starttime="20200707 20:26:44.009" endtime="20200707 20:26:44.010"></status>
+<msg timestamp="20200713 18:58:41.817" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002423D716F98&gt;</msg>
+<status status="PASS" starttime="20200713 18:58:41.817" endtime="20200713 18:58:41.817"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -81,7 +81,7 @@
 <arg>add_argument</arg>
 <arg>--ignore-certificate-errors</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:44.010" endtime="20200707 20:26:44.010"></status>
+<status status="PASS" starttime="20200713 18:58:41.818" endtime="20200713 18:58:41.818"></status>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <doc>Creates an instance of Selenium WebDriver.</doc>
@@ -90,20 +90,20 @@
 <arg>alias=JMap Web</arg>
 <arg>chrome_options=${chrome_options}</arg>
 </arguments>
-<msg timestamp="20200707 20:26:44.011" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20200707 20:26:44.011" endtime="20200707 20:26:47.207"></status>
+<msg timestamp="20200713 18:58:41.818" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20200713 18:58:41.818" endtime="20200713 18:58:44.882"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:44.009" endtime="20200707 20:26:47.207"></status>
+<status status="PASS" starttime="20200713 18:58:41.817" endtime="20200713 18:58:44.883"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:44.009" endtime="20200707 20:26:47.208"></status>
+<status status="PASS" starttime="20200713 18:58:41.816" endtime="20200713 18:58:44.884"></status>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>${vURL}</arg>
 </arguments>
-<msg timestamp="20200707 20:26:47.209" level="INFO">Opening url 'http://localhost:8081/JMap_Web_WorldTest_HTTP'</msg>
-<status status="PASS" starttime="20200707 20:26:47.208" endtime="20200707 20:26:47.632"></status>
+<msg timestamp="20200713 18:58:44.886" level="INFO">Opening url 'http://localhost:8081/JMap_Web_WorldTest_HTTP'</msg>
+<status status="PASS" starttime="20200713 18:58:44.885" endtime="20200713 18:58:45.276"></status>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
@@ -111,13 +111,13 @@
 <arg>${RESOLUTION_X}</arg>
 <arg>${RESOLUTION_Y}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:47.632" endtime="20200707 20:26:49.776"></status>
+<status status="PASS" starttime="20200713 18:58:45.276" endtime="20200713 18:58:47.410"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200707 20:26:49.777" endtime="20200707 20:26:49.889"></status>
+<status status="PASS" starttime="20200713 18:58:47.411" endtime="20200713 18:58:47.576"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:44.006" endtime="20200707 20:26:49.889"></status>
+<status status="PASS" starttime="20200713 18:58:41.814" endtime="20200713 18:58:47.576"></status>
 </kw>
 <kw name="Login To JMap Web" library="CommonLogin">
 <arguments>
@@ -130,21 +130,21 @@
 <arg>id=username</arg>
 <arg>10s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:49.890" endtime="20200707 20:26:49.918"></status>
+<status status="PASS" starttime="20200713 18:58:47.577" endtime="20200713 18:58:47.600"></status>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
 <arguments>
 <arg>id=username</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:49.918" endtime="20200707 20:26:49.954"></status>
+<status status="PASS" starttime="20200713 18:58:47.600" endtime="20200713 18:58:47.630"></status>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
 <arguments>
 <arg>id=password</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:49.955" endtime="20200707 20:26:50.000"></status>
+<status status="PASS" starttime="20200713 18:58:47.630" endtime="20200713 18:58:47.661"></status>
 </kw>
 <kw name="Type" library="CommonWeb">
 <doc>Type the value in the locator after been clean</doc>
@@ -157,7 +157,7 @@
 <arguments>
 <arg>0.1s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:50.001" endtime="20200707 20:26:50.002"></status>
+<status status="PASS" starttime="20200713 18:58:47.662" endtime="20200713 18:58:47.663"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -174,16 +174,16 @@
 <arg>${locator}</arg>
 <arg>2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:50.003" endtime="20200707 20:26:50.024"></status>
+<status status="PASS" starttime="20200713 18:58:47.664" endtime="20200713 18:58:47.682"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:50.003" endtime="20200707 20:26:50.024"></status>
+<status status="PASS" starttime="20200713 18:58:47.663" endtime="20200713 18:58:47.682"></status>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:50.024" endtime="20200707 20:26:50.046"></status>
+<status status="PASS" starttime="20200713 18:58:47.682" endtime="20200713 18:58:47.701"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -191,18 +191,18 @@
 <arg>${locator}</arg>
 <arg>${value}</arg>
 </arguments>
-<msg timestamp="20200707 20:26:50.047" level="INFO">Typing text 'userTest1' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20200707 20:26:50.047" endtime="20200707 20:26:50.118"></status>
+<msg timestamp="20200713 18:58:47.701" level="INFO">Typing text 'userTest1' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20200713 18:58:47.701" endtime="20200713 18:58:47.754"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200707 20:26:51.119" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200707 20:26:50.119" endtime="20200707 20:26:51.120"></status>
+<msg timestamp="20200713 18:58:48.756" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200713 18:58:47.754" endtime="20200713 18:58:48.757"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:50.000" endtime="20200707 20:26:51.121"></status>
+<status status="PASS" starttime="20200713 18:58:47.662" endtime="20200713 18:58:48.757"></status>
 </kw>
 <kw name="Type" library="CommonWeb">
 <doc>Type the value in the locator after been clean</doc>
@@ -215,7 +215,7 @@
 <arguments>
 <arg>0.1s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:51.123" endtime="20200707 20:26:51.128"></status>
+<status status="PASS" starttime="20200713 18:58:48.761" endtime="20200713 18:58:48.762"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -232,16 +232,16 @@
 <arg>${locator}</arg>
 <arg>2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:51.131" endtime="20200707 20:26:51.184"></status>
+<status status="PASS" starttime="20200713 18:58:48.763" endtime="20200713 18:58:48.781"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:51.129" endtime="20200707 20:26:51.184"></status>
+<status status="PASS" starttime="20200713 18:58:48.762" endtime="20200713 18:58:48.781"></status>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:51.185" endtime="20200707 20:26:51.213"></status>
+<status status="PASS" starttime="20200713 18:58:48.781" endtime="20200713 18:58:48.800"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -249,46 +249,41 @@
 <arg>${locator}</arg>
 <arg>${value}</arg>
 </arguments>
-<msg timestamp="20200707 20:26:51.214" level="INFO">Typing text 'userTest1' into text field 'id=password'.</msg>
-<status status="PASS" starttime="20200707 20:26:51.213" endtime="20200707 20:26:51.346"></status>
+<msg timestamp="20200713 18:58:48.800" level="INFO">Typing text 'userTest1' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20200713 18:58:48.800" endtime="20200713 18:58:48.874"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200707 20:26:52.347" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200707 20:26:51.346" endtime="20200707 20:26:52.347"></status>
+<msg timestamp="20200713 18:58:49.876" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200713 18:58:48.875" endtime="20200713 18:58:49.877"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:51.121" endtime="20200707 20:26:52.348"></status>
+<status status="PASS" starttime="20200713 18:58:48.758" endtime="20200713 18:58:49.877"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>id=submit</arg>
 </arguments>
-<msg timestamp="20200707 20:26:52.349" level="INFO">Clicking element 'id=submit'.</msg>
-<status status="PASS" starttime="20200707 20:26:52.348" endtime="20200707 20:26:52.968"></status>
+<msg timestamp="20200713 18:58:49.880" level="INFO">Clicking element 'id=submit'.</msg>
+<status status="PASS" starttime="20200713 18:58:49.878" endtime="20200713 18:58:50.259"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200707 20:26:53.970" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200707 20:26:52.968" endtime="20200707 20:26:53.970"></status>
+<msg timestamp="20200713 18:58:51.261" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200713 18:58:50.260" endtime="20200713 18:58:51.261"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:49.890" endtime="20200707 20:26:53.970"></status>
+<status status="PASS" starttime="20200713 18:58:47.576" endtime="20200713 18:58:51.261"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:44.006" endtime="20200707 20:26:53.970"></status>
+<status status="PASS" starttime="20200713 18:58:41.814" endtime="20200713 18:58:51.261"></status>
 </kw>
-<kw name="Draw a Text Annotation With Text And Coordinates" library="CommonAnnotationWeb">
-<doc>This is a precondition for all test cases to "Select, Modify, Delete and Style" a text annotation</doc>
-<arguments>
-<arg>Argentina</arg>
-<arg>-175</arg>
-<arg>130</arg>
-</arguments>
+<kw name="Draw a Rectangle annotation" library="CommonAnnotationWeb">
+<doc>This is a precondition for all test cases to "Select, Modify, Delete and Style" a line annotation</doc>
 <kw name="Verify That Title Of The Cover Page Is" library="CommonWeb">
 <doc>Check for the title of the cover page</doc>
 <arguments>
@@ -304,7 +299,7 @@
 <arguments>
 <arg>5s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:53.972" endtime="20200707 20:26:53.973"></status>
+<status status="PASS" starttime="20200713 18:58:51.262" endtime="20200713 18:58:51.264"></status>
 </kw>
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
@@ -317,14 +312,14 @@
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200707 20:26:53.982" level="INFO">Page title is 'JMap_Web_WorldTest_HTTP'.</msg>
-<status status="PASS" starttime="20200707 20:26:53.973" endtime="20200707 20:26:53.982"></status>
+<msg timestamp="20200713 18:58:51.272" level="INFO">Page title is 'JMap_Web_WorldTest_HTTP'.</msg>
+<status status="PASS" starttime="20200713 18:58:51.264" endtime="20200713 18:58:51.272"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:53.973" endtime="20200707 20:26:53.982"></status>
+<status status="PASS" starttime="20200713 18:58:51.264" endtime="20200713 18:58:51.272"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:53.971" endtime="20200707 20:26:53.983"></status>
+<status status="PASS" starttime="20200713 18:58:51.262" endtime="20200713 18:58:51.273"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:53.971" endtime="20200707 20:26:53.983"></status>
+<status status="PASS" starttime="20200713 18:58:51.262" endtime="20200713 18:58:51.273"></status>
 </kw>
 <kw name="Click On Annotation Down List Arrow" library="CommonAnnotationWeb">
 <doc>Click on annotation tool</doc>
@@ -343,55 +338,55 @@
 <arg>xpath://div[@id='smallTrigger_freehandSet']</arg>
 <arg>timeout=2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:53.984" endtime="20200707 20:26:54.009"></status>
+<status status="PASS" starttime="20200713 18:58:51.274" endtime="20200713 18:58:51.297"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:53.983" endtime="20200707 20:26:54.009"></status>
+<status status="PASS" starttime="20200713 18:58:51.273" endtime="20200713 18:58:51.297"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://div[@id='smallTrigger_freehandSet']</arg>
 </arguments>
-<msg timestamp="20200707 20:26:54.009" level="INFO">Clicking element 'xpath://div[@id='smallTrigger_freehandSet']'.</msg>
-<status status="PASS" starttime="20200707 20:26:54.009" endtime="20200707 20:26:54.051"></status>
+<msg timestamp="20200713 18:58:51.297" level="INFO">Clicking element 'xpath://div[@id='smallTrigger_freehandSet']'.</msg>
+<status status="PASS" starttime="20200713 18:58:51.297" endtime="20200713 18:58:51.330"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:53.983" endtime="20200707 20:26:54.052"></status>
+<status status="PASS" starttime="20200713 18:58:51.273" endtime="20200713 18:58:51.331"></status>
 </kw>
-<kw name="Click On Text Annotation" library="CommonAnnotationWeb">
-<doc>Click on text annotation tool</doc>
+<kw name="Click On Rectangle Annotation" library="CommonAnnotationWeb">
+<doc>Click on rectangle annotation tool</doc>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
 <arguments>
 <arg>10s</arg>
 <arg>1s</arg>
-<arg>Wait Until Element Is Enabled</arg>
-<arg>xpath://div[@class='textAnnotation CustomButtons btn btn-default']</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@id='rectangle_FreeDrawingTrigger']</arg>
 <arg>timeout=2s</arg>
 </arguments>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is enabled.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>xpath://div[@class='textAnnotation CustomButtons btn btn-default']</arg>
+<arg>xpath://div[@id='rectangle_FreeDrawingTrigger']</arg>
 <arg>timeout=2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:54.053" endtime="20200707 20:26:54.076"></status>
+<status status="PASS" starttime="20200713 18:58:51.331" endtime="20200713 18:58:51.566"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.052" endtime="20200707 20:26:54.076"></status>
+<status status="PASS" starttime="20200713 18:58:51.331" endtime="20200713 18:58:51.567"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>xpath://div[@class='textAnnotation CustomButtons btn btn-default']</arg>
+<arg>xpath://div[@id='rectangle_FreeDrawingTrigger']</arg>
 </arguments>
-<msg timestamp="20200707 20:26:54.078" level="INFO">Clicking element 'xpath://div[@class='textAnnotation CustomButtons btn btn-default']'.</msg>
-<status status="PASS" starttime="20200707 20:26:54.076" endtime="20200707 20:26:54.131"></status>
+<msg timestamp="20200713 18:58:51.567" level="INFO">Clicking element 'xpath://div[@id='rectangle_FreeDrawingTrigger']'.</msg>
+<status status="PASS" starttime="20200713 18:58:51.567" endtime="20200713 18:58:51.618"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.052" endtime="20200707 20:26:54.131"></status>
+<status status="PASS" starttime="20200713 18:58:51.331" endtime="20200713 18:58:51.619"></status>
 </kw>
 <kw name="Element Annotation Should Be Selected" library="CommonAnnotationWeb">
 <doc>Check that element annotation is selected</doc>
 <arguments>
-<arg>Text</arg>
+<arg>Rectangle</arg>
 </arguments>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -408,9 +403,9 @@
 <arg>xpath://div[@id='dropdownButton_freehandSet']</arg>
 <arg>timeout=2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:54.132" endtime="20200707 20:26:54.168"></status>
+<status status="PASS" starttime="20200713 18:58:51.620" endtime="20200713 18:58:51.650"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.132" endtime="20200707 20:26:54.168"></status>
+<status status="PASS" starttime="20200713 18:58:51.619" endtime="20200713 18:58:51.650"></status>
 </kw>
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
@@ -427,18 +422,94 @@
 <arg>data-original-title</arg>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200707 20:26:54.184" level="INFO">Element '//div[@id='dropdownButton_freehandSet']' attribute 'data-original-title' contains value 'Text'.</msg>
-<status status="PASS" starttime="20200707 20:26:54.169" endtime="20200707 20:26:54.184"></status>
+<msg timestamp="20200713 18:58:51.663" level="INFO">Element '//div[@id='dropdownButton_freehandSet']' attribute 'data-original-title' contains value 'Rectangle'.</msg>
+<status status="PASS" starttime="20200713 18:58:51.651" endtime="20200713 18:58:51.663"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.168" endtime="20200707 20:26:54.184"></status>
+<status status="PASS" starttime="20200713 18:58:51.651" endtime="20200713 18:58:51.663"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.132" endtime="20200707 20:26:54.184"></status>
+<status status="PASS" starttime="20200713 18:58:51.619" endtime="20200713 18:58:51.664"></status>
+</kw>
+<kw name="Draw With Rectangle Annotation" library="CommonAnnotationWeb">
+<doc>Draw a Rectangle Annotation</doc>
+<kw name="Click On The Map At Coordinates" library="CommonWeb">
+<doc>Click on the map using xoffset and yoffset as displacement from the center of the map (0.0)</doc>
+<arguments>
+<arg>0</arg>
+<arg>0</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:51.665" endtime="20200713 18:58:51.687"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:51.664" endtime="20200713 18:58:51.687"></status>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>${xoffset}</arg>
+<arg>${yoffset}</arg>
+</arguments>
+<msg timestamp="20200713 18:58:51.687" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=0, y=0.</msg>
+<status status="PASS" starttime="20200713 18:58:51.687" endtime="20200713 18:58:52.284"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:51.664" endtime="20200713 18:58:52.284"></status>
+</kw>
+<kw name="Click On The Map At Coordinates" library="CommonWeb">
+<doc>Click on the map using xoffset and yoffset as displacement from the center of the map (0.0)</doc>
+<arguments>
+<arg>115</arg>
+<arg>-70</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:52.285" endtime="20200713 18:58:52.319"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:52.285" endtime="20200713 18:58:52.319"></status>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>${xoffset}</arg>
+<arg>${yoffset}</arg>
+</arguments>
+<msg timestamp="20200713 18:58:52.319" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=115, y=-70.</msg>
+<status status="PASS" starttime="20200713 18:58:52.319" endtime="20200713 18:58:52.844"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:52.285" endtime="20200713 18:58:52.844"></status>
 </kw>
 <kw name="Double Click On The Map At Coordinates" library="CommonWeb">
 <doc>Double Click on the map using xoffset and yoffset as displacement from the center of the map (0.0)</doc>
 <arguments>
-<arg>${xoffset}</arg>
-<arg>${yoffset}</arg>
+<arg>0</arg>
+<arg>0</arg>
 </arguments>
 <kw name="${count} IN RANGE [ 1 | 3 ]" type="for">
 <kw name="${count} = 1" type="foritem">
@@ -463,9 +534,9 @@
 <arg>xpath://div[@id='map']</arg>
 <arg>timeout=2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:54.186" endtime="20200707 20:26:54.212"></status>
+<status status="PASS" starttime="20200713 18:58:52.846" endtime="20200713 18:58:52.861"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.186" endtime="20200707 20:26:54.212"></status>
+<status status="PASS" starttime="20200713 18:58:52.845" endtime="20200713 18:58:52.861"></status>
 </kw>
 <kw name="Click Element At Coordinates" library="SeleniumLibrary">
 <doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
@@ -474,12 +545,12 @@
 <arg>${xoffset}</arg>
 <arg>${yoffset}</arg>
 </arguments>
-<msg timestamp="20200707 20:26:54.213" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=-175, y=130.</msg>
-<status status="PASS" starttime="20200707 20:26:54.212" endtime="20200707 20:26:54.789"></status>
+<msg timestamp="20200713 18:58:52.862" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=0, y=0.</msg>
+<status status="PASS" starttime="20200713 18:58:52.861" endtime="20200713 18:58:53.381"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.185" endtime="20200707 20:26:54.789"></status>
+<status status="PASS" starttime="20200713 18:58:52.845" endtime="20200713 18:58:53.382"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.185" endtime="20200707 20:26:54.790"></status>
+<status status="PASS" starttime="20200713 18:58:52.845" endtime="20200713 18:58:53.382"></status>
 </kw>
 <kw name="${count} = 2" type="foritem">
 <kw name="Click On The Map At Coordinates" library="CommonWeb">
@@ -503,9 +574,9 @@
 <arg>xpath://div[@id='map']</arg>
 <arg>timeout=2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:54.792" endtime="20200707 20:26:54.814"></status>
+<status status="PASS" starttime="20200713 18:58:53.383" endtime="20200713 18:58:53.399"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.791" endtime="20200707 20:26:54.814"></status>
+<status status="PASS" starttime="20200713 18:58:53.382" endtime="20200713 18:58:53.399"></status>
 </kw>
 <kw name="Click Element At Coordinates" library="SeleniumLibrary">
 <doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
@@ -514,524 +585,188 @@
 <arg>${xoffset}</arg>
 <arg>${yoffset}</arg>
 </arguments>
-<msg timestamp="20200707 20:26:54.815" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=-175, y=130.</msg>
-<status status="PASS" starttime="20200707 20:26:54.815" endtime="20200707 20:26:55.361"></status>
+<msg timestamp="20200713 18:58:53.400" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=0, y=0.</msg>
+<status status="PASS" starttime="20200713 18:58:53.400" endtime="20200713 18:58:53.922"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.790" endtime="20200707 20:26:55.362"></status>
+<status status="PASS" starttime="20200713 18:58:53.382" endtime="20200713 18:58:53.922"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.790" endtime="20200707 20:26:55.362"></status>
+<status status="PASS" starttime="20200713 18:58:53.382" endtime="20200713 18:58:53.922"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.185" endtime="20200707 20:26:55.363"></status>
+<status status="PASS" starttime="20200713 18:58:52.845" endtime="20200713 18:58:53.923"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200707 20:26:56.365" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200707 20:26:55.363" endtime="20200707 20:26:56.365"></status>
+<msg timestamp="20200713 18:58:54.923" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200713 18:58:53.923" endtime="20200713 18:58:54.923"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:54.185" endtime="20200707 20:26:56.365"></status>
+<status status="PASS" starttime="20200713 18:58:52.844" endtime="20200713 18:58:54.923"></status>
 </kw>
-<kw name="Verify Text Annotation Field Is Exist" library="CommonAnnotationWeb">
-<doc>Check text annotation exist</doc>
+<status status="PASS" starttime="20200713 18:58:51.664" endtime="20200713 18:58:54.923"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:51.261" endtime="20200713 18:58:54.923"></status>
+</kw>
+<kw name="Click On Modification Icon" library="CommonAnnotationWeb">
+<doc>Click on annotation modification tool</doc>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
 <arguments>
 <arg>10s</arg>
 <arg>1s</arg>
 <arg>Wait Until Element Is Visible</arg>
-<arg>xpath://div[@class='textAnnotationInputDiv']//input</arg>
-<arg>5s</arg>
+<arg>xpath://div[@class='ModifyTool CustomButtons btn btn-default']</arg>
+<arg>timeout=2s</arg>
 </arguments>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>xpath://div[@class='textAnnotationInputDiv']//input</arg>
-<arg>5s</arg>
+<arg>xpath://div[@class='ModifyTool CustomButtons btn btn-default']</arg>
+<arg>timeout=2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:56.366" endtime="20200707 20:26:56.390"></status>
+<status status="PASS" starttime="20200713 18:58:54.925" endtime="20200713 18:58:54.944"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:56.366" endtime="20200707 20:26:56.390"></status>
+<status status="PASS" starttime="20200713 18:58:54.924" endtime="20200713 18:58:54.945"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@class='ModifyTool CustomButtons btn btn-default']</arg>
+</arguments>
+<msg timestamp="20200713 18:58:54.945" level="INFO">Clicking element 'xpath://div[@class='ModifyTool CustomButtons btn btn-default']'.</msg>
+<status status="PASS" starttime="20200713 18:58:54.945" endtime="20200713 18:58:54.984"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:54.924" endtime="20200713 18:58:54.984"></status>
+</kw>
+<kw name="Select The Drawing Tool Rectangle Annotation" library="CommonAnnotationWeb">
+<doc>Select The Drawing Tool Rectangle Annotation clicking over</doc>
+<arguments>
+<arg>115</arg>
+<arg>-70</arg>
+</arguments>
+<kw name="Click On The Map At Coordinates" library="CommonWeb">
+<doc>Click on the map using xoffset and yoffset as displacement from the center of the map (0.0)</doc>
+<arguments>
+<arg>${xoffset}</arg>
+<arg>${yoffset}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:54.985" endtime="20200713 18:58:55.005"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:54.985" endtime="20200713 18:58:55.005"></status>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>${xoffset}</arg>
+<arg>${yoffset}</arg>
+</arguments>
+<msg timestamp="20200713 18:58:55.006" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=115, y=-70.</msg>
+<status status="PASS" starttime="20200713 18:58:55.005" endtime="20200713 18:58:55.537"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:54.985" endtime="20200713 18:58:55.538"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:54.984" endtime="20200713 18:58:55.538"></status>
+</kw>
+<kw name="The Icone Rotate Right Should Be Exist" library="CommonAnnotationWeb">
+<doc>Check for the Rotate right icon to be present</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@name='rotateRight']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@name='rotateRight']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:55.539" endtime="20200713 18:58:55.990"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:55.539" endtime="20200713 18:58:55.990"></status>
 </kw>
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
 <arg>Element Should Be Visible</arg>
-<arg>//div[@class='textAnnotationInputDiv']//input</arg>
+<arg>//div[@name='rotateRight']</arg>
 </arguments>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
 <arguments>
-<arg>//div[@class='textAnnotationInputDiv']//input</arg>
+<arg>//div[@name='rotateRight']</arg>
 </arguments>
-<msg timestamp="20200707 20:26:56.406" level="INFO">Element '//div[@class='textAnnotationInputDiv']//input' is displayed.</msg>
-<status status="PASS" starttime="20200707 20:26:56.391" endtime="20200707 20:26:56.406"></status>
+<msg timestamp="20200713 18:58:56.003" level="INFO">Element '//div[@name='rotateRight']' is displayed.</msg>
+<status status="PASS" starttime="20200713 18:58:55.991" endtime="20200713 18:58:56.003"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:56.390" endtime="20200707 20:26:56.406"></status>
+<status status="PASS" starttime="20200713 18:58:55.991" endtime="20200713 18:58:56.003"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:56.365" endtime="20200707 20:26:56.406"></status>
+<status status="PASS" starttime="20200713 18:58:55.538" endtime="20200713 18:58:56.003"></status>
 </kw>
-<kw name="Create Annotation With Text" library="CommonAnnotationWeb">
-<doc>Create Text Annotation with the given text</doc>
-<arguments>
-<arg>${value}</arg>
-</arguments>
-<kw name="Type In Text Annotation Field" library="CommonAnnotationWeb">
-<doc>Type given text to Text Annotation</doc>
-<arguments>
-<arg>${value}</arg>
-</arguments>
-<kw name="Type" library="CommonWeb">
-<doc>Type the value in the locator after been clean</doc>
-<arguments>
-<arg>//div[@class='textAnnotationInputDiv']//input</arg>
-<arg>${text}</arg>
-</arguments>
-<kw name="Set Selenium Timeout" library="SeleniumLibrary">
-<doc>Sets the timeout that is used by various keywords.</doc>
-<arguments>
-<arg>0.1s</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:26:56.408" endtime="20200707 20:26:56.409"></status>
-</kw>
+<kw name="The Icone Rotate left Should be Exist" library="CommonAnnotationWeb">
+<doc>Check for the Rotate left icon to be present</doc>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
 <arguments>
 <arg>10s</arg>
 <arg>1s</arg>
-<arg>Wait Until Element Is Enabled</arg>
-<arg>${locator}</arg>
-<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@name='rotateLeft']</arg>
+<arg>timeout=2s</arg>
 </arguments>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is enabled.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>${locator}</arg>
-<arg>2s</arg>
+<arg>xpath://div[@name='rotateLeft']</arg>
+<arg>timeout=2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:26:56.410" endtime="20200707 20:26:56.430"></status>
+<status status="PASS" starttime="20200713 18:58:56.004" endtime="20200713 18:58:56.019"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:56.409" endtime="20200707 20:26:56.430"></status>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:26:56.431" endtime="20200707 20:26:56.492"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${value}</arg>
-</arguments>
-<msg timestamp="20200707 20:26:56.493" level="INFO">Typing text 'Argentina' into text field '//div[@class='textAnnotationInputDiv']//input'.</msg>
-<status status="PASS" starttime="20200707 20:26:56.493" endtime="20200707 20:26:56.672"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200707 20:26:57.674" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200707 20:26:56.672" endtime="20200707 20:26:57.675"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:26:56.407" endtime="20200707 20:26:57.676"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200707 20:26:58.679" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200707 20:26:57.677" endtime="20200707 20:26:58.680"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:26:56.407" endtime="20200707 20:26:58.681"></status>
-</kw>
-<kw name="Verify value of Text Annotation Field" library="CommonAnnotationWeb">
-<doc>Check text annotation value from the given value</doc>
-<arguments>
-<arg>${value}</arg>
-</arguments>
-<kw name="Verify Value" library="CommonWeb">
-<doc>Check for the value existence on the locator</doc>
-<arguments>
-<arg>//div[@class='textAnnotationInputDiv']//input</arg>
-<arg>${value}</arg>
-</arguments>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>10s</arg>
-<arg>1s</arg>
-<arg>Wait Until Element Is Enabled</arg>
-<arg>${locator}</arg>
-</arguments>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:26:58.685" endtime="20200707 20:26:58.720"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:26:58.684" endtime="20200707 20:26:58.720"></status>
+<status status="PASS" starttime="20200713 18:58:56.004" endtime="20200713 18:58:56.019"></status>
 </kw>
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
-<arg>Element Attribute Value Should Be</arg>
-<arg>${locator}</arg>
-<arg>value</arg>
-<arg>${value}</arg>
+<arg>Element Should Be Visible</arg>
+<arg>//div[@name='rotateLeft']</arg>
 </arguments>
-<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
-<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
 <arguments>
-<arg>${locator}</arg>
-<arg>value</arg>
-<arg>${value}</arg>
+<arg>//div[@name='rotateLeft']</arg>
 </arguments>
-<msg timestamp="20200707 20:26:58.756" level="INFO">Element '//div[@class='textAnnotationInputDiv']//input' attribute 'value' contains value 'Argentina'.</msg>
-<status status="PASS" starttime="20200707 20:26:58.722" endtime="20200707 20:26:58.757"></status>
+<msg timestamp="20200713 18:58:56.033" level="INFO">Element '//div[@name='rotateLeft']' is displayed.</msg>
+<status status="PASS" starttime="20200713 18:58:56.020" endtime="20200713 18:58:56.033"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:58.721" endtime="20200707 20:26:58.758"></status>
+<status status="PASS" starttime="20200713 18:58:56.020" endtime="20200713 18:58:56.033"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:26:58.683" endtime="20200707 20:26:58.758"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:26:58.682" endtime="20200707 20:26:58.759"></status>
-</kw>
-<kw name="Press Enter" library="CommonWeb">
-<doc>Press Enter key</doc>
-<arguments>
-<arg>//div[@class='textAnnotationInputDiv']//input</arg>
-</arguments>
-<kw name="Press Key" library="SeleniumLibrary">
-<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>\\13</arg>
-</arguments>
-<msg timestamp="20200707 20:26:58.762" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
-<status status="PASS" starttime="20200707 20:26:58.762" endtime="20200707 20:26:58.887"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200707 20:26:59.889" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200707 20:26:58.887" endtime="20200707 20:26:59.890"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:26:58.760" endtime="20200707 20:26:59.891"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200707 20:27:00.895" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200707 20:26:59.892" endtime="20200707 20:27:00.896"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:26:56.407" endtime="20200707 20:27:00.897"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:26:53.971" endtime="20200707 20:27:00.898"></status>
-</kw>
-<kw name="Verify The Background Color Of The Text Field" library="CommonAnnotationWeb">
-<doc>Check annotation text background color by the given text background color value</doc>
-<arguments>
-<arg>${blackColorField}</arg>
-</arguments>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>10s</arg>
-<arg>1s</arg>
-<arg>Wait Until Element Is Enabled</arg>
-<arg>xpath://div[@class='AnnotationStylePanel']//div[5]//div[1]//div[1]//div[1]</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<arguments>
-<arg>xpath://div[@class='AnnotationStylePanel']//div[5]//div[1]//div[1]//div[1]</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:00.901" endtime="20200707 20:27:00.973"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:00.900" endtime="20200707 20:27:00.974"></status>
-</kw>
-<kw name="Verify Background Color" library="CommonWeb">
-<doc>Check for the css backgroud color of the web element located in locator</doc>
-<arguments>
-<arg>//div[@class='AnnotationStylePanel']//div[5]//div[1]//div[1]//div[1]</arg>
-<arg>${color}</arg>
-</arguments>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<arguments>
-<arg>${Locator}</arg>
-</arguments>
-<assign>
-<var>${elem}</var>
-</assign>
-<msg timestamp="20200707 20:27:00.992" level="INFO">${elem} = &lt;selenium.webdriver.remote.webelement.WebElement (session="ba74d7e4b0fa8d105cc0017a329c2ce5", element="b78f2c30-5139-4c57-896c-671b84f2e995")&gt;</msg>
-<status status="PASS" starttime="20200707 20:27:00.976" endtime="20200707 20:27:00.993"></status>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<arguments>
-<arg>${elem}</arg>
-<arg>value_of_css_property</arg>
-<arg>background-color</arg>
-</arguments>
-<assign>
-<var>${getBgColor}</var>
-</assign>
-<msg timestamp="20200707 20:27:01.016" level="INFO">${getBgColor} = rgba(0, 0, 0, 1)</msg>
-<status status="PASS" starttime="20200707 20:27:00.993" endtime="20200707 20:27:01.016"></status>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<arguments>
-<arg>Should Be Equal</arg>
-<arg>${getBgColor}</arg>
-<arg>${color}</arg>
-</arguments>
-<kw name="Should Be Equal" library="BuiltIn">
-<doc>Fails if the given objects are unequal.</doc>
-<arguments>
-<arg>${getBgColor}</arg>
-<arg>${color}</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:01.018" endtime="20200707 20:27:01.019"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:01.017" endtime="20200707 20:27:01.019"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:00.974" endtime="20200707 20:27:01.019"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:00.898" endtime="20200707 20:27:01.020"></status>
-</kw>
-<kw name="Click On Selection Icon" library="CommonAnnotationWeb">
-<doc>Click on annotation selection tool</doc>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>10s</arg>
-<arg>1s</arg>
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath://div[@class='SelectionTool CustomButtons btn btn-default']</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath://div[@class='SelectionTool CustomButtons btn btn-default']</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:01.022" endtime="20200707 20:27:01.069"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:01.021" endtime="20200707 20:27:01.070"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://div[@class='SelectionTool CustomButtons btn btn-default']</arg>
-</arguments>
-<msg timestamp="20200707 20:27:01.071" level="INFO">Clicking element 'xpath://div[@class='SelectionTool CustomButtons btn btn-default']'.</msg>
-<status status="PASS" starttime="20200707 20:27:01.070" endtime="20200707 20:27:01.164"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:01.021" endtime="20200707 20:27:01.164"></status>
-</kw>
-<kw name="Select The Drawing Tool Text Annotation" library="CommonAnnotationWeb">
-<doc>Select The Drawing Tool Text Annotation clicking over</doc>
-<arguments>
-<arg>-175</arg>
-<arg>130</arg>
-</arguments>
-<kw name="Click On The Map At Coordinates" library="CommonWeb">
-<doc>Click on the map using xoffset and yoffset as displacement from the center of the map (0.0)</doc>
-<arguments>
-<arg>${xoffset}</arg>
-<arg>${yoffset}</arg>
-</arguments>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>10s</arg>
-<arg>1s</arg>
-<arg>Wait Until Element Is Enabled</arg>
-<arg>xpath://div[@id='map']</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<arguments>
-<arg>xpath://div[@id='map']</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:01.168" endtime="20200707 20:27:01.213"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:01.167" endtime="20200707 20:27:01.213"></status>
-</kw>
-<kw name="Click Element At Coordinates" library="SeleniumLibrary">
-<doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
-<arguments>
-<arg>xpath://div[@id='map']</arg>
-<arg>${xoffset}</arg>
-<arg>${yoffset}</arg>
-</arguments>
-<msg timestamp="20200707 20:27:01.215" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=-175, y=130.</msg>
-<status status="PASS" starttime="20200707 20:27:01.214" endtime="20200707 20:27:01.881"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:01.166" endtime="20200707 20:27:01.882"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:01.165" endtime="20200707 20:27:01.883"></status>
-</kw>
-<kw name="Click On Style Icon" library="CommonAnnotationWeb">
-<doc>Click on annotation style tool</doc>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>10s</arg>
-<arg>1s</arg>
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath://div[@id='AnnotationStyleTrigger']</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath://div[@id='AnnotationStyleTrigger']</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:01.887" endtime="20200707 20:27:01.952"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:01.885" endtime="20200707 20:27:01.953"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://div[@id='AnnotationStyleTrigger']</arg>
-</arguments>
-<msg timestamp="20200707 20:27:01.955" level="INFO">Clicking element 'xpath://div[@id='AnnotationStyleTrigger']'.</msg>
-<status status="PASS" starttime="20200707 20:27:01.954" endtime="20200707 20:27:02.091"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:01.884" endtime="20200707 20:27:02.092"></status>
-</kw>
-<kw name="Choose The Color Via The Text Field" library="CommonAnnotationWeb">
-<doc>Choose text color for annotations</doc>
-<arguments>
-<arg>${greenColorElement}</arg>
-</arguments>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>10s</arg>
-<arg>1s</arg>
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath://div[@class='AnnotationStylePanel']//div[5]//div[1]//div[1]//div[1]</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath://div[@class='AnnotationStylePanel']//div[5]//div[1]//div[1]//div[1]</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<kw name="No Operation" library="BuiltIn">
-<doc>Does absolutely nothing.</doc>
-<status status="PASS" starttime="20200707 20:27:02.278" endtime="20200707 20:27:02.279"></status>
-</kw>
-<msg timestamp="20200707 20:27:02.283" level="FAIL">TimeoutException: Message: script timeout
-  (Session info: chrome=83.0.4103.116)
-</msg>
-<status status="FAIL" starttime="20200707 20:27:02.094" endtime="20200707 20:27:02.283"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath://div[@class='AnnotationStylePanel']//div[5]//div[1]//div[1]//div[1]</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:03.283" endtime="20200707 20:27:03.337"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:02.094" endtime="20200707 20:27:03.337"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://div[@class='AnnotationStylePanel']//div[5]//div[1]//div[1]//div[1]</arg>
-</arguments>
-<msg timestamp="20200707 20:27:03.340" level="INFO">Clicking element 'xpath://div[@class='AnnotationStylePanel']//div[5]//div[1]//div[1]//div[1]'.</msg>
-<status status="PASS" starttime="20200707 20:27:03.339" endtime="20200707 20:27:03.526"></status>
-</kw>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>10s</arg>
-<arg>1s</arg>
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath:${colorElement}</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath:${colorElement}</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:03.528" endtime="20200707 20:27:03.551"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:03.526" endtime="20200707 20:27:03.551"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath:${colorElement}</arg>
-</arguments>
-<msg timestamp="20200707 20:27:03.551" level="INFO">Clicking element 'xpath://div[@class='sp-container sp-light sp-alpha-enabled sp-buttons-disabled sp-palette-buttons-disabled sp-initial-disabled']//div[@class='sp-cf sp-palette-row sp-palette-row-1']//span[4]'.</msg>
-<status status="PASS" starttime="20200707 20:27:03.551" endtime="20200707 20:27:03.634"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:02.092" endtime="20200707 20:27:03.635"></status>
-</kw>
-<kw name="Click On Style Icon" library="CommonAnnotationWeb">
-<doc>Click on annotation style tool</doc>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<arguments>
-<arg>10s</arg>
-<arg>1s</arg>
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath://div[@id='AnnotationStyleTrigger']</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath://div[@id='AnnotationStyleTrigger']</arg>
-<arg>timeout=2s</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:03.637" endtime="20200707 20:27:03.667"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:03.636" endtime="20200707 20:27:03.668"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://div[@id='AnnotationStyleTrigger']</arg>
-</arguments>
-<msg timestamp="20200707 20:27:03.669" level="INFO">Clicking element 'xpath://div[@id='AnnotationStyleTrigger']'.</msg>
-<status status="PASS" starttime="20200707 20:27:03.668" endtime="20200707 20:27:03.744"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:03.635" endtime="20200707 20:27:03.745"></status>
+<status status="PASS" starttime="20200713 18:58:56.003" endtime="20200713 18:58:56.033"></status>
 </kw>
 <kw name="Click On The Map At Coordinates" library="CommonWeb">
 <doc>Click on the map using xoffset and yoffset as displacement from the center of the map (0.0)</doc>
 <arguments>
 <arg>150</arg>
-<arg>30</arg>
+<arg>100</arg>
 </arguments>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -1048,9 +783,9 @@
 <arg>xpath://div[@id='map']</arg>
 <arg>timeout=2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:03.748" endtime="20200707 20:27:03.792"></status>
+<status status="PASS" starttime="20200713 18:58:56.034" endtime="20200713 18:58:56.049"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:03.746" endtime="20200707 20:27:03.792"></status>
+<status status="PASS" starttime="20200713 18:58:56.034" endtime="20200713 18:58:56.049"></status>
 </kw>
 <kw name="Click Element At Coordinates" library="SeleniumLibrary">
 <doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
@@ -1059,141 +794,10 @@
 <arg>${xoffset}</arg>
 <arg>${yoffset}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:03.794" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=150, y=30.</msg>
-<status status="PASS" starttime="20200707 20:27:03.793" endtime="20200707 20:27:04.368"></status>
+<msg timestamp="20200713 18:58:56.050" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=150, y=100.</msg>
+<status status="PASS" starttime="20200713 18:58:56.050" endtime="20200713 18:58:56.578"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:03.746" endtime="20200707 20:27:04.369"></status>
-</kw>
-<kw name="Verify That The Annotation Type Is" library="CommonAnnotationWeb">
-<doc>Check annotation type by the given type value</doc>
-<arguments>
-<arg>Text</arg>
-</arguments>
-<kw name="Get Annotation Attribute" library="CommonAnnotationWeb">
-<doc>Get annotation attributes</doc>
-<arguments>
-<arg>annotationType</arg>
-</arguments>
-<assign>
-<var>${getAnnotationType}</var>
-</assign>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<arguments>
-<arg>0.1s</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:04.374" endtime="20200707 20:27:04.375"></status>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<arguments>
-<arg>return window.JMap.Html5Core.Util.getAnnotationConfig()[0].${attribute}</arg>
-</arguments>
-<assign>
-<var>${getAttribute}</var>
-</assign>
-<msg timestamp="20200707 20:27:04.378" level="INFO">Executing JavaScript:
-return window.JMap.Html5Core.Util.getAnnotationConfig()[0].annotationType
-Without any arguments.</msg>
-<msg timestamp="20200707 20:27:04.495" level="INFO">${getAttribute} = Text</msg>
-<status status="PASS" starttime="20200707 20:27:04.376" endtime="20200707 20:27:04.495"></status>
-</kw>
-<msg timestamp="20200707 20:27:04.496" level="INFO">${getAnnotationType} = Text</msg>
-<status status="PASS" starttime="20200707 20:27:04.372" endtime="20200707 20:27:04.497"></status>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<arguments>
-<arg>Should Be Equal</arg>
-<arg>${getAnnotationType}</arg>
-<arg>${annotationType}</arg>
-</arguments>
-<kw name="Should Be Equal" library="BuiltIn">
-<doc>Fails if the given objects are unequal.</doc>
-<arguments>
-<arg>${getAnnotationType}</arg>
-<arg>${annotationType}</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:04.499" endtime="20200707 20:27:04.500"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:04.498" endtime="20200707 20:27:04.501"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:04.370" endtime="20200707 20:27:04.502"></status>
-</kw>
-<kw name="Verify That The Annotation Text Color Is" library="CommonAnnotationWeb">
-<doc>Check annotation text color by the given text color value</doc>
-<arguments>
-<arg>${greenColorDrawing}</arg>
-</arguments>
-<kw name="Get Annotation Attribute" library="CommonAnnotationWeb">
-<doc>Get annotation attributes</doc>
-<arguments>
-<arg>textColor</arg>
-</arguments>
-<assign>
-<var>${getAnnotation}</var>
-</assign>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<arguments>
-<arg>0.1s</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:04.505" endtime="20200707 20:27:04.506"></status>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<arguments>
-<arg>return window.JMap.Html5Core.Util.getAnnotationConfig()[0].${attribute}</arg>
-</arguments>
-<assign>
-<var>${getAttribute}</var>
-</assign>
-<msg timestamp="20200707 20:27:04.508" level="INFO">Executing JavaScript:
-return window.JMap.Html5Core.Util.getAnnotationConfig()[0].textColor
-Without any arguments.</msg>
-<msg timestamp="20200707 20:27:04.623" level="INFO">${getAttribute} = [0, 255, 0, 1]</msg>
-<status status="PASS" starttime="20200707 20:27:04.507" endtime="20200707 20:27:04.624"></status>
-</kw>
-<msg timestamp="20200707 20:27:04.625" level="INFO">${getAnnotation} = [0, 255, 0, 1]</msg>
-<status status="PASS" starttime="20200707 20:27:04.504" endtime="20200707 20:27:04.625"></status>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<doc>Converts the given item to a Unicode string.</doc>
-<arguments>
-<arg>${getAnnotation}</arg>
-</arguments>
-<assign>
-<var>${getTextColor}</var>
-</assign>
-<msg timestamp="20200707 20:27:04.627" level="INFO">${getTextColor} = [0, 255, 0, 1]</msg>
-<status status="PASS" starttime="20200707 20:27:04.626" endtime="20200707 20:27:04.628"></status>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<arguments>
-<arg>Should Be Equal</arg>
-<arg>${getTextColor}</arg>
-<arg>${annotationTextColor}</arg>
-</arguments>
-<kw name="Should Be Equal" library="BuiltIn">
-<doc>Fails if the given objects are unequal.</doc>
-<arguments>
-<arg>${getTextColor}</arg>
-<arg>${annotationTextColor}</arg>
-</arguments>
-<status status="PASS" starttime="20200707 20:27:04.630" endtime="20200707 20:27:04.631"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:04.628" endtime="20200707 20:27:04.632"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200707 20:27:05.634" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200707 20:27:04.633" endtime="20200707 20:27:05.634"></status>
-</kw>
-<status status="PASS" starttime="20200707 20:27:04.502" endtime="20200707 20:27:05.635"></status>
+<status status="PASS" starttime="20200713 18:58:56.033" endtime="20200713 18:58:56.578"></status>
 </kw>
 <kw name="Click On Delete Icon" library="CommonAnnotationWeb">
 <doc>Click on annotation delete tool</doc>
@@ -1212,31 +816,415 @@ Without any arguments.</msg>
 <arg>xpath://div[@class='ClearTool CustomButtons btn btn-default']//i</arg>
 <arg>timeout=2s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:05.637" endtime="20200707 20:27:05.886"></status>
+<status status="PASS" starttime="20200713 18:58:56.579" endtime="20200713 18:58:56.599"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:05.636" endtime="20200707 20:27:05.886"></status>
+<status status="PASS" starttime="20200713 18:58:56.579" endtime="20200713 18:58:56.599"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://div[@class='ClearTool CustomButtons btn btn-default']//i</arg>
 </arguments>
-<msg timestamp="20200707 20:27:05.888" level="INFO">Clicking element 'xpath://div[@class='ClearTool CustomButtons btn btn-default']//i'.</msg>
-<status status="PASS" starttime="20200707 20:27:05.887" endtime="20200707 20:27:06.172"></status>
+<msg timestamp="20200713 18:58:56.600" level="INFO">Clicking element 'xpath://div[@class='ClearTool CustomButtons btn btn-default']//i'.</msg>
+<status status="PASS" starttime="20200713 18:58:56.599" endtime="20200713 18:58:56.645"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:05.635" endtime="20200707 20:27:06.173"></status>
+<status status="PASS" starttime="20200713 18:58:56.579" endtime="20200713 18:58:56.646"></status>
 </kw>
-<kw name="Confirm Message" library="CommonWeb">
-<doc>Confirm the alert pop ups in JMap Web</doc>
-<kw name="Handle Alert" library="SeleniumLibrary">
-<doc>Handles the current alert and returns its message.</doc>
+<kw name="Verify Alert Text And Cancel" library="CommonWeb">
+<doc>Check for the Alert message and Cancel the popup</doc>
 <arguments>
+<arg>Erase all annotations?</arg>
+</arguments>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Alert Should Be Present</arg>
+<arg>text=${text}</arg>
+<arg>action=DISMISS</arg>
+<arg>timeout=3s</arg>
+</arguments>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<arguments>
+<arg>text=${text}</arg>
+<arg>action=DISMISS</arg>
+<arg>timeout=3s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:56.646" endtime="20200713 18:58:56.650"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:56.646" endtime="20200713 18:58:56.650"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200713 18:58:57.652" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200713 18:58:56.650" endtime="20200713 18:58:57.652"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:56.646" endtime="20200713 18:58:57.652"></status>
+</kw>
+<kw name="Select The Drawing Tool Rectangle Annotation" library="CommonAnnotationWeb">
+<doc>Select The Drawing Tool Rectangle Annotation clicking over</doc>
+<arguments>
+<arg>115</arg>
+<arg>-70</arg>
+</arguments>
+<kw name="Click On The Map At Coordinates" library="CommonWeb">
+<doc>Click on the map using xoffset and yoffset as displacement from the center of the map (0.0)</doc>
+<arguments>
+<arg>${xoffset}</arg>
+<arg>${yoffset}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:57.654" endtime="20200713 18:58:57.670"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:57.654" endtime="20200713 18:58:57.670"></status>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>${xoffset}</arg>
+<arg>${yoffset}</arg>
+</arguments>
+<msg timestamp="20200713 18:58:57.670" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=115, y=-70.</msg>
+<status status="PASS" starttime="20200713 18:58:57.670" endtime="20200713 18:58:58.206"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:57.653" endtime="20200713 18:58:58.207"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:57.653" endtime="20200713 18:58:58.207"></status>
+</kw>
+<kw name="The Icone Rotate Right Should Be Exist" library="CommonAnnotationWeb">
+<doc>Check for the Rotate right icon to be present</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@name='rotateRight']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@name='rotateRight']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:58.208" endtime="20200713 18:58:58.461"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:58.208" endtime="20200713 18:58:58.461"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>//div[@name='rotateRight']</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@name='rotateRight']</arg>
+</arguments>
+<msg timestamp="20200713 18:58:58.476" level="INFO">Element '//div[@name='rotateRight']' is displayed.</msg>
+<status status="PASS" starttime="20200713 18:58:58.462" endtime="20200713 18:58:58.476"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:58.461" endtime="20200713 18:58:58.476"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:58.207" endtime="20200713 18:58:58.476"></status>
+</kw>
+<kw name="The Icone Rotate left Should be Exist" library="CommonAnnotationWeb">
+<doc>Check for the Rotate left icon to be present</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@name='rotateLeft']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@name='rotateLeft']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:58.477" endtime="20200713 18:58:58.490"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:58.477" endtime="20200713 18:58:58.490"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>//div[@name='rotateLeft']</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@name='rotateLeft']</arg>
+</arguments>
+<msg timestamp="20200713 18:58:58.503" level="INFO">Element '//div[@name='rotateLeft']' is displayed.</msg>
+<status status="PASS" starttime="20200713 18:58:58.491" endtime="20200713 18:58:58.503"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:58.491" endtime="20200713 18:58:58.503"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:58.477" endtime="20200713 18:58:58.504"></status>
+</kw>
+<kw name="Click On The Map At Coordinates" library="CommonWeb">
+<doc>Click on the map using xoffset and yoffset as displacement from the center of the map (0.0)</doc>
+<arguments>
+<arg>150</arg>
+<arg>100</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:58.504" endtime="20200713 18:58:58.518"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:58.504" endtime="20200713 18:58:58.518"></status>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>${xoffset}</arg>
+<arg>${yoffset}</arg>
+</arguments>
+<msg timestamp="20200713 18:58:58.518" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=150, y=100.</msg>
+<status status="PASS" starttime="20200713 18:58:58.518" endtime="20200713 18:58:59.044"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:58.504" endtime="20200713 18:58:59.044"></status>
+</kw>
+<kw name="Click On Delete Icon" library="CommonAnnotationWeb">
+<doc>Click on annotation delete tool</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@class='ClearTool CustomButtons btn btn-default']//i</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@class='ClearTool CustomButtons btn btn-default']//i</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:59.045" endtime="20200713 18:58:59.060"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:59.045" endtime="20200713 18:58:59.060"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@class='ClearTool CustomButtons btn btn-default']//i</arg>
+</arguments>
+<msg timestamp="20200713 18:58:59.060" level="INFO">Clicking element 'xpath://div[@class='ClearTool CustomButtons btn btn-default']//i'.</msg>
+<status status="PASS" starttime="20200713 18:58:59.060" endtime="20200713 18:58:59.085"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:59.045" endtime="20200713 18:58:59.086"></status>
+</kw>
+<kw name="Verify Alert Text And Accept" library="CommonWeb">
+<doc>Check for the Alert message and Accept the popup</doc>
+<arguments>
+<arg>Erase all annotations?</arg>
+</arguments>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Alert Should Be Present</arg>
+<arg>text=${AlertMsg}</arg>
 <arg>action=ACCEPT</arg>
 <arg>timeout=3s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:06.174" endtime="20200707 20:27:06.485"></status>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<arguments>
+<arg>text=${AlertMsg}</arg>
+<arg>action=ACCEPT</arg>
+<arg>timeout=3s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:58:59.087" endtime="20200713 18:58:59.091"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:06.173" endtime="20200707 20:27:06.485"></status>
+<status status="PASS" starttime="20200713 18:58:59.086" endtime="20200713 18:58:59.091"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>-----&gt; The Alert message is REALLY: ${AlertMsg}</arg>
+</arguments>
+<msg timestamp="20200713 18:58:59.092" level="INFO">-----&gt; The Alert message is REALLY: Erase all annotations?</msg>
+<status status="PASS" starttime="20200713 18:58:59.092" endtime="20200713 18:58:59.092"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200713 18:59:00.093" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200713 18:58:59.092" endtime="20200713 18:59:00.094"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:58:59.086" endtime="20200713 18:59:00.095"></status>
+</kw>
+<kw name="Select The Drawing Tool Rectangle Annotation" library="CommonAnnotationWeb">
+<doc>Select The Drawing Tool Rectangle Annotation clicking over</doc>
+<arguments>
+<arg>115</arg>
+<arg>-70</arg>
+</arguments>
+<kw name="Click On The Map At Coordinates" library="CommonWeb">
+<doc>Click on the map using xoffset and yoffset as displacement from the center of the map (0.0)</doc>
+<arguments>
+<arg>${xoffset}</arg>
+<arg>${yoffset}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>timeout=2s</arg>
+</arguments>
+<status status="PASS" starttime="20200713 18:59:00.101" endtime="20200713 18:59:00.117"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:59:00.099" endtime="20200713 18:59:00.118"></status>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
+<arguments>
+<arg>xpath://div[@id='map']</arg>
+<arg>${xoffset}</arg>
+<arg>${yoffset}</arg>
+</arguments>
+<msg timestamp="20200713 18:59:00.118" level="INFO">Clicking element 'xpath://div[@id='map']' at coordinates x=115, y=-70.</msg>
+<status status="PASS" starttime="20200713 18:59:00.118" endtime="20200713 18:59:00.653"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:59:00.097" endtime="20200713 18:59:00.653"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:59:00.095" endtime="20200713 18:59:00.653"></status>
+</kw>
+<kw name="The Icone Rotate Right Should Be Not Exist" library="CommonAnnotationWeb">
+<doc>Check for the Rotate right icon not to be present</doc>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@name='rotateRight']</arg>
+<arg>timeout=3s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@name='rotateRight']</arg>
+<arg>timeout=3s</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200713 18:59:03.811" endtime="20200713 18:59:03.813"></status>
+</kw>
+<msg timestamp="20200713 18:59:03.823" level="FAIL">Element 'xpath://div[@name='rotateRight']' not visible after 3 seconds.</msg>
+<status status="FAIL" starttime="20200713 18:59:00.654" endtime="20200713 18:59:03.824"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:59:00.654" endtime="20200713 18:59:03.825"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Should Not Be Visible</arg>
+<arg>//div[@name='rotateRight']</arg>
+</arguments>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>//div[@name='rotateRight']</arg>
+</arguments>
+<msg timestamp="20200713 18:59:03.841" level="INFO">Element '//div[@name='rotateRight']' exists but is not displayed.</msg>
+<status status="PASS" starttime="20200713 18:59:03.827" endtime="20200713 18:59:03.841"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:59:03.826" endtime="20200713 18:59:03.842"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:59:00.654" endtime="20200713 18:59:03.842"></status>
+</kw>
+<kw name="The Icone Rotate left Should be Not Exist" library="CommonAnnotationWeb">
+<doc>Check for the Rotate left icon not to be present</doc>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath://div[@name='rotateLeft']</arg>
+<arg>timeout=3s</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@name='rotateLeft']</arg>
+<arg>timeout=3s</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200713 18:59:06.964" endtime="20200713 18:59:06.964"></status>
+</kw>
+<msg timestamp="20200713 18:59:06.965" level="FAIL">Element 'xpath://div[@name='rotateLeft']' not visible after 3 seconds.</msg>
+<status status="FAIL" starttime="20200713 18:59:03.843" endtime="20200713 18:59:06.965"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:59:03.842" endtime="20200713 18:59:06.965"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Element Should Not Be Visible</arg>
+<arg>//div[@name='rotateLeft']</arg>
+</arguments>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>//div[@name='rotateLeft']</arg>
+</arguments>
+<msg timestamp="20200713 18:59:06.978" level="INFO">Element '//div[@name='rotateLeft']' exists but is not displayed.</msg>
+<status status="PASS" starttime="20200713 18:59:06.966" endtime="20200713 18:59:06.979"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:59:06.965" endtime="20200713 18:59:06.979"></status>
+</kw>
+<status status="PASS" starttime="20200713 18:59:03.842" endtime="20200713 18:59:06.979"></status>
 </kw>
 <kw name="LogOut" library="CommonLogin" type="teardown">
 <doc>Log out from JMap Web</doc>
@@ -1250,25 +1238,25 @@ Without any arguments.</msg>
 <arg>xpath://i[@class='configMenuIcon']</arg>
 <arg>timeout=10s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:06.490" endtime="20200707 20:27:06.838"></status>
+<status status="PASS" starttime="20200713 18:59:06.980" endtime="20200713 18:59:07.000"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://i[@class='configMenuIcon']</arg>
 </arguments>
-<msg timestamp="20200707 20:27:06.839" level="INFO">Clicking element 'xpath://i[@class='configMenuIcon']'.</msg>
-<status status="PASS" starttime="20200707 20:27:06.838" endtime="20200707 20:27:07.176"></status>
+<msg timestamp="20200713 18:59:07.000" level="INFO">Clicking element 'xpath://i[@class='configMenuIcon']'.</msg>
+<status status="PASS" starttime="20200713 18:59:07.000" endtime="20200713 18:59:07.052"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200707 20:27:08.178" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200707 20:27:07.177" endtime="20200707 20:27:08.179"></status>
+<msg timestamp="20200713 18:59:08.053" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200713 18:59:07.053" endtime="20200713 18:59:08.053"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:06.489" endtime="20200707 20:27:08.180"></status>
+<status status="PASS" starttime="20200713 18:59:06.980" endtime="20200713 18:59:08.054"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is enabled.</doc>
@@ -1276,30 +1264,30 @@ Without any arguments.</msg>
 <arg>xpath://div[@class='headerContainer']//li[4]</arg>
 <arg>timeout=10s</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:08.181" endtime="20200707 20:27:08.547"></status>
+<status status="PASS" starttime="20200713 18:59:08.054" endtime="20200713 18:59:08.100"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://div[@class='headerContainer']//li[4]</arg>
 </arguments>
-<msg timestamp="20200707 20:27:08.550" level="INFO">Clicking element 'xpath://div[@class='headerContainer']//li[4]'.</msg>
-<status status="PASS" starttime="20200707 20:27:08.548" endtime="20200707 20:27:09.066"></status>
+<msg timestamp="20200713 18:59:08.101" level="INFO">Clicking element 'xpath://div[@class='headerContainer']//li[4]'.</msg>
+<status status="PASS" starttime="20200713 18:59:08.100" endtime="20200713 18:59:08.273"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200707 20:27:11.068" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200707 20:27:09.067" endtime="20200707 20:27:11.068"></status>
+<msg timestamp="20200713 18:59:10.275" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200713 18:59:08.274" endtime="20200713 18:59:10.275"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:06.487" endtime="20200707 20:27:11.069"></status>
+<status status="PASS" starttime="20200713 18:59:06.979" endtime="20200713 18:59:10.275"></status>
 </kw>
 <kw name="Close JMap Web" library="CommonKeywords">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200707 20:27:11.072" endtime="20200707 20:27:13.263"></status>
+<status status="PASS" starttime="20200713 18:59:10.276" endtime="20200713 18:59:12.377"></status>
 </kw>
 <kw name="Check Metrics" library="CommonKeywords">
 <doc>This Keyword used to check the elapsed time, and display it in the console.</doc>
@@ -1320,8 +1308,8 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>${tc_end}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.269" level="INFO">${tc_end} = 1594168033.268739</msg>
-<status status="PASS" starttime="20200707 20:27:13.268" endtime="20200707 20:27:13.270"></status>
+<msg timestamp="20200713 18:59:12.383" level="INFO">${tc_end} = 1594681152.382603</msg>
+<status status="PASS" starttime="20200713 18:59:12.382" endtime="20200713 18:59:12.383"></status>
 </kw>
 <kw name="Subtract Time From Time" library="DateTime">
 <doc>Subtracts time from another time and returns the resulting time.</doc>
@@ -1332,8 +1320,8 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>${tc_duration}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.272" level="INFO">${tc_duration} = 29.261940956115723</msg>
-<status status="PASS" starttime="20200707 20:27:13.270" endtime="20200707 20:27:13.272"></status>
+<msg timestamp="20200713 18:59:12.385" level="INFO">${tc_duration} = 30.56784701347351</msg>
+<status status="PASS" starttime="20200713 18:59:12.384" endtime="20200713 18:59:12.385"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1343,38 +1331,38 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>${tc_duration}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.275" level="INFO">${tc_duration} = 0.48769901593526205</msg>
-<status status="PASS" starttime="20200707 20:27:13.273" endtime="20200707 20:27:13.275"></status>
+<msg timestamp="20200713 18:59:12.385" level="INFO">${tc_duration} = 0.5094641168912252</msg>
+<status status="PASS" starttime="20200713 18:59:12.385" endtime="20200713 18:59:12.385"></status>
 </kw>
-<msg timestamp="20200707 20:27:13.276" level="INFO">${duration} = 0.48769901593526205</msg>
-<status status="PASS" starttime="20200707 20:27:13.266" endtime="20200707 20:27:13.277"></status>
+<msg timestamp="20200713 18:59:12.386" level="INFO">${duration} = 0.5094641168912252</msg>
+<status status="PASS" starttime="20200713 18:59:12.380" endtime="20200713 18:59:12.386"></status>
 </kw>
 <kw name="Set Tags" library="BuiltIn">
 <doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
 <arguments>
 <arg>Time Out</arg>
 </arguments>
-<msg timestamp="20200707 20:27:13.279" level="INFO">Set tag 'Time Out'.</msg>
-<status status="PASS" starttime="20200707 20:27:13.277" endtime="20200707 20:27:13.279"></status>
+<msg timestamp="20200713 18:59:12.386" level="INFO">Set tag 'Time Out'.</msg>
+<status status="PASS" starttime="20200713 18:59:12.386" endtime="20200713 18:59:12.386"></status>
 </kw>
-<msg timestamp="20200707 20:27:13.280" level="INFO">${ElapsedTime} = 0.48769901593526205</msg>
-<status status="PASS" starttime="20200707 20:27:13.264" endtime="20200707 20:27:13.280"></status>
+<msg timestamp="20200713 18:59:12.387" level="INFO">${ElapsedTime} = 0.5094641168912252</msg>
+<status status="PASS" starttime="20200713 18:59:12.378" endtime="20200713 18:59:12.387"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>================================================</arg>
 </arguments>
-<msg timestamp="20200707 20:27:13.282" level="INFO">================================================</msg>
-<status status="PASS" starttime="20200707 20:27:13.281" endtime="20200707 20:27:13.283"></status>
+<msg timestamp="20200713 18:59:12.387" level="INFO">================================================</msg>
+<status status="PASS" starttime="20200713 18:59:12.387" endtime="20200713 18:59:12.387"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${SUITE_NAME}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:13.285" level="INFO">JMapJenkinsTests.Tests.Jmap 7.0.jmapWeb.Manage Annotations.EditStyleOfAnnotationTests</msg>
-<status status="PASS" starttime="20200707 20:27:13.284" endtime="20200707 20:27:13.285"></status>
+<msg timestamp="20200713 18:59:12.388" level="INFO">JMapJenkinsTests.Tests.Jmap 7.0.jmapWeb.Manage Annotations.DeleteAnAnnotationTests</msg>
+<status status="PASS" starttime="20200713 18:59:12.387" endtime="20200713 18:59:12.388"></status>
 </kw>
 <kw name="Split String" library="String">
 <doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
@@ -1385,8 +1373,8 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>@{listeSuiteName}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.288" level="INFO">@{listeSuiteName} = [ JMapJenkinsTests | Tests | Jmap 7 | 0 | jmapWeb | Manage Annotations | EditStyleOfAnnotationTests ]</msg>
-<status status="PASS" starttime="20200707 20:27:13.286" endtime="20200707 20:27:13.288"></status>
+<msg timestamp="20200713 18:59:12.389" level="INFO">@{listeSuiteName} = [ JMapJenkinsTests | Tests | Jmap 7 | 0 | jmapWeb | Manage Annotations | DeleteAnAnnotationTests ]</msg>
+<status status="PASS" starttime="20200713 18:59:12.388" endtime="20200713 18:59:12.389"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -1396,9 +1384,9 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>${LengthSuiteName}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.290" level="INFO">Length is 7</msg>
-<msg timestamp="20200707 20:27:13.290" level="INFO">${LengthSuiteName} = 7</msg>
-<status status="PASS" starttime="20200707 20:27:13.289" endtime="20200707 20:27:13.291"></status>
+<msg timestamp="20200713 18:59:12.389" level="INFO">Length is 7</msg>
+<msg timestamp="20200713 18:59:12.389" level="INFO">${LengthSuiteName} = 7</msg>
+<status status="PASS" starttime="20200713 18:59:12.389" endtime="20200713 18:59:12.389"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1408,8 +1396,8 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>${suiteName}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.292" level="INFO">${suiteName} = EditStyleOfAnnotationTests</msg>
-<status status="PASS" starttime="20200707 20:27:13.291" endtime="20200707 20:27:13.293"></status>
+<msg timestamp="20200713 18:59:12.390" level="INFO">${suiteName} = DeleteAnAnnotationTests</msg>
+<status status="PASS" starttime="20200713 18:59:12.390" endtime="20200713 18:59:12.390"></status>
 </kw>
 <kw name="Split String" library="String">
 <doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
@@ -1420,8 +1408,8 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>@{suiteName}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.294" level="INFO">@{suiteName} = [ EditStyleOfAnnotation |  ]</msg>
-<status status="PASS" starttime="20200707 20:27:13.293" endtime="20200707 20:27:13.294"></status>
+<msg timestamp="20200713 18:59:12.391" level="INFO">@{suiteName} = [ DeleteAnAnnotation |  ]</msg>
+<status status="PASS" starttime="20200713 18:59:12.390" endtime="20200713 18:59:12.391"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1431,32 +1419,32 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>${suiteName}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.296" level="INFO">${suiteName} = EditStyleOfAnnotation</msg>
-<status status="PASS" starttime="20200707 20:27:13.295" endtime="20200707 20:27:13.296"></status>
+<msg timestamp="20200713 18:59:12.391" level="INFO">${suiteName} = DeleteAnAnnotation</msg>
+<status status="PASS" starttime="20200713 18:59:12.391" endtime="20200713 18:59:12.391"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${suiteName}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:13.297" level="INFO">EditStyleOfAnnotation</msg>
-<status status="PASS" starttime="20200707 20:27:13.296" endtime="20200707 20:27:13.297"></status>
+<msg timestamp="20200713 18:59:12.392" level="INFO">DeleteAnAnnotation</msg>
+<status status="PASS" starttime="20200713 18:59:12.391" endtime="20200713 18:59:12.392"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>================================================</arg>
 </arguments>
-<msg timestamp="20200707 20:27:13.298" level="INFO">================================================</msg>
-<status status="PASS" starttime="20200707 20:27:13.298" endtime="20200707 20:27:13.298"></status>
+<msg timestamp="20200713 18:59:12.392" level="INFO">================================================</msg>
+<status status="PASS" starttime="20200713 18:59:12.392" endtime="20200713 18:59:12.392"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${TEST_NAME}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:13.299" level="INFO">JM70-974:Modify the text color of the text annotation</msg>
-<status status="PASS" starttime="20200707 20:27:13.299" endtime="20200707 20:27:13.300"></status>
+<msg timestamp="20200713 18:59:12.393" level="INFO">JM70-918:Delete a Rectangle annotation</msg>
+<status status="PASS" starttime="20200713 18:59:12.392" endtime="20200713 18:59:12.393"></status>
 </kw>
 <kw name="Split String" library="String">
 <doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
@@ -1467,8 +1455,8 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>@{listeTestName}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.301" level="INFO">@{listeTestName} = [ JM70-974 | Modify the text color of the text annotation ]</msg>
-<status status="PASS" starttime="20200707 20:27:13.300" endtime="20200707 20:27:13.301"></status>
+<msg timestamp="20200713 18:59:12.393" level="INFO">@{listeTestName} = [ JM70-918 | Delete a Rectangle annotation ]</msg>
+<status status="PASS" starttime="20200713 18:59:12.393" endtime="20200713 18:59:12.393"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -1478,9 +1466,9 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>${LengthTest}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.301" level="INFO">Length is 2</msg>
-<msg timestamp="20200707 20:27:13.302" level="INFO">${LengthTest} = 2</msg>
-<status status="PASS" starttime="20200707 20:27:13.301" endtime="20200707 20:27:13.302"></status>
+<msg timestamp="20200713 18:59:12.394" level="INFO">Length is 2</msg>
+<msg timestamp="20200713 18:59:12.394" level="INFO">${LengthTest} = 2</msg>
+<status status="PASS" starttime="20200713 18:59:12.393" endtime="20200713 18:59:12.394"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1490,24 +1478,24 @@ And it account elapsed time for the execution</doc>
 <assign>
 <var>${tesCaseName}</var>
 </assign>
-<msg timestamp="20200707 20:27:13.303" level="INFO">${tesCaseName} = Modify the text color of the text annotation</msg>
-<status status="PASS" starttime="20200707 20:27:13.302" endtime="20200707 20:27:13.303"></status>
+<msg timestamp="20200713 18:59:12.394" level="INFO">${tesCaseName} = Delete a Rectangle annotation</msg>
+<status status="PASS" starttime="20200713 18:59:12.394" endtime="20200713 18:59:12.394"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${tesCaseName}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:13.304" level="INFO">Modify the text color of the text annotation</msg>
-<status status="PASS" starttime="20200707 20:27:13.303" endtime="20200707 20:27:13.304"></status>
+<msg timestamp="20200713 18:59:12.395" level="INFO">Delete a Rectangle annotation</msg>
+<status status="PASS" starttime="20200713 18:59:12.394" endtime="20200713 18:59:12.395"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>================================================</arg>
 </arguments>
-<msg timestamp="20200707 20:27:13.305" level="INFO">================================================</msg>
-<status status="PASS" starttime="20200707 20:27:13.305" endtime="20200707 20:27:13.305"></status>
+<msg timestamp="20200713 18:59:12.395" level="INFO">================================================</msg>
+<status status="PASS" starttime="20200713 18:59:12.395" endtime="20200713 18:59:12.395"></status>
 </kw>
 <kw name="Open New Session" library="CommonKeywords">
 <doc>Open new session for the given username, password and application type
@@ -1532,7 +1520,7 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <arg>allow_redirects=true</arg>
 <arg>headers={"Content-Type":"application/json"}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:13.308" endtime="20200707 20:27:15.442"></status>
+<status status="PASS" starttime="20200713 18:59:12.396" endtime="20200713 18:59:14.494"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -1543,7 +1531,7 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:15.443" endtime="20200707 20:27:15.444"></status>
+<status status="PASS" starttime="20200713 18:59:14.494" endtime="20200713 18:59:14.495"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1554,7 +1542,7 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <arg>$.status</arg>
 <arg>OK</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:15.444" endtime="20200707 20:27:15.492"></status>
+<status status="PASS" starttime="20200713 18:59:14.495" endtime="20200713 18:59:14.516"></status>
 </kw>
 <kw name="Object" library="REST">
 <tags>
@@ -1567,8 +1555,8 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <assign>
 <var>${RESULT}</var>
 </assign>
-<msg timestamp="20200707 20:27:15.515" level="INFO">${RESULT} = [{'sessionId': 2014219990, 'serverVersion': '7.0 Istanbul build 163', 'userEmailAddress': '', 'sessionExceed': False, 'userFullName': 'userTest1'}]</msg>
-<status status="PASS" starttime="20200707 20:27:15.492" endtime="20200707 20:27:15.515"></status>
+<msg timestamp="20200713 18:59:14.534" level="INFO">${RESULT} = [{'sessionId': 2124175193, 'serverVersion': '7.0 Istanbul build 166', 'userFullName': 'userTest1', 'sessionExceed': False, 'userEmailAddress': ''}]</msg>
+<status status="PASS" starttime="20200713 18:59:14.516" endtime="20200713 18:59:14.534"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1578,11 +1566,11 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <assign>
 <var>${RESULT}</var>
 </assign>
-<msg timestamp="20200707 20:27:15.516" level="INFO">${RESULT} = {'sessionId': 2014219990, 'serverVersion': '7.0 Istanbul build 163', 'userEmailAddress': '', 'sessionExceed': False, 'userFullName': 'userTest1'}</msg>
-<status status="PASS" starttime="20200707 20:27:15.516" endtime="20200707 20:27:15.516"></status>
+<msg timestamp="20200713 18:59:14.534" level="INFO">${RESULT} = {'sessionId': 2124175193, 'serverVersion': '7.0 Istanbul build 166', 'userFullName': 'userTest1', 'sessionExceed': False, 'userEmailAddress': ''}</msg>
+<status status="PASS" starttime="20200713 18:59:14.534" endtime="20200713 18:59:14.534"></status>
 </kw>
-<msg timestamp="20200707 20:27:15.516" level="INFO">${BODY} = {'sessionId': 2014219990, 'serverVersion': '7.0 Istanbul build 163', 'userEmailAddress': '', 'sessionExceed': False, 'userFullName': 'userTest1'}</msg>
-<status status="PASS" starttime="20200707 20:27:13.307" endtime="20200707 20:27:15.516"></status>
+<msg timestamp="20200713 18:59:14.534" level="INFO">${BODY} = {'sessionId': 2124175193, 'serverVersion': '7.0 Istanbul build 166', 'userFullName': 'userTest1', 'sessionExceed': False, 'userEmailAddress': ''}</msg>
+<status status="PASS" starttime="20200713 18:59:12.396" endtime="20200713 18:59:14.534"></status>
 </kw>
 <kw name="GET Current Session ID" library="CommonKeywords">
 <doc>Get the session ID for the current session</doc>
@@ -1600,11 +1588,11 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <assign>
 <var>${getSessionID}</var>
 </assign>
-<msg timestamp="20200707 20:27:15.517" level="INFO">${getSessionID} = 2014219990</msg>
-<status status="PASS" starttime="20200707 20:27:15.517" endtime="20200707 20:27:15.517"></status>
+<msg timestamp="20200713 18:59:14.535" level="INFO">${getSessionID} = 2124175193</msg>
+<status status="PASS" starttime="20200713 18:59:14.535" endtime="20200713 18:59:14.535"></status>
 </kw>
-<msg timestamp="20200707 20:27:15.518" level="INFO">${SESSIONID} = 2014219990</msg>
-<status status="PASS" starttime="20200707 20:27:15.517" endtime="20200707 20:27:15.518"></status>
+<msg timestamp="20200713 18:59:14.535" level="INFO">${SESSIONID} = 2124175193</msg>
+<status status="PASS" starttime="20200713 18:59:14.534" endtime="20200713 18:59:14.535"></status>
 </kw>
 <kw name="GET Current Server Version" library="CommonKeywords">
 <doc>Get the server version (Build) for the current session</doc>
@@ -1622,11 +1610,11 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <assign>
 <var>${getBuild}</var>
 </assign>
-<msg timestamp="20200707 20:27:15.519" level="INFO">${getBuild} = 7.0 Istanbul build 163</msg>
-<status status="PASS" starttime="20200707 20:27:15.518" endtime="20200707 20:27:15.519"></status>
+<msg timestamp="20200713 18:59:14.536" level="INFO">${getBuild} = 7.0 Istanbul build 166</msg>
+<status status="PASS" starttime="20200713 18:59:14.536" endtime="20200713 18:59:14.536"></status>
 </kw>
-<msg timestamp="20200707 20:27:15.519" level="INFO">${buildName} = 7.0 Istanbul build 163</msg>
-<status status="PASS" starttime="20200707 20:27:15.518" endtime="20200707 20:27:15.519"></status>
+<msg timestamp="20200713 18:59:14.536" level="INFO">${buildName} = 7.0 Istanbul build 166</msg>
+<status status="PASS" starttime="20200713 18:59:14.536" endtime="20200713 18:59:14.536"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1636,8 +1624,8 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <assign>
 <var>${buildName}</var>
 </assign>
-<msg timestamp="20200707 20:27:15.519" level="INFO">${buildName} = JMap 7.0 Istanbul build 163</msg>
-<status status="PASS" starttime="20200707 20:27:15.519" endtime="20200707 20:27:15.520"></status>
+<msg timestamp="20200713 18:59:14.537" level="INFO">${buildName} = JMap 7.0 Istanbul build 166</msg>
+<status status="PASS" starttime="20200713 18:59:14.537" endtime="20200713 18:59:14.537"></status>
 </kw>
 <kw name="Close The Current Session" library="CommonKeywords">
 <doc>Close REST API session by given session id</doc>
@@ -1652,7 +1640,7 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <arguments>
 <arg>http://${localhost}:${internPort}/services/rest/v2.0/session?sessionId=${SESSION}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:15.520" endtime="20200707 20:27:17.541"></status>
+<status status="PASS" starttime="20200713 18:59:14.537" endtime="20200713 18:59:16.556"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1663,7 +1651,7 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <arg>$.message</arg>
 <arg>Session has been closed</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:17.542" endtime="20200707 20:27:17.590"></status>
+<status status="PASS" starttime="20200713 18:59:16.557" endtime="20200713 18:59:16.594"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -1674,17 +1662,17 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <arg>$.status</arg>
 <arg>OK</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:17.591" endtime="20200707 20:27:17.612"></status>
+<status status="PASS" starttime="20200713 18:59:16.594" endtime="20200713 18:59:16.611"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:15.520" endtime="20200707 20:27:17.612"></status>
+<status status="PASS" starttime="20200713 18:59:14.537" endtime="20200713 18:59:16.612"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>================================================================================</arg>
 </arguments>
-<msg timestamp="20200707 20:27:17.612" level="INFO">================================================================================</msg>
-<status status="PASS" starttime="20200707 20:27:17.612" endtime="20200707 20:27:17.613"></status>
+<msg timestamp="20200713 18:59:16.612" level="INFO">================================================================================</msg>
+<status status="PASS" starttime="20200713 18:59:16.612" endtime="20200713 18:59:16.612"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn" type="teardown">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1718,9 +1706,9 @@ Use ${SESSIONID} wherever you want to access to the variable's value</doc>
 <arg>\n=================== Go To Connect To Testlink ===================</arg>
 <arg>console=yes</arg>
 </arguments>
-<msg timestamp="20200707 20:27:17.614" level="INFO">
+<msg timestamp="20200713 18:59:16.614" level="INFO">
 =================== Go To Connect To Testlink ===================</msg>
-<status status="PASS" starttime="20200707 20:27:17.614" endtime="20200707 20:27:17.614"></status>
+<status status="PASS" starttime="20200713 18:59:16.613" endtime="20200713 18:59:16.614"></status>
 </kw>
 <kw name="Create Api Client" library="TestlinkAPILibrary">
 <doc>Creates a new TestLink-API-Python-client (XMLRPC), using Python class 
@@ -1733,20 +1721,20 @@ TestlinkAPIClient or TestlinkAPIGeneric.</doc>
 <assign>
 <var>${tlapi_client}</var>
 </assign>
-<msg timestamp="20200707 20:27:18.193" level="INFO">${tlapi_client} = 
+<msg timestamp="20200713 18:59:17.199" level="INFO">${tlapi_client} = 
 TestLink API - class TestlinkAPIClient - version 0.8.1 (PY 3.7.3)
 @authors: Luiko Czub, Olivier Renault, James Stock, TestLink-API-Python-client developers
 
 Current connection settings
  Server URL: h...</msg>
-<status status="PASS" starttime="20200707 20:27:17.615" endtime="20200707 20:27:18.194"></status>
+<status status="PASS" starttime="20200713 18:59:16.614" endtime="20200713 18:59:17.200"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${tlapi_client}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:18.196" endtime="20200707 20:27:18.936"></status>
+<status status="PASS" starttime="20200713 18:59:17.201" endtime="20200713 18:59:17.848"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
@@ -1754,18 +1742,18 @@ Current connection settings
 <arg>-----&gt; Testlink is connected successfully</arg>
 <arg>console=yes</arg>
 </arguments>
-<msg timestamp="20200707 20:27:18.938" level="INFO">-----&gt; Testlink is connected successfully</msg>
-<status status="PASS" starttime="20200707 20:27:18.937" endtime="20200707 20:27:18.938"></status>
+<msg timestamp="20200713 18:59:17.851" level="INFO">-----&gt; Testlink is connected successfully</msg>
+<status status="PASS" starttime="20200713 18:59:17.850" endtime="20200713 18:59:17.851"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>=================================================================================</arg>
 </arguments>
-<msg timestamp="20200707 20:27:18.940" level="INFO">=================================================================================</msg>
-<status status="PASS" starttime="20200707 20:27:18.940" endtime="20200707 20:27:18.940"></status>
+<msg timestamp="20200713 18:59:17.852" level="INFO">=================================================================================</msg>
+<status status="PASS" starttime="20200713 18:59:17.852" endtime="20200713 18:59:17.852"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:17.614" endtime="20200707 20:27:18.941"></status>
+<status status="PASS" starttime="20200713 18:59:16.613" endtime="20200713 18:59:17.852"></status>
 </kw>
 <kw name="Call Api Method" library="TestlinkAPILibrary">
 <doc>Calls a TestLink API method and returns TestLinks server response.</doc>
@@ -1775,8 +1763,8 @@ Current connection settings
 <assign>
 <var>@{projects}</var>
 </assign>
-<msg timestamp="20200707 20:27:19.565" level="INFO">@{projects} = [ {'id': '1964', 'notes': '', 'color': '', 'active': '1', 'option_reqs': '0', 'option_priority': '0', 'option_automation': '0', 'options': 'O:8:"stdClass":4:{s:19:"requirementsEnabled";i:0;s:19:"testP...</msg>
-<status status="PASS" starttime="20200707 20:27:18.941" endtime="20200707 20:27:19.565"></status>
+<msg timestamp="20200713 18:59:18.401" level="INFO">@{projects} = [ {'id': '1964', 'notes': '', 'color': '', 'active': '1', 'option_reqs': '0', 'option_priority': '0', 'option_automation': '0', 'options': 'O:8:"stdClass":4:{s:19:"requirementsEnabled";i:0;s:19:"testP...</msg>
+<status status="PASS" starttime="20200713 18:59:17.852" endtime="20200713 18:59:18.402"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -1786,9 +1774,9 @@ Current connection settings
 <assign>
 <var>${length}</var>
 </assign>
-<msg timestamp="20200707 20:27:19.567" level="INFO">Length is 13</msg>
-<msg timestamp="20200707 20:27:19.568" level="INFO">${length} = 13</msg>
-<status status="PASS" starttime="20200707 20:27:19.566" endtime="20200707 20:27:19.568"></status>
+<msg timestamp="20200713 18:59:18.404" level="INFO">Length is 13</msg>
+<msg timestamp="20200713 18:59:18.404" level="INFO">${length} = 13</msg>
+<status status="PASS" starttime="20200713 18:59:18.403" endtime="20200713 18:59:18.405"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1798,16 +1786,16 @@ Current connection settings
 <assign>
 <var>${project}</var>
 </assign>
-<msg timestamp="20200707 20:27:19.569" level="INFO">${project} = {'id': '4960', 'notes': '', 'color': '', 'active': '1', 'option_reqs': '0', 'option_priority': '0', 'option_automation': '0', 'options': 'O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPri...</msg>
-<status status="PASS" starttime="20200707 20:27:19.568" endtime="20200707 20:27:19.570"></status>
+<msg timestamp="20200713 18:59:18.407" level="INFO">${project} = {'id': '4960', 'notes': '', 'color': '', 'active': '1', 'option_reqs': '0', 'option_priority': '0', 'option_automation': '0', 'options': 'O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPri...</msg>
+<status status="PASS" starttime="20200713 18:59:18.405" endtime="20200713 18:59:18.407"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${project}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:19.571" level="INFO">{'id': '4960', 'notes': '', 'color': '', 'active': '1', 'option_reqs': '0', 'option_priority': '0', 'option_automation': '0', 'options': 'O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}', 'prefix': 'JM70', 'tc_counter': '1151', 'is_public': '1', 'issue_tracker_enabled': '0', 'reqmgr_integration_enabled': '0', 'api_key': '5bad96bc97c7a43833402dd65e468024f00370e7535d8438fa11163c66b2d0a9', 'name': 'Jmap 7.0', 'opt': {'requirementsEnabled': 1, 'testPriorityEnabled': 1, 'automationEnabled': 1, 'inventoryEnabled': 0}}</msg>
-<status status="PASS" starttime="20200707 20:27:19.570" endtime="20200707 20:27:19.571"></status>
+<msg timestamp="20200713 18:59:18.409" level="INFO">{'id': '4960', 'notes': '', 'color': '', 'active': '1', 'option_reqs': '0', 'option_priority': '0', 'option_automation': '0', 'options': 'O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}', 'prefix': 'JM70', 'tc_counter': '1151', 'is_public': '1', 'issue_tracker_enabled': '0', 'reqmgr_integration_enabled': '0', 'api_key': '5bad96bc97c7a43833402dd65e468024f00370e7535d8438fa11163c66b2d0a9', 'name': 'Jmap 7.0', 'opt': {'requirementsEnabled': 1, 'testPriorityEnabled': 1, 'automationEnabled': 1, 'inventoryEnabled': 0}}</msg>
+<status status="PASS" starttime="20200713 18:59:18.408" endtime="20200713 18:59:18.409"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1817,8 +1805,8 @@ Current connection settings
 <assign>
 <var>${projectNAME}</var>
 </assign>
-<msg timestamp="20200707 20:27:19.572" level="INFO">${projectNAME} = Jmap 7.0</msg>
-<status status="PASS" starttime="20200707 20:27:19.572" endtime="20200707 20:27:19.572"></status>
+<msg timestamp="20200713 18:59:18.411" level="INFO">${projectNAME} = Jmap 7.0</msg>
+<status status="PASS" starttime="20200713 18:59:18.410" endtime="20200713 18:59:18.412"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1828,16 +1816,16 @@ Current connection settings
 <assign>
 <var>${projectID}</var>
 </assign>
-<msg timestamp="20200707 20:27:19.574" level="INFO">${projectID} = 4960</msg>
-<status status="PASS" starttime="20200707 20:27:19.573" endtime="20200707 20:27:19.574"></status>
+<msg timestamp="20200713 18:59:18.414" level="INFO">${projectID} = 4960</msg>
+<status status="PASS" starttime="20200713 18:59:18.412" endtime="20200713 18:59:18.414"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>=================================================================================</arg>
 </arguments>
-<msg timestamp="20200707 20:27:19.575" level="INFO">=================================================================================</msg>
-<status status="PASS" starttime="20200707 20:27:19.574" endtime="20200707 20:27:19.575"></status>
+<msg timestamp="20200713 18:59:18.416" level="INFO">=================================================================================</msg>
+<status status="PASS" starttime="20200713 18:59:18.415" endtime="20200713 18:59:18.416"></status>
 </kw>
 <kw name="Call Api Method" library="TestlinkAPILibrary">
 <doc>Calls a TestLink API method and returns TestLinks server response.</doc>
@@ -1849,8 +1837,8 @@ Current connection settings
 <assign>
 <var>@{testPlans}</var>
 </assign>
-<msg timestamp="20200707 20:27:19.946" level="INFO">@{testPlans} = [ {'id': '6381', 'testproject_id': '4960', 'notes': '', 'active': '1', 'is_open': '1', 'is_public': '1', 'api_key': 'd51e9fc5cf182e4821adcc1ef29ea5af29ca0bb64de6f11c3a6c82acfaea7002', 'name': 'Full te...</msg>
-<status status="PASS" starttime="20200707 20:27:19.576" endtime="20200707 20:27:19.946"></status>
+<msg timestamp="20200713 18:59:18.730" level="INFO">@{testPlans} = [ {'id': '6381', 'testproject_id': '4960', 'notes': '', 'active': '1', 'is_open': '1', 'is_public': '1', 'api_key': 'd51e9fc5cf182e4821adcc1ef29ea5af29ca0bb64de6f11c3a6c82acfaea7002', 'name': 'Full te...</msg>
+<status status="PASS" starttime="20200713 18:59:18.417" endtime="20200713 18:59:18.730"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -1860,9 +1848,9 @@ Current connection settings
 <assign>
 <var>${length}</var>
 </assign>
-<msg timestamp="20200707 20:27:19.949" level="INFO">Length is 1</msg>
-<msg timestamp="20200707 20:27:19.949" level="INFO">${length} = 1</msg>
-<status status="PASS" starttime="20200707 20:27:19.947" endtime="20200707 20:27:19.949"></status>
+<msg timestamp="20200713 18:59:18.732" level="INFO">Length is 1</msg>
+<msg timestamp="20200713 18:59:18.733" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20200713 18:59:18.731" endtime="20200713 18:59:18.733"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1872,16 +1860,16 @@ Current connection settings
 <assign>
 <var>${testPlan}</var>
 </assign>
-<msg timestamp="20200707 20:27:19.951" level="INFO">${testPlan} = {'id': '6381', 'testproject_id': '4960', 'notes': '', 'active': '1', 'is_open': '1', 'is_public': '1', 'api_key': 'd51e9fc5cf182e4821adcc1ef29ea5af29ca0bb64de6f11c3a6c82acfaea7002', 'name': 'Full test...</msg>
-<status status="PASS" starttime="20200707 20:27:19.950" endtime="20200707 20:27:19.951"></status>
+<msg timestamp="20200713 18:59:18.733" level="INFO">${testPlan} = {'id': '6381', 'testproject_id': '4960', 'notes': '', 'active': '1', 'is_open': '1', 'is_public': '1', 'api_key': 'd51e9fc5cf182e4821adcc1ef29ea5af29ca0bb64de6f11c3a6c82acfaea7002', 'name': 'Full test...</msg>
+<status status="PASS" starttime="20200713 18:59:18.733" endtime="20200713 18:59:18.733"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${testPlan}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:19.953" level="INFO">{'id': '6381', 'testproject_id': '4960', 'notes': '', 'active': '1', 'is_open': '1', 'is_public': '1', 'api_key': 'd51e9fc5cf182e4821adcc1ef29ea5af29ca0bb64de6f11c3a6c82acfaea7002', 'name': 'Full test'}</msg>
-<status status="PASS" starttime="20200707 20:27:19.953" endtime="20200707 20:27:19.954"></status>
+<msg timestamp="20200713 18:59:18.734" level="INFO">{'id': '6381', 'testproject_id': '4960', 'notes': '', 'active': '1', 'is_open': '1', 'is_public': '1', 'api_key': 'd51e9fc5cf182e4821adcc1ef29ea5af29ca0bb64de6f11c3a6c82acfaea7002', 'name': 'Full test'}</msg>
+<status status="PASS" starttime="20200713 18:59:18.734" endtime="20200713 18:59:18.734"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1891,8 +1879,8 @@ Current connection settings
 <assign>
 <var>${testPlanNAME}</var>
 </assign>
-<msg timestamp="20200707 20:27:19.956" level="INFO">${testPlanNAME} = Full test</msg>
-<status status="PASS" starttime="20200707 20:27:19.955" endtime="20200707 20:27:19.957"></status>
+<msg timestamp="20200713 18:59:18.734" level="INFO">${testPlanNAME} = Full test</msg>
+<status status="PASS" starttime="20200713 18:59:18.734" endtime="20200713 18:59:18.735"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1902,16 +1890,16 @@ Current connection settings
 <assign>
 <var>${testPlanID}</var>
 </assign>
-<msg timestamp="20200707 20:27:19.958" level="INFO">${testPlanID} = 6381</msg>
-<status status="PASS" starttime="20200707 20:27:19.958" endtime="20200707 20:27:19.959"></status>
+<msg timestamp="20200713 18:59:18.735" level="INFO">${testPlanID} = 6381</msg>
+<status status="PASS" starttime="20200713 18:59:18.735" endtime="20200713 18:59:18.735"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>=================================================================================</arg>
 </arguments>
-<msg timestamp="20200707 20:27:19.961" level="INFO">=================================================================================</msg>
-<status status="PASS" starttime="20200707 20:27:19.960" endtime="20200707 20:27:19.962"></status>
+<msg timestamp="20200713 18:59:18.736" level="INFO">=================================================================================</msg>
+<status status="PASS" starttime="20200713 18:59:18.735" endtime="20200713 18:59:18.736"></status>
 </kw>
 <kw name="Call Api Method" library="TestlinkAPILibrary">
 <doc>Calls a TestLink API method and returns TestLinks server response.</doc>
@@ -1922,16 +1910,16 @@ Current connection settings
 <assign>
 <var>${latestBuild}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.400" level="INFO">${latestBuild} = {'id': '894', 'testplan_id': '6381', 'name': 'JMap 7.0 Istanbul build 163', 'notes': 'TFIFT-9827 JMap Server : An error occurred while adding a new element having an external form&lt;/br&gt;', 'active': '1'...</msg>
-<status status="PASS" starttime="20200707 20:27:19.962" endtime="20200707 20:27:20.401"></status>
+<msg timestamp="20200713 18:59:19.126" level="INFO">${latestBuild} = {'id': '898', 'testplan_id': '6381', 'name': 'JMap 7.0 Istanbul build 166', 'notes': '&lt;div&gt;\n\t[TFIFT-9820] JMap Web : An error occurred when edit an element that contains a Calendar component and the...</msg>
+<status status="PASS" starttime="20200713 18:59:18.736" endtime="20200713 18:59:19.126"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${latestBuild}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:20.403" level="INFO">{'id': '894', 'testplan_id': '6381', 'name': 'JMap 7.0 Istanbul build 163', 'notes': 'TFIFT-9827 JMap Server : An error occurred while adding a new element having an external form&lt;/br&gt;', 'active': '1', 'is_open': '1', 'release_date': '', 'closed_on_date': '', 'creation_ts': '2020-07-07 19:43:13'}</msg>
-<status status="PASS" starttime="20200707 20:27:20.402" endtime="20200707 20:27:20.404"></status>
+<msg timestamp="20200713 18:59:19.129" level="INFO">{'id': '898', 'testplan_id': '6381', 'name': 'JMap 7.0 Istanbul build 166', 'notes': '&lt;div&gt;\n\t[TFIFT-9820] JMap Web : An error occurred when edit an element that contains a Calendar component and the date value becomes null&lt;/div&gt;\n&lt;div&gt;\n\t[TFIFT-9804] JMap Server : Get layer elements by passing a filter parameter returns all elements with only one filter&lt;/div&gt;\n', 'active': '1', 'is_open': '1', 'release_date': '2020-07-13', 'closed_on_date': '', 'creation_ts': '2020-07-13 15:53:11'}</msg>
+<status status="PASS" starttime="20200713 18:59:19.127" endtime="20200713 18:59:19.129"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -1941,9 +1929,9 @@ Current connection settings
 <assign>
 <var>${length}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.405" level="INFO">Length is 9</msg>
-<msg timestamp="20200707 20:27:20.406" level="INFO">${length} = 9</msg>
-<status status="PASS" starttime="20200707 20:27:20.404" endtime="20200707 20:27:20.406"></status>
+<msg timestamp="20200713 18:59:19.131" level="INFO">Length is 9</msg>
+<msg timestamp="20200713 18:59:19.131" level="INFO">${length} = 9</msg>
+<status status="PASS" starttime="20200713 18:59:19.130" endtime="20200713 18:59:19.132"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1953,8 +1941,8 @@ Current connection settings
 <assign>
 <var>${latestBuildID}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.408" level="INFO">${latestBuildID} = 894</msg>
-<status status="PASS" starttime="20200707 20:27:20.407" endtime="20200707 20:27:20.408"></status>
+<msg timestamp="20200713 18:59:19.134" level="INFO">${latestBuildID} = 898</msg>
+<status status="PASS" starttime="20200713 18:59:19.133" endtime="20200713 18:59:19.134"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -1964,8 +1952,8 @@ Current connection settings
 <assign>
 <var>${latestBuildNAME}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.410" level="INFO">${latestBuildNAME} = JMap 7.0 Istanbul build 163</msg>
-<status status="PASS" starttime="20200707 20:27:20.409" endtime="20200707 20:27:20.412"></status>
+<msg timestamp="20200713 18:59:19.136" level="INFO">${latestBuildNAME} = JMap 7.0 Istanbul build 166</msg>
+<status status="PASS" starttime="20200713 18:59:19.135" endtime="20200713 18:59:19.137"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1985,26 +1973,26 @@ Current connection settings
 <arguments>
 <arg>${latestBuildNAME}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:20.413" endtime="20200707 20:27:20.415"></status>
+<status status="PASS" starttime="20200713 18:59:19.140" endtime="20200713 18:59:19.140"></status>
 </kw>
-<msg timestamp="20200707 20:27:20.416" level="INFO">${latestBuildNAME} = JMap 7.0 Istanbul build 163</msg>
-<status status="PASS" starttime="20200707 20:27:20.412" endtime="20200707 20:27:20.416"></status>
+<msg timestamp="20200713 18:59:19.140" level="INFO">${latestBuildNAME} = JMap 7.0 Istanbul build 166</msg>
+<status status="PASS" starttime="20200713 18:59:19.138" endtime="20200713 18:59:19.140"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${latestBuildNAME}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:20.417" level="INFO">JMap 7.0 Istanbul build 163</msg>
-<status status="PASS" starttime="20200707 20:27:20.417" endtime="20200707 20:27:20.417"></status>
+<msg timestamp="20200713 18:59:19.141" level="INFO">JMap 7.0 Istanbul build 166</msg>
+<status status="PASS" starttime="20200713 18:59:19.141" endtime="20200713 18:59:19.141"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>=================================================================================</arg>
 </arguments>
-<msg timestamp="20200707 20:27:20.419" level="INFO">=================================================================================</msg>
-<status status="PASS" starttime="20200707 20:27:20.418" endtime="20200707 20:27:20.420"></status>
+<msg timestamp="20200713 18:59:19.141" level="INFO">=================================================================================</msg>
+<status status="PASS" starttime="20200713 18:59:19.141" endtime="20200713 18:59:19.141"></status>
 </kw>
 <kw name="Call Api Method" library="TestlinkAPILibrary">
 <doc>Calls a TestLink API method and returns TestLinks server response.</doc>
@@ -2017,8 +2005,8 @@ Current connection settings
 <assign>
 <var>@{testCases}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.882" level="INFO">@{testCases} = [ {'id': '8694', 'name': 'Modify the text color of the text annotation', 'parent_id': '8685', 'tsuite_name': 'EditStyleOfAnnotation', 'tc_external_id': '974'} ]</msg>
-<status status="PASS" starttime="20200707 20:27:20.420" endtime="20200707 20:27:20.882"></status>
+<msg timestamp="20200713 18:59:19.507" level="INFO">@{testCases} = [ {'id': '8578', 'name': 'Delete a Rectangle annotation', 'parent_id': '8555', 'tsuite_name': 'DeleteAnAnnotation', 'tc_external_id': '918'} ]</msg>
+<status status="PASS" starttime="20200713 18:59:19.141" endtime="20200713 18:59:19.507"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -2028,9 +2016,9 @@ Current connection settings
 <assign>
 <var>${length}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.884" level="INFO">Length is 1</msg>
-<msg timestamp="20200707 20:27:20.885" level="INFO">${length} = 1</msg>
-<status status="PASS" starttime="20200707 20:27:20.883" endtime="20200707 20:27:20.885"></status>
+<msg timestamp="20200713 18:59:19.508" level="INFO">Length is 1</msg>
+<msg timestamp="20200713 18:59:19.508" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20200713 18:59:19.507" endtime="20200713 18:59:19.508"></status>
 </kw>
 <kw name="${i} IN RANGE [ ${length} ]" type="for">
 <kw name="${i} = 0" type="foritem">
@@ -2039,8 +2027,8 @@ Current connection settings
 <arguments>
 <arg>${testCases[${i}]}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:20.888" level="INFO">{'id': '8694', 'name': 'Modify the text color of the text annotation', 'parent_id': '8685', 'tsuite_name': 'EditStyleOfAnnotation', 'tc_external_id': '974'}</msg>
-<status status="PASS" starttime="20200707 20:27:20.887" endtime="20200707 20:27:20.889"></status>
+<msg timestamp="20200713 18:59:19.510" level="INFO">{'id': '8578', 'name': 'Delete a Rectangle annotation', 'parent_id': '8555', 'tsuite_name': 'DeleteAnAnnotation', 'tc_external_id': '918'}</msg>
+<status status="PASS" starttime="20200713 18:59:19.509" endtime="20200713 18:59:19.510"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -2057,30 +2045,30 @@ Current connection settings
 <arguments>
 <arg>${testCases}[${i}]</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:20.891" endtime="20200707 20:27:20.893"></status>
+<status status="PASS" starttime="20200713 18:59:19.511" endtime="20200713 18:59:19.512"></status>
 </kw>
-<msg timestamp="20200707 20:27:20.893" level="INFO">${testCase} = {'id': '8694', 'name': 'Modify the text color of the text annotation', 'parent_id': '8685', 'tsuite_name': 'EditStyleOfAnnotation', 'tc_external_id': '974'}</msg>
-<status status="PASS" starttime="20200707 20:27:20.890" endtime="20200707 20:27:20.894"></status>
+<msg timestamp="20200713 18:59:19.512" level="INFO">${testCase} = {'id': '8578', 'name': 'Delete a Rectangle annotation', 'parent_id': '8555', 'tsuite_name': 'DeleteAnAnnotation', 'tc_external_id': '918'}</msg>
+<status status="PASS" starttime="20200713 18:59:19.510" endtime="20200713 18:59:19.512"></status>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
 <arguments>
 <arg>'${testCases[${i}]['tsuite_name']}'=='${suitName}'</arg>
 </arguments>
-<msg timestamp="20200707 20:27:20.896" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20200707 20:27:20.894" endtime="20200707 20:27:20.897"></status>
+<msg timestamp="20200713 18:59:19.514" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20200713 18:59:19.513" endtime="20200713 18:59:19.514"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:20.886" endtime="20200707 20:27:20.897"></status>
+<status status="PASS" starttime="20200713 18:59:19.509" endtime="20200713 18:59:19.514"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:20.886" endtime="20200707 20:27:20.898"></status>
+<status status="PASS" starttime="20200713 18:59:19.508" endtime="20200713 18:59:19.514"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${testCase}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:20.899" level="INFO">{'id': '8694', 'name': 'Modify the text color of the text annotation', 'parent_id': '8685', 'tsuite_name': 'EditStyleOfAnnotation', 'tc_external_id': '974'}</msg>
-<status status="PASS" starttime="20200707 20:27:20.898" endtime="20200707 20:27:20.900"></status>
+<msg timestamp="20200713 18:59:19.515" level="INFO">{'id': '8578', 'name': 'Delete a Rectangle annotation', 'parent_id': '8555', 'tsuite_name': 'DeleteAnAnnotation', 'tc_external_id': '918'}</msg>
+<status status="PASS" starttime="20200713 18:59:19.515" endtime="20200713 18:59:19.516"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2090,8 +2078,8 @@ Current connection settings
 <assign>
 <var>${testCaseNAME}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.902" level="INFO">${testCaseNAME} = Modify the text color of the text annotation</msg>
-<status status="PASS" starttime="20200707 20:27:20.901" endtime="20200707 20:27:20.902"></status>
+<msg timestamp="20200713 18:59:19.517" level="INFO">${testCaseNAME} = Delete a Rectangle annotation</msg>
+<status status="PASS" starttime="20200713 18:59:19.516" endtime="20200713 18:59:19.517"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2101,8 +2089,8 @@ Current connection settings
 <assign>
 <var>${testCaseID}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.904" level="INFO">${testCaseID} = 8694</msg>
-<status status="PASS" starttime="20200707 20:27:20.903" endtime="20200707 20:27:20.905"></status>
+<msg timestamp="20200713 18:59:19.518" level="INFO">${testCaseID} = 8578</msg>
+<status status="PASS" starttime="20200713 18:59:19.517" endtime="20200713 18:59:19.518"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2112,16 +2100,16 @@ Current connection settings
 <assign>
 <var>${testCaseExternalID}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.907" level="INFO">${testCaseExternalID} = 974</msg>
-<status status="PASS" starttime="20200707 20:27:20.906" endtime="20200707 20:27:20.907"></status>
+<msg timestamp="20200713 18:59:19.519" level="INFO">${testCaseExternalID} = 918</msg>
+<status status="PASS" starttime="20200713 18:59:19.518" endtime="20200713 18:59:19.519"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>=================================================================================</arg>
 </arguments>
-<msg timestamp="20200707 20:27:20.909" level="INFO">=================================================================================</msg>
-<status status="PASS" starttime="20200707 20:27:20.908" endtime="20200707 20:27:20.909"></status>
+<msg timestamp="20200713 18:59:19.520" level="INFO">=================================================================================</msg>
+<status status="PASS" starttime="20200713 18:59:19.520" endtime="20200713 18:59:19.520"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2131,8 +2119,8 @@ Current connection settings
 <assign>
 <var>${numVersion}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.911" level="INFO">${numVersion} = 163</msg>
-<status status="PASS" starttime="20200707 20:27:20.910" endtime="20200707 20:27:20.911"></status>
+<msg timestamp="20200713 18:59:19.521" level="INFO">${numVersion} = 166</msg>
+<status status="PASS" starttime="20200713 18:59:19.521" endtime="20200713 18:59:19.522"></status>
 </kw>
 <kw name="Fetch From Left" library="String">
 <doc>Returns contents of the ``string`` before the first occurrence of ``marker``.</doc>
@@ -2143,8 +2131,8 @@ Current connection settings
 <assign>
 <var>${splitedBuild}</var>
 </assign>
-<msg timestamp="20200707 20:27:20.913" level="INFO">${splitedBuild} = JMap 7.0 Istanbul build </msg>
-<status status="PASS" starttime="20200707 20:27:20.912" endtime="20200707 20:27:20.913"></status>
+<msg timestamp="20200713 18:59:19.523" level="INFO">${splitedBuild} = JMap 7.0 Istanbul build </msg>
+<status status="PASS" starttime="20200713 18:59:19.522" endtime="20200713 18:59:19.523"></status>
 </kw>
 <kw name="${i} IN RANGE [ 1 | 22 ]" type="for">
 <kw name="${i} = 1" type="foritem">
@@ -2170,18 +2158,18 @@ Current connection settings
 <arg>testCaseexternaid=${testCaseExternalID}</arg>
 <arg>buildname=${splitedBuild}${numVersion}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:20.915" endtime="20200707 20:27:21.201"></status>
+<status status="PASS" starttime="20200713 18:59:19.524" endtime="20200713 18:59:19.846"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.202" level="INFO">@{getExecution} = [ PASS | [{'id': -1}] ]</msg>
-<status status="PASS" starttime="20200707 20:27:20.914" endtime="20200707 20:27:21.203"></status>
+<msg timestamp="20200713 18:59:19.847" level="INFO">@{getExecution} = [ PASS | [{'id': -1}] ]</msg>
+<status status="PASS" starttime="20200713 18:59:19.524" endtime="20200713 18:59:19.847"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>---- &gt; ${getExecution}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.204" level="INFO">---- &gt; ['PASS', [{'id': -1}]]</msg>
-<status status="PASS" starttime="20200707 20:27:21.203" endtime="20200707 20:27:21.205"></status>
+<msg timestamp="20200713 18:59:19.849" level="INFO">---- &gt; ['PASS', [{'id': -1}]]</msg>
+<status status="PASS" starttime="20200713 18:59:19.848" endtime="20200713 18:59:19.849"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -2192,8 +2180,8 @@ Current connection settings
 <assign>
 <var>&amp;{dictIfFail}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.207" level="INFO">&amp;{dictIfFail} = { id=-1 }</msg>
-<status status="PASS" starttime="20200707 20:27:21.205" endtime="20200707 20:27:21.207"></status>
+<msg timestamp="20200713 18:59:19.850" level="INFO">&amp;{dictIfFail} = { id=-1 }</msg>
+<status status="PASS" starttime="20200713 18:59:19.850" endtime="20200713 18:59:19.850"></status>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
@@ -2203,8 +2191,8 @@ Current connection settings
 <assign>
 <var>@{listIfFail}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.209" level="INFO">@{listIfFail} = [ {'id': '-1'} ]</msg>
-<status status="PASS" starttime="20200707 20:27:21.208" endtime="20200707 20:27:21.210"></status>
+<msg timestamp="20200713 18:59:19.851" level="INFO">@{listIfFail} = [ {'id': '-1'} ]</msg>
+<status status="PASS" starttime="20200713 18:59:19.851" endtime="20200713 18:59:19.851"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -2225,10 +2213,10 @@ Current connection settings
 <arguments>
 <arg>${getExecution}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.212" endtime="20200707 20:27:21.213"></status>
+<status status="PASS" starttime="20200713 18:59:19.852" endtime="20200713 18:59:19.852"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.214" level="INFO">@{getExecution} = [ PASS | [{'id': -1}] ]</msg>
-<status status="PASS" starttime="20200707 20:27:21.211" endtime="20200707 20:27:21.214"></status>
+<msg timestamp="20200713 18:59:19.852" level="INFO">@{getExecution} = [ PASS | [{'id': -1}] ]</msg>
+<status status="PASS" starttime="20200713 18:59:19.851" endtime="20200713 18:59:19.852"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -2238,9 +2226,9 @@ Current connection settings
 <assign>
 <var>${Length1}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.216" level="INFO">Length is 2</msg>
-<msg timestamp="20200707 20:27:21.217" level="INFO">${Length1} = 2</msg>
-<status status="PASS" starttime="20200707 20:27:21.215" endtime="20200707 20:27:21.217"></status>
+<msg timestamp="20200713 18:59:19.852" level="INFO">Length is 2</msg>
+<msg timestamp="20200713 18:59:19.853" level="INFO">${Length1} = 2</msg>
+<status status="PASS" starttime="20200713 18:59:19.852" endtime="20200713 18:59:19.853"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2250,8 +2238,8 @@ Current connection settings
 <assign>
 <var>${lastExecution}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.219" level="INFO">${lastExecution} = [{'id': -1}]</msg>
-<status status="PASS" starttime="20200707 20:27:21.218" endtime="20200707 20:27:21.219"></status>
+<msg timestamp="20200713 18:59:19.853" level="INFO">${lastExecution} = [{'id': -1}]</msg>
+<status status="PASS" starttime="20200713 18:59:19.853" endtime="20200713 18:59:19.853"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -2268,10 +2256,10 @@ Current connection settings
 <arguments>
 <arg>${lastExecution[0]['id']}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.222" endtime="20200707 20:27:21.223"></status>
+<status status="PASS" starttime="20200713 18:59:19.854" endtime="20200713 18:59:19.854"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.224" level="INFO">${idBuild} = -1</msg>
-<status status="PASS" starttime="20200707 20:27:21.220" endtime="20200707 20:27:21.224"></status>
+<msg timestamp="20200713 18:59:19.854" level="INFO">${idBuild} = -1</msg>
+<status status="PASS" starttime="20200713 18:59:19.853" endtime="20200713 18:59:19.854"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -2285,18 +2273,18 @@ Current connection settings
 <arguments>
 <arg>----- &gt; ID of Build(${NumVersion}) : ${idBuild}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.228" level="INFO">----- &gt; ID of Build(163) : -1</msg>
-<status status="PASS" starttime="20200707 20:27:21.227" endtime="20200707 20:27:21.228"></status>
+<msg timestamp="20200713 18:59:19.855" level="INFO">----- &gt; ID of Build(166) : -1</msg>
+<status status="PASS" starttime="20200713 18:59:19.855" endtime="20200713 18:59:19.855"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.225" endtime="20200707 20:27:21.229"></status>
+<status status="PASS" starttime="20200713 18:59:19.854" endtime="20200713 18:59:19.855"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>------------------------------------------------------------------------------------</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.230" level="INFO">------------------------------------------------------------------------------------</msg>
-<status status="PASS" starttime="20200707 20:27:21.229" endtime="20200707 20:27:21.230"></status>
+<msg timestamp="20200713 18:59:19.856" level="INFO">------------------------------------------------------------------------------------</msg>
+<status status="PASS" starttime="20200713 18:59:19.855" endtime="20200713 18:59:19.856"></status>
 </kw>
 <kw name="Convert To Integer" library="BuiltIn">
 <doc>Converts the given item to an integer number.</doc>
@@ -2306,8 +2294,8 @@ Current connection settings
 <assign>
 <var>${numVersion}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.232" level="INFO">${numVersion} = 163</msg>
-<status status="PASS" starttime="20200707 20:27:21.231" endtime="20200707 20:27:21.232"></status>
+<msg timestamp="20200713 18:59:19.856" level="INFO">${numVersion} = 166</msg>
+<status status="PASS" starttime="20200713 18:59:19.856" endtime="20200713 18:59:19.856"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -2317,8 +2305,8 @@ Current connection settings
 <assign>
 <var>${numVersion}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.233" level="INFO">${numVersion} = 162</msg>
-<status status="PASS" starttime="20200707 20:27:21.233" endtime="20200707 20:27:21.234"></status>
+<msg timestamp="20200713 18:59:19.857" level="INFO">${numVersion} = 165</msg>
+<status status="PASS" starttime="20200713 18:59:19.856" endtime="20200713 18:59:19.857"></status>
 </kw>
 <kw name="Set Variable If" library="BuiltIn">
 <doc>Sets variable based on the given condition.</doc>
@@ -2359,23 +2347,23 @@ Current connection settings
 <arg>${numVersion} &gt; 100</arg>
 <arg>${numVersion}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.237" endtime="20200707 20:27:21.237"></status>
+<status status="PASS" starttime="20200713 18:59:19.858" endtime="20200713 18:59:19.858"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.236" endtime="20200707 20:27:21.238"></status>
+<status status="PASS" starttime="20200713 18:59:19.858" endtime="20200713 18:59:19.858"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.235" endtime="20200707 20:27:21.238"></status>
+<status status="PASS" starttime="20200713 18:59:19.857" endtime="20200713 18:59:19.858"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.238" level="INFO">${numVersion} = 162</msg>
-<status status="PASS" starttime="20200707 20:27:21.235" endtime="20200707 20:27:21.238"></status>
+<msg timestamp="20200713 18:59:19.859" level="INFO">${numVersion} = 165</msg>
+<status status="PASS" starttime="20200713 18:59:19.857" endtime="20200713 18:59:19.859"></status>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
 <arguments>
 <arg>'${getExecution[0]}' == 'PASS' and '${idBuild}' != '-1' or '${numVersion}' == '001'</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.239" endtime="20200707 20:27:21.239"></status>
+<status status="PASS" starttime="20200713 18:59:19.859" endtime="20200713 18:59:19.859"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:20.914" endtime="20200707 20:27:21.240"></status>
+<status status="PASS" starttime="20200713 18:59:19.523" endtime="20200713 18:59:19.859"></status>
 </kw>
 <kw name="${i} = 2" type="foritem">
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
@@ -2400,18 +2388,18 @@ Current connection settings
 <arg>testCaseexternaid=${testCaseExternalID}</arg>
 <arg>buildname=${splitedBuild}${numVersion}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.241" endtime="20200707 20:27:21.578"></status>
+<status status="PASS" starttime="20200713 18:59:19.860" endtime="20200713 18:59:20.208"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.579" level="INFO">@{getExecution} = [ PASS | [{'id': '349180', 'build_id': '890', 'tester_id': '9', 'execution_ts': '2020-07-06 20:56:31', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8695', 'tcversion_number': '1', 'platform_...</msg>
-<status status="PASS" starttime="20200707 20:27:21.241" endtime="20200707 20:27:21.579"></status>
+<msg timestamp="20200713 18:59:20.209" level="INFO">@{getExecution} = [ PASS | [{'id': '350973', 'build_id': '897', 'tester_id': '9', 'execution_ts': '2020-07-10 22:48:38', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8579', 'tcversion_number': '1', 'platform_...</msg>
+<status status="PASS" starttime="20200713 18:59:19.860" endtime="20200713 18:59:20.209"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>---- &gt; ${getExecution}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.581" level="INFO">---- &gt; ['PASS', [{'id': '349180', 'build_id': '890', 'tester_id': '9', 'execution_ts': '2020-07-06 20:56:31', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8695', 'tcversion_number': '1', 'platform_id': '0', 'execution_type': '2', 'execution_duration': '0.48', 'notes': 'AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED'}]]</msg>
-<status status="PASS" starttime="20200707 20:27:21.581" endtime="20200707 20:27:21.582"></status>
+<msg timestamp="20200713 18:59:20.210" level="INFO">---- &gt; ['PASS', [{'id': '350973', 'build_id': '897', 'tester_id': '9', 'execution_ts': '2020-07-10 22:48:38', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8579', 'tcversion_number': '1', 'platform_id': '0', 'execution_type': '2', 'execution_duration': '0.55', 'notes': 'AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED'}]]</msg>
+<status status="PASS" starttime="20200713 18:59:20.210" endtime="20200713 18:59:20.211"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -2422,8 +2410,8 @@ Current connection settings
 <assign>
 <var>&amp;{dictIfFail}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.584" level="INFO">&amp;{dictIfFail} = { id=-1 }</msg>
-<status status="PASS" starttime="20200707 20:27:21.583" endtime="20200707 20:27:21.585"></status>
+<msg timestamp="20200713 18:59:20.211" level="INFO">&amp;{dictIfFail} = { id=-1 }</msg>
+<status status="PASS" starttime="20200713 18:59:20.211" endtime="20200713 18:59:20.211"></status>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
@@ -2433,8 +2421,8 @@ Current connection settings
 <assign>
 <var>@{listIfFail}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.587" level="INFO">@{listIfFail} = [ {'id': '-1'} ]</msg>
-<status status="PASS" starttime="20200707 20:27:21.586" endtime="20200707 20:27:21.587"></status>
+<msg timestamp="20200713 18:59:20.212" level="INFO">@{listIfFail} = [ {'id': '-1'} ]</msg>
+<status status="PASS" starttime="20200713 18:59:20.211" endtime="20200713 18:59:20.212"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -2455,10 +2443,10 @@ Current connection settings
 <arguments>
 <arg>${getExecution}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.590" endtime="20200707 20:27:21.591"></status>
+<status status="PASS" starttime="20200713 18:59:20.212" endtime="20200713 18:59:20.213"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.592" level="INFO">@{getExecution} = [ PASS | [{'id': '349180', 'build_id': '890', 'tester_id': '9', 'execution_ts': '2020-07-06 20:56:31', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8695', 'tcversion_number': '1', 'platform_...</msg>
-<status status="PASS" starttime="20200707 20:27:21.588" endtime="20200707 20:27:21.592"></status>
+<msg timestamp="20200713 18:59:20.213" level="INFO">@{getExecution} = [ PASS | [{'id': '350973', 'build_id': '897', 'tester_id': '9', 'execution_ts': '2020-07-10 22:48:38', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8579', 'tcversion_number': '1', 'platform_...</msg>
+<status status="PASS" starttime="20200713 18:59:20.212" endtime="20200713 18:59:20.213"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -2468,9 +2456,9 @@ Current connection settings
 <assign>
 <var>${Length1}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.593" level="INFO">Length is 2</msg>
-<msg timestamp="20200707 20:27:21.595" level="INFO">${Length1} = 2</msg>
-<status status="PASS" starttime="20200707 20:27:21.593" endtime="20200707 20:27:21.595"></status>
+<msg timestamp="20200713 18:59:20.213" level="INFO">Length is 2</msg>
+<msg timestamp="20200713 18:59:20.213" level="INFO">${Length1} = 2</msg>
+<status status="PASS" starttime="20200713 18:59:20.213" endtime="20200713 18:59:20.213"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2480,8 +2468,8 @@ Current connection settings
 <assign>
 <var>${lastExecution}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.597" level="INFO">${lastExecution} = [{'id': '349180', 'build_id': '890', 'tester_id': '9', 'execution_ts': '2020-07-06 20:56:31', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8695', 'tcversion_number': '1', 'platform_id': '0',...</msg>
-<status status="PASS" starttime="20200707 20:27:21.595" endtime="20200707 20:27:21.597"></status>
+<msg timestamp="20200713 18:59:20.214" level="INFO">${lastExecution} = [{'id': '350973', 'build_id': '897', 'tester_id': '9', 'execution_ts': '2020-07-10 22:48:38', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8579', 'tcversion_number': '1', 'platform_id': '0',...</msg>
+<status status="PASS" starttime="20200713 18:59:20.214" endtime="20200713 18:59:20.214"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -2498,10 +2486,10 @@ Current connection settings
 <arguments>
 <arg>${lastExecution[0]['id']}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.599" endtime="20200707 20:27:21.601"></status>
+<status status="PASS" starttime="20200713 18:59:20.215" endtime="20200713 18:59:20.215"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.601" level="INFO">${idBuild} = 349180</msg>
-<status status="PASS" starttime="20200707 20:27:21.598" endtime="20200707 20:27:21.601"></status>
+<msg timestamp="20200713 18:59:20.215" level="INFO">${idBuild} = 350973</msg>
+<status status="PASS" starttime="20200713 18:59:20.214" endtime="20200713 18:59:20.215"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -2515,18 +2503,18 @@ Current connection settings
 <arguments>
 <arg>----- &gt; ID of Build(${NumVersion}) : ${idBuild}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.605" level="INFO">----- &gt; ID of Build(162) : 349180</msg>
-<status status="PASS" starttime="20200707 20:27:21.604" endtime="20200707 20:27:21.606"></status>
+<msg timestamp="20200713 18:59:20.216" level="INFO">----- &gt; ID of Build(165) : 350973</msg>
+<status status="PASS" starttime="20200713 18:59:20.216" endtime="20200713 18:59:20.216"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.602" endtime="20200707 20:27:21.606"></status>
+<status status="PASS" starttime="20200713 18:59:20.215" endtime="20200713 18:59:20.216"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>------------------------------------------------------------------------------------</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.608" level="INFO">------------------------------------------------------------------------------------</msg>
-<status status="PASS" starttime="20200707 20:27:21.607" endtime="20200707 20:27:21.608"></status>
+<msg timestamp="20200713 18:59:20.216" level="INFO">------------------------------------------------------------------------------------</msg>
+<status status="PASS" starttime="20200713 18:59:20.216" endtime="20200713 18:59:20.217"></status>
 </kw>
 <kw name="Convert To Integer" library="BuiltIn">
 <doc>Converts the given item to an integer number.</doc>
@@ -2536,8 +2524,8 @@ Current connection settings
 <assign>
 <var>${numVersion}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.610" level="INFO">${numVersion} = 162</msg>
-<status status="PASS" starttime="20200707 20:27:21.609" endtime="20200707 20:27:21.610"></status>
+<msg timestamp="20200713 18:59:20.217" level="INFO">${numVersion} = 165</msg>
+<status status="PASS" starttime="20200713 18:59:20.217" endtime="20200713 18:59:20.217"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -2547,8 +2535,8 @@ Current connection settings
 <assign>
 <var>${numVersion}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.612" level="INFO">${numVersion} = 161</msg>
-<status status="PASS" starttime="20200707 20:27:21.611" endtime="20200707 20:27:21.612"></status>
+<msg timestamp="20200713 18:59:20.218" level="INFO">${numVersion} = 164</msg>
+<status status="PASS" starttime="20200713 18:59:20.217" endtime="20200713 18:59:20.218"></status>
 </kw>
 <kw name="Set Variable If" library="BuiltIn">
 <doc>Sets variable based on the given condition.</doc>
@@ -2589,26 +2577,26 @@ Current connection settings
 <arg>${numVersion} &gt; 100</arg>
 <arg>${numVersion}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.615" endtime="20200707 20:27:21.616"></status>
+<status status="PASS" starttime="20200713 18:59:20.219" endtime="20200713 18:59:20.219"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.615" endtime="20200707 20:27:21.616"></status>
+<status status="PASS" starttime="20200713 18:59:20.219" endtime="20200713 18:59:20.219"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.613" endtime="20200707 20:27:21.617"></status>
+<status status="PASS" starttime="20200713 18:59:20.218" endtime="20200713 18:59:20.220"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.618" level="INFO">${numVersion} = 161</msg>
-<status status="PASS" starttime="20200707 20:27:21.612" endtime="20200707 20:27:21.618"></status>
+<msg timestamp="20200713 18:59:20.220" level="INFO">${numVersion} = 164</msg>
+<status status="PASS" starttime="20200713 18:59:20.218" endtime="20200713 18:59:20.220"></status>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
 <arguments>
 <arg>'${getExecution[0]}' == 'PASS' and '${idBuild}' != '-1' or '${numVersion}' == '001'</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.618" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20200707 20:27:21.618" endtime="20200707 20:27:21.619"></status>
+<msg timestamp="20200713 18:59:20.220" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20200713 18:59:20.220" endtime="20200713 18:59:20.220"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.241" endtime="20200707 20:27:21.619"></status>
+<status status="PASS" starttime="20200713 18:59:19.859" endtime="20200713 18:59:20.220"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:20.913" endtime="20200707 20:27:21.619"></status>
+<status status="PASS" starttime="20200713 18:59:19.523" endtime="20200713 18:59:20.221"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -2618,9 +2606,9 @@ Current connection settings
 <assign>
 <var>${Length1}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.620" level="INFO">Length is 1</msg>
-<msg timestamp="20200707 20:27:21.621" level="INFO">${Length1} = 1</msg>
-<status status="PASS" starttime="20200707 20:27:21.620" endtime="20200707 20:27:21.621"></status>
+<msg timestamp="20200713 18:59:20.221" level="INFO">Length is 1</msg>
+<msg timestamp="20200713 18:59:20.221" level="INFO">${Length1} = 1</msg>
+<status status="PASS" starttime="20200713 18:59:20.221" endtime="20200713 18:59:20.221"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2630,8 +2618,8 @@ Current connection settings
 <assign>
 <var>${lastExecution}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.621" level="INFO">${lastExecution} = {'id': '349180', 'build_id': '890', 'tester_id': '9', 'execution_ts': '2020-07-06 20:56:31', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8695', 'tcversion_number': '1', 'platform_id': '0', ...</msg>
-<status status="PASS" starttime="20200707 20:27:21.621" endtime="20200707 20:27:21.621"></status>
+<msg timestamp="20200713 18:59:20.222" level="INFO">${lastExecution} = {'id': '350973', 'build_id': '897', 'tester_id': '9', 'execution_ts': '2020-07-10 22:48:38', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8579', 'tcversion_number': '1', 'platform_id': '0', ...</msg>
+<status status="PASS" starttime="20200713 18:59:20.221" endtime="20200713 18:59:20.222"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
@@ -2639,8 +2627,8 @@ Current connection settings
 <arg>-----&gt; Last execution : ${lastExecution}</arg>
 <arg>console=yes</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.623" level="INFO">-----&gt; Last execution : {'id': '349180', 'build_id': '890', 'tester_id': '9', 'execution_ts': '2020-07-06 20:56:31', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8695', 'tcversion_number': '1', 'platform_id': '0', 'execution_type': '2', 'execution_duration': '0.48', 'notes': 'AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED'}</msg>
-<status status="PASS" starttime="20200707 20:27:21.622" endtime="20200707 20:27:21.623"></status>
+<msg timestamp="20200713 18:59:20.222" level="INFO">-----&gt; Last execution : {'id': '350973', 'build_id': '897', 'tester_id': '9', 'execution_ts': '2020-07-10 22:48:38', 'status': 'p', 'testplan_id': '6381', 'tcversion_id': '8579', 'tcversion_number': '1', 'platform_id': '0', 'execution_type': '2', 'execution_duration': '0.55', 'notes': 'AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED'}</msg>
+<status status="PASS" starttime="20200713 18:59:20.222" endtime="20200713 18:59:20.222"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2650,8 +2638,8 @@ Current connection settings
 <assign>
 <var>${lastExecutionID}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.623" level="INFO">${lastExecutionID} = 349180</msg>
-<status status="PASS" starttime="20200707 20:27:21.623" endtime="20200707 20:27:21.624"></status>
+<msg timestamp="20200713 18:59:20.223" level="INFO">${lastExecutionID} = 350973</msg>
+<status status="PASS" starttime="20200713 18:59:20.222" endtime="20200713 18:59:20.223"></status>
 </kw>
 <kw name="Run Keyword If Test Passed" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if the test passed.</doc>
@@ -2683,7 +2671,7 @@ Current connection settings
 <arg>${latestBuildNAME}</arg>
 <arg>${Elapsed}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.625" endtime="20200707 20:27:21.626"></status>
+<status status="PASS" starttime="20200713 18:59:20.224" endtime="20200713 18:59:20.224"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -2713,8 +2701,8 @@ Current connection settings
 <assign>
 <var>${lastExecutionNotes}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.628" level="INFO">${lastExecutionNotes} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED</msg>
-<status status="PASS" starttime="20200707 20:27:21.627" endtime="20200707 20:27:21.628"></status>
+<msg timestamp="20200713 18:59:20.225" level="INFO">${lastExecutionNotes} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED</msg>
+<status status="PASS" starttime="20200713 18:59:20.225" endtime="20200713 18:59:20.225"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2724,8 +2712,8 @@ Current connection settings
 <assign>
 <var>${status}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.629" level="INFO">${status} = p</msg>
-<status status="PASS" starttime="20200707 20:27:21.628" endtime="20200707 20:27:21.629"></status>
+<msg timestamp="20200713 18:59:20.226" level="INFO">${status} = p</msg>
+<status status="PASS" starttime="20200713 18:59:20.225" endtime="20200713 18:59:20.226"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2735,8 +2723,8 @@ Current connection settings
 <assign>
 <var>${testerid}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.630" level="INFO">${testerid} = 9</msg>
-<status status="PASS" starttime="20200707 20:27:21.630" endtime="20200707 20:27:21.630"></status>
+<msg timestamp="20200713 18:59:20.226" level="INFO">${testerid} = 9</msg>
+<status status="PASS" starttime="20200713 18:59:20.226" endtime="20200713 18:59:20.226"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -2746,17 +2734,17 @@ Current connection settings
 <assign>
 <var>${lengthIssuesPrefix}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.631" level="INFO">Length is 2</msg>
-<msg timestamp="20200707 20:27:21.631" level="INFO">${lengthIssuesPrefix} = 2</msg>
-<status status="PASS" starttime="20200707 20:27:21.630" endtime="20200707 20:27:21.631"></status>
+<msg timestamp="20200713 18:59:20.227" level="INFO">Length is 2</msg>
+<msg timestamp="20200713 18:59:20.227" level="INFO">${lengthIssuesPrefix} = 2</msg>
+<status status="PASS" starttime="20200713 18:59:20.226" endtime="20200713 18:59:20.227"></status>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
 <assign>
 <var>@{isIssuesPrefix}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.631" level="INFO">@{isIssuesPrefix} = [ ]</msg>
-<status status="PASS" starttime="20200707 20:27:21.631" endtime="20200707 20:27:21.631"></status>
+<msg timestamp="20200713 18:59:20.227" level="INFO">@{isIssuesPrefix} = [ ]</msg>
+<status status="PASS" starttime="20200713 18:59:20.227" endtime="20200713 18:59:20.227"></status>
 </kw>
 <kw name="${issue} IN [ @{issuesPrefix} ]" type="for">
 <kw name="${issue} = TFIFT" type="foritem">
@@ -2776,11 +2764,11 @@ Current connection settings
 <arg>${lastExecutionNotes}</arg>
 <arg>${issue}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.632" level="FAIL">'AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED' does not contain 'TFIFT'</msg>
-<status status="FAIL" starttime="20200707 20:27:21.632" endtime="20200707 20:27:21.633"></status>
+<msg timestamp="20200713 18:59:20.228" level="FAIL">'AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED' does not contain 'TFIFT'</msg>
+<status status="FAIL" starttime="20200713 18:59:20.228" endtime="20200713 18:59:20.228"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.633" level="INFO">${isIssue} = False</msg>
-<status status="PASS" starttime="20200707 20:27:21.632" endtime="20200707 20:27:21.633"></status>
+<msg timestamp="20200713 18:59:20.228" level="INFO">${isIssue} = False</msg>
+<status status="PASS" starttime="20200713 18:59:20.228" endtime="20200713 18:59:20.228"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -2790,8 +2778,8 @@ Current connection settings
 <assign>
 <var>${isIssue}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.633" level="INFO">${isIssue} = False</msg>
-<status status="PASS" starttime="20200707 20:27:21.633" endtime="20200707 20:27:21.634"></status>
+<msg timestamp="20200713 18:59:20.229" level="INFO">${isIssue} = False</msg>
+<status status="PASS" starttime="20200713 18:59:20.229" endtime="20200713 18:59:20.229"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -2799,9 +2787,9 @@ Current connection settings
 <arg>${isIssuesPrefix}</arg>
 <arg>${isIssue}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.634" endtime="20200707 20:27:21.634"></status>
+<status status="PASS" starttime="20200713 18:59:20.229" endtime="20200713 18:59:20.229"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.632" endtime="20200707 20:27:21.634"></status>
+<status status="PASS" starttime="20200713 18:59:20.227" endtime="20200713 18:59:20.229"></status>
 </kw>
 <kw name="${issue} = JMNG" type="foritem">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -2820,11 +2808,11 @@ Current connection settings
 <arg>${lastExecutionNotes}</arg>
 <arg>${issue}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.635" level="FAIL">'AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED' does not contain 'JMNG'</msg>
-<status status="FAIL" starttime="20200707 20:27:21.635" endtime="20200707 20:27:21.635"></status>
+<msg timestamp="20200713 18:59:20.230" level="FAIL">'AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED' does not contain 'JMNG'</msg>
+<status status="FAIL" starttime="20200713 18:59:20.230" endtime="20200713 18:59:20.230"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.636" level="INFO">${isIssue} = False</msg>
-<status status="PASS" starttime="20200707 20:27:21.635" endtime="20200707 20:27:21.636"></status>
+<msg timestamp="20200713 18:59:20.230" level="INFO">${isIssue} = False</msg>
+<status status="PASS" starttime="20200713 18:59:20.230" endtime="20200713 18:59:20.230"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -2834,8 +2822,8 @@ Current connection settings
 <assign>
 <var>${isIssue}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.636" level="INFO">${isIssue} = False</msg>
-<status status="PASS" starttime="20200707 20:27:21.636" endtime="20200707 20:27:21.636"></status>
+<msg timestamp="20200713 18:59:20.231" level="INFO">${isIssue} = False</msg>
+<status status="PASS" starttime="20200713 18:59:20.231" endtime="20200713 18:59:20.231"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -2843,19 +2831,19 @@ Current connection settings
 <arg>${isIssuesPrefix}</arg>
 <arg>${isIssue}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.637" endtime="20200707 20:27:21.637"></status>
+<status status="PASS" starttime="20200713 18:59:20.231" endtime="20200713 18:59:20.231"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.634" endtime="20200707 20:27:21.637"></status>
+<status status="PASS" starttime="20200713 18:59:20.230" endtime="20200713 18:59:20.231"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.631" endtime="20200707 20:27:21.637"></status>
+<status status="PASS" starttime="20200713 18:59:20.227" endtime="20200713 18:59:20.232"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${isIssuesPrefix}</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.638" level="INFO">['False', 'False']</msg>
-<status status="PASS" starttime="20200707 20:27:21.637" endtime="20200707 20:27:21.638"></status>
+<msg timestamp="20200713 18:59:20.232" level="INFO">['False', 'False']</msg>
+<status status="PASS" starttime="20200713 18:59:20.232" endtime="20200713 18:59:20.232"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -2873,11 +2861,11 @@ Current connection settings
 <arg>${isIssuesPrefix}</arg>
 <arg>True</arg>
 </arguments>
-<msg timestamp="20200707 20:27:21.639" level="FAIL">[ False | False ] does not contain value 'True'.</msg>
-<status status="FAIL" starttime="20200707 20:27:21.638" endtime="20200707 20:27:21.639"></status>
+<msg timestamp="20200713 18:59:20.233" level="FAIL">[ False | False ] does not contain value 'True'.</msg>
+<status status="FAIL" starttime="20200713 18:59:20.232" endtime="20200713 18:59:20.233"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.639" level="INFO">${isIssueInList} = False</msg>
-<status status="PASS" starttime="20200707 20:27:21.638" endtime="20200707 20:27:21.640"></status>
+<msg timestamp="20200713 18:59:20.233" level="INFO">${isIssueInList} = False</msg>
+<status status="PASS" starttime="20200713 18:59:20.232" endtime="20200713 18:59:20.233"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -2900,10 +2888,10 @@ Current connection settings
 <arguments>
 <arg>${EMPTY}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.640" endtime="20200707 20:27:21.640"></status>
+<status status="PASS" starttime="20200713 18:59:20.234" endtime="20200713 18:59:20.234"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.640" level="INFO">${lastExecutionNotes} = </msg>
-<status status="PASS" starttime="20200707 20:27:21.640" endtime="20200707 20:27:21.640"></status>
+<msg timestamp="20200713 18:59:20.234" level="INFO">${lastExecutionNotes} = </msg>
+<status status="PASS" starttime="20200713 18:59:20.233" endtime="20200713 18:59:20.234"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -2921,10 +2909,10 @@ Current connection settings
 <arg>${lastExecutionNotes}</arg>
 <arg>${EMPTY}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.641" endtime="20200707 20:27:21.641"></status>
+<status status="PASS" starttime="20200713 18:59:20.234" endtime="20200713 18:59:20.235"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.641" level="INFO">${isEmpty} = True</msg>
-<status status="PASS" starttime="20200707 20:27:21.641" endtime="20200707 20:27:21.641"></status>
+<msg timestamp="20200713 18:59:20.235" level="INFO">${isEmpty} = True</msg>
+<status status="PASS" starttime="20200713 18:59:20.234" endtime="20200713 18:59:20.235"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -2934,8 +2922,8 @@ Current connection settings
 <assign>
 <var>${notesFinal}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.642" level="INFO">${notesFinal} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST</msg>
-<status status="PASS" starttime="20200707 20:27:21.642" endtime="20200707 20:27:21.642"></status>
+<msg timestamp="20200713 18:59:20.235" level="INFO">${notesFinal} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST</msg>
+<status status="PASS" starttime="20200713 18:59:20.235" endtime="20200713 18:59:20.235"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -2955,10 +2943,10 @@ Current connection settings
 <arguments>
 <arg>${notesFinal} PASSED</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.643" endtime="20200707 20:27:21.643"></status>
+<status status="PASS" starttime="20200713 18:59:20.236" endtime="20200713 18:59:20.236"></status>
 </kw>
-<msg timestamp="20200707 20:27:21.643" level="INFO">${notesFinal} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED</msg>
-<status status="PASS" starttime="20200707 20:27:21.642" endtime="20200707 20:27:21.644"></status>
+<msg timestamp="20200713 18:59:20.236" level="INFO">${notesFinal} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED</msg>
+<status status="PASS" starttime="20200713 18:59:20.235" endtime="20200713 18:59:20.236"></status>
 </kw>
 <kw name="Set Variable If" library="BuiltIn">
 <doc>Sets variable based on the given condition.</doc>
@@ -2971,8 +2959,8 @@ Current connection settings
 <assign>
 <var>${notesFinal}</var>
 </assign>
-<msg timestamp="20200707 20:27:21.644" level="INFO">${notesFinal} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED</msg>
-<status status="PASS" starttime="20200707 20:27:21.644" endtime="20200707 20:27:21.644"></status>
+<msg timestamp="20200713 18:59:20.237" level="INFO">${notesFinal} = AUTOMATED TEST PASSED AND LAST EXECUTION TEST PASSED</msg>
+<status status="PASS" starttime="20200713 18:59:20.236" endtime="20200713 18:59:20.237"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -3007,17 +2995,17 @@ Current connection settings
 <arg>${notesFinal}</arg>
 <arg>execduration=${Elapsed}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.645" endtime="20200707 20:27:21.957"></status>
+<status status="PASS" starttime="20200713 18:59:20.237" endtime="20200713 18:59:20.669"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.644" endtime="20200707 20:27:21.958"></status>
+<status status="PASS" starttime="20200713 18:59:20.237" endtime="20200713 18:59:20.670"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.626" endtime="20200707 20:27:21.958"></status>
+<status status="PASS" starttime="20200713 18:59:20.224" endtime="20200713 18:59:20.671"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.626" endtime="20200707 20:27:21.959"></status>
+<status status="PASS" starttime="20200713 18:59:20.224" endtime="20200713 18:59:20.672"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.625" endtime="20200707 20:27:21.960"></status>
+<status status="PASS" starttime="20200713 18:59:20.223" endtime="20200713 18:59:20.672"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:21.624" endtime="20200707 20:27:21.960"></status>
+<status status="PASS" starttime="20200713 18:59:20.223" endtime="20200713 18:59:20.673"></status>
 </kw>
 <kw name="Run Keyword If Test Failed" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
@@ -3030,36 +3018,36 @@ Current connection settings
 <arg>${latestBuildNAME}</arg>
 <arg>${Elapsed}</arg>
 </arguments>
-<status status="PASS" starttime="20200707 20:27:21.961" endtime="20200707 20:27:21.962"></status>
+<status status="PASS" starttime="20200713 18:59:20.673" endtime="20200713 18:59:20.674"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:17.614" endtime="20200707 20:27:21.963"></status>
+<status status="PASS" starttime="20200713 18:59:16.613" endtime="20200713 18:59:20.674"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:17.613" endtime="20200707 20:27:21.964"></status>
+<status status="PASS" starttime="20200713 18:59:16.612" endtime="20200713 18:59:20.674"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:11.070" endtime="20200707 20:27:21.965"></status>
+<status status="PASS" starttime="20200713 18:59:10.275" endtime="20200713 18:59:20.674"></status>
 </kw>
-<status status="PASS" starttime="20200707 20:27:06.486" endtime="20200707 20:27:21.965"></status>
+<status status="PASS" starttime="20200713 18:59:06.979" endtime="20200713 18:59:20.674"></status>
 </kw>
 <tags>
 <tag>Time Out</tag>
 </tags>
-<status status="PASS" starttime="20200707 20:26:44.005" endtime="20200707 20:27:21.966" critical="yes"></status>
+<status status="PASS" starttime="20200713 18:58:41.813" endtime="20200713 18:59:20.675" critical="yes"></status>
 </test>
-<doc>Edit Style Annotation Test cases</doc>
+<doc>Delete Annotation Test cases</doc>
 <metadata>
 <item name="author">Mordjane Boussad</item>
 </metadata>
-<status status="PASS" starttime="20200707 20:26:43.273" endtime="20200707 20:27:21.968"></status>
+<status status="PASS" starttime="20200713 18:58:41.253" endtime="20200713 18:59:20.675"></status>
 </suite>
-<status status="PASS" starttime="20200707 20:26:43.271" endtime="20200707 20:27:21.975"></status>
+<status status="PASS" starttime="20200713 18:58:41.251" endtime="20200713 18:59:20.677"></status>
 </suite>
-<status status="PASS" starttime="20200707 20:26:43.269" endtime="20200707 20:27:21.980"></status>
+<status status="PASS" starttime="20200713 18:58:41.249" endtime="20200713 18:59:20.678"></status>
 </suite>
-<status status="PASS" starttime="20200707 20:26:43.267" endtime="20200707 20:27:21.985"></status>
+<status status="PASS" starttime="20200713 18:58:41.248" endtime="20200713 18:59:20.679"></status>
 </suite>
-<status status="PASS" starttime="20200707 20:26:43.265" endtime="20200707 20:27:21.988"></status>
+<status status="PASS" starttime="20200713 18:58:41.246" endtime="20200713 18:59:20.681"></status>
 </suite>
-<status status="PASS" starttime="20200707 20:26:43.245" endtime="20200707 20:27:21.991"></status>
+<status status="PASS" starttime="20200713 18:58:41.230" endtime="20200713 18:59:20.682"></status>
 </suite>
 <statistics>
 <total>
@@ -3075,17 +3063,12 @@ Current connection settings
 <stat pass="1" fail="0" id="s1-s1-s1" name="Jmap 7.0">JMapJenkinsTests.Tests.Jmap 7.0</stat>
 <stat pass="1" fail="0" id="s1-s1-s1-s1" name="jmapWeb">JMapJenkinsTests.Tests.Jmap 7.0.jmapWeb</stat>
 <stat pass="1" fail="0" id="s1-s1-s1-s1-s1" name="Manage Annotations">JMapJenkinsTests.Tests.Jmap 7.0.jmapWeb.Manage Annotations</stat>
-<stat pass="1" fail="0" id="s1-s1-s1-s1-s1-s1" name="EditStyleOfAnnotationTests">JMapJenkinsTests.Tests.Jmap 7.0.jmapWeb.Manage Annotations.EditStyleOfAnnotationTests</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s1-s1" name="DeleteAnAnnotationTests">JMapJenkinsTests.Tests.Jmap 7.0.jmapWeb.Manage Annotations.DeleteAnAnnotationTests</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200707 20:26:43.191" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' JM70-974:Modify the text color of the text annotation' in file 'C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\tests\jmap_7.0\jmapWeb\Manage_Annotations\EditStyleOfAnnotationTests.robot' on line 120.</msg>
-<msg timestamp="20200707 20:26:43.191" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' JM70-975:Modify the font size of the text annotation with valid data' in file 'C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\tests\jmap_7.0\jmapWeb\Manage_Annotations\EditStyleOfAnnotationTests.robot' on line 136.</msg>
-<msg timestamp="20200707 20:26:43.194" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' JM70-979:Modify the line color of the Point annotation' in file 'C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\tests\jmap_7.0\jmapWeb\Manage_Annotations\EditStyleOfAnnotationTests.robot' on line 215.</msg>
-<msg timestamp="20200707 20:26:43.194" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' JM70-980:Modify the fill color of the Point annotation' in file 'C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\tests\jmap_7.0\jmapWeb\Manage_Annotations\EditStyleOfAnnotationTests.robot' on line 231.</msg>
-<msg timestamp="20200707 20:26:43.483" level="WARN">Error in file 'C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\common\admin\CommonKeywords.robot': Escaping empty cells with '\' before line continuation marker '...' is deprecated. Remove escaping before Robot Framework 3.2.</msg>
-<msg timestamp="20200707 20:26:43.483" level="WARN">Error in file 'C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\common\admin\CommonKeywords.robot': Escaping empty cells with '\' before line continuation marker '...' is deprecated. Remove escaping before Robot Framework 3.2.</msg>
-<msg timestamp="20200707 20:26:43.484" level="WARN">Error in file 'C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\common\admin\CommonKeywords.robot': Escaping empty cells with '\' before line continuation marker '...' is deprecated. Remove escaping before Robot Framework 3.2.</msg>
-<msg timestamp="20200707 20:26:58.762" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<msg timestamp="20200713 18:58:41.418" level="WARN">Error in file 'C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\common\admin\CommonKeywords.robot': Escaping empty cells with '\' before line continuation marker '...' is deprecated. Remove escaping before Robot Framework 3.2.</msg>
+<msg timestamp="20200713 18:58:41.419" level="WARN">Error in file 'C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\common\admin\CommonKeywords.robot': Escaping empty cells with '\' before line continuation marker '...' is deprecated. Remove escaping before Robot Framework 3.2.</msg>
+<msg timestamp="20200713 18:58:41.419" level="WARN">Error in file 'C:\Users\mbous\eclipse-workspace\JMapJenkinsTests\common\admin\CommonKeywords.robot': Escaping empty cells with '\' before line continuation marker '...' is deprecated. Remove escaping before Robot Framework 3.2.</msg>
 </errors>
 </robot>
